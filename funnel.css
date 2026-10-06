@@ -274,3 +274,6 @@ fieldset.choice-group legend {
   box-shadow: inset 0 0 0 6px transparent, inset 0 0 0 7px rgba(224,195,126,.16), 0 18px 40px rgba(0,0,0,.4);
 }
 :root { --radius: 10px; }
+
+label .opt { color: var(--muted-2); font-weight: 400; }
+.wa-copy { margin-bottom: 18px; }

@@ -7,8 +7,8 @@
 <title>Cek email lu</title>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-900.woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts.css">
-<link rel="stylesheet" href="funnel.css?v=20261006b">
-<link rel="stylesheet" href="theme-maroon.css?v=20261006b">
+<link rel="stylesheet" href="funnel.css?v=20261006c">
+<link rel="stylesheet" href="theme-maroon.css?v=20261006c">
 </head>
 <body>
 <div class="aura" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
@@ -20,10 +20,26 @@
   </div>
 
   <span class="eyebrow">Love, Not Luck</span>
-  <h1>Ebook-nya <em>otw</em>. Cek email lu.</h1>
+  <h1>Lu udah <em>terdaftar</em>.</h1>
   <p class="sub">
-    Kalau dalam beberapa menit belum masuk, cek folder Promosi atau Spam.
+    Ebook-nya gw kirim ke email lu. Kalau belum keliatan, cek juga folder
+    Promosi atau Spam.
   </p>
+
+  <!-- Panel grup WA baru muncul kalau WA_LINK di bawah udah diisi. -->
+  <div class="panel" id="wa-panel" hidden>
+    <p class="lead"><b>Satu langkah lagi:</b></p>
+    <p class="sub wa-copy">Masuk grup WA Love, Not Luck. Info rilis ebook dan update berikutnya gw kabarin di sana duluan.</p>
+    <a class="btn-primary" id="wa-btn" href="#" rel="noopener">Masuk grup WA</a>
+  </div>
 </div>
+<script>
+  // TODO: isi link undangan grup WA Love, Not Luck. Selama kosong, panelnya disembunyiin.
+  var WA_LINK = '';
+  if (WA_LINK) {
+    document.getElementById('wa-btn').href = WA_LINK;
+    document.getElementById('wa-panel').hidden = false;
+  }
+</script>
 </body>
 </html>
