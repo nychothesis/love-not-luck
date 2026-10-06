@@ -1,0 +1,48 @@
+/* ============ TEMA MAROON ============
+   Redesign warna: maroon jadi warna dominan, bukan hitam.
+   Cara balik ke hitam: hapus baris <link ... theme-maroon.css> di index.html
+   dan thanks.html. File ini nggak mengubah struktur apa pun.
+   Catatan kontras: dasar maroon sengaja gelap (sekitar #4a1519 ke bawah) supaya
+   emas dan krem tetap kebaca. Maroon terang (#B0413C) ga cukup kontras buat
+   emas, jadi jangan dipakai sebagai dasar. */
+:root {
+  --bg:        #2a0c0e;
+  --bg-soft:   #3a1215;
+  --card:      #3a1215;
+  --card-2:    #431519;
+  --line:      #6a2a2f;
+  --muted:     #bfa7a2;
+  --muted-2:   #94797a;
+  --wine-text: #e0c37e;
+  --poster-bg: linear-gradient(160deg, #6b1d22 0%, #4a1519 55%, #33100f 100%);
+  --radar-line: #8a4348;
+  --radar-fill: rgba(224,195,126,.20);
+  --radar-stroke: #e0c37e;
+  --radar-dot: #f4efe4;
+  --radar-low: #ffb0a8;
+  --radar-lbl: #f1e6df;
+  --radar-lbl-low: #ffc9c3;
+}
+body {
+  background: radial-gradient(1200px 760px at 80% -10%, #8a2a2f 0%, #4a1519 48%, #260a0c 100%) fixed;
+}
+.aura .a1 {
+  background: radial-gradient(circle, rgba(224,195,126,.16), rgba(224,195,126,.05) 45%, transparent 70%);
+}
+.aura .a2 {
+  background: radial-gradient(circle, rgba(214,92,86,.34), rgba(214,92,86,.12) 45%, transparent 70%);
+}
+.panel {
+  background:
+    linear-gradient(180deg, rgba(42,12,14,.78), rgba(33,9,11,.78)) padding-box,
+    linear-gradient(140deg, rgba(224,195,126,.46), rgba(224,195,126,.10) 50%, rgba(224,195,126,.30)) border-box;
+}
+.lnl-poster { box-shadow: 0 22px 58px rgba(10,2,3,.55); border-color: rgba(224,195,126,.5); }
+.list li::before { color: var(--gold-soft); }
+input[type=text], input[type=email], input[type=tel], select {
+  background: rgba(24,6,8,.6); border-color: var(--line);
+}
+.choice { background: rgba(24,6,8,.6); }
+.btn-primary { color: #240a0b; }
+.err { background: rgba(0,0,0,.32); border-color: #e0908c; color: #ffd0cc; }
+.sub, .tagline { color: #ecdcd6; }
