@@ -250,3 +250,12 @@ fieldset.choice-group legend {
   .poster-meta { flex-direction: column; gap: 4px; }
   .poster-meta span + span { padding-left: 0; border-left: 0; }
 }
+
+/* Sub-subtitle kredibilitas: badge emas biar menonjol, bukan teks kecil. */
+.proof-badge {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin: 16px 0 4px; padding: 12px 15px; border-radius: 12px;
+  border: 1px solid rgba(224,195,126,.6); background: rgba(224,195,126,.09);
+  color: var(--gold-soft); font-size: 1rem; font-weight: 700; line-height: 1.45;
+}
+.proof-icon { flex: 0 0 auto; font-size: .7rem; margin-top: 5px; }

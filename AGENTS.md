@@ -7,9 +7,13 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 > Untuk pekerjaan user-facing yang menyentuh brand, baca `../BRAND.md` dulu.
 > Aturan universal berlaku dari `../AGENTS.md`.
 
-## Status (2026-10-05)
-- Draft lokal. **Belum ada repo, belum deploy.** Jangan `git init` atau push
-  tanpa diminta.
+## Status (2026-10-06)
+- Repo publik `nychothesis/love-not-luck` sudah dibuat dan GitHub Pages sudah
+  diaktifkan (branch `main`, path `/`), URL yang dituju
+  `https://nychothesis.com/love-not-luck/`. **Status build Pages belum
+  diverifikasi** (pengecekan URL live diblokir sesi ini). Halaman `noindex`,
+  tapi form belum berfungsi dan ebook belum ada.
+- Deploy: push ke `main`, Pages auto-update. Nggak ada build step.
 - Situs statis tanpa build step, gaya dan font disalin dari
   `paradoxical-man-lp/` (Inter, gelap `#121110`, emas).
 
@@ -28,9 +32,11 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 - Lead magnet diputuskan: **ebook pendek + self-test skor 6 pilar** (5 Okt
   2026). Ebook-nya sendiri belum dibuat, jadi halaman ini jangan live dulu.
   Copy "Ambil ebook + self-test gratisnya" harus disesuaikan kalau isinya berubah.
-- Subtitle di lockup: "Cara Narik & Milih Orang yang Tepat, Tanpa Ngandalin
-  Hoki, Berbasis Psikologi & Filosofi". Versi di vault masih "Narik &
-  Dapetin Pasangan yang Tepat". Samain salah satunya sebelum live.
+- Copy hero diputuskan Nicho (2026-10-06): subtitle "Cara Narik & Dapetin
+  Pasangan yang Tepat, Tanpa Ngandalin Hoki", sub-subtitle badge "Bukan ebook
+  dating biasa. Psikologi & filosofi yang legit, plus pengalaman nyata gw"
+  (opsi 3, lagi dicoba). Klaim "legit" dan "pengalaman nyata" harus bisa
+  dibuktikan di isi ebook.
 - Radar chart di index.html cuma ilustrasi (skor contoh, dilabelin "bukan
   data asli"). Jangan diganti jadi data atau testimoni palsu.
 - Belum ada Google Analytics, belum ada halaman penjualan (sales page) flagship.
