@@ -251,11 +251,26 @@ fieldset.choice-group legend {
   .poster-meta span + span { padding-left: 0; border-left: 0; }
 }
 
-/* Sub-subtitle kredibilitas: badge emas biar menonjol, bukan teks kecil. */
-.proof-badge {
-  display: flex; gap: 10px; align-items: flex-start;
-  margin: 16px 0 4px; padding: 12px 15px; border-radius: 12px;
-  border: 1px solid rgba(224,195,126,.6); background: rgba(224,195,126,.09);
-  color: var(--gold-soft); font-size: 1rem; font-weight: 700; line-height: 1.45;
+/* Sub-subtitle kredibilitas: tiga poin di antara dua garis emas tipis.
+   Sengaja tanpa kotak isi warna, biar kesannya rapi dan mahal, bukan stiker. */
+.proof-list {
+  list-style: none; margin: 18px 0 4px; padding: 12px 0;
+  border-top: 1px solid rgba(224,195,126,.38);
+  border-bottom: 1px solid rgba(224,195,126,.38);
 }
-.proof-icon { flex: 0 0 auto; font-size: .7rem; margin-top: 5px; }
+.proof-list li {
+  position: relative; padding: 5px 0 5px 22px;
+  color: var(--text); font-size: 1rem; font-weight: 600; letter-spacing: .005em;
+}
+.proof-list li::before {
+  content: ""; position: absolute; left: 3px; top: 50%;
+  width: 7px; height: 7px; margin-top: -3.5px;
+  background: var(--gold-soft); transform: rotate(45deg);
+}
+
+/* Bingkai ganda tipis di poster: kesan elegan tanpa glow tebal. */
+.lnl-poster {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 6px transparent, inset 0 0 0 7px rgba(224,195,126,.16), 0 18px 40px rgba(0,0,0,.4);
+}
+:root { --radius: 10px; }

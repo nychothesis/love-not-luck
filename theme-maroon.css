@@ -2,47 +2,58 @@
    Redesign warna: maroon jadi warna dominan, bukan hitam.
    Cara balik ke hitam: hapus baris <link ... theme-maroon.css> di index.html
    dan thanks.html. File ini nggak mengubah struktur apa pun.
-   Catatan kontras: dasar maroon sengaja gelap (sekitar #4a1519 ke bawah) supaya
-   emas dan krem tetap kebaca. Maroon terang (#B0413C) ga cukup kontras buat
-   emas, jadi jangan dipakai sebagai dasar. */
+
+   Arah visual (2026-10-06): elegan dan tegas, bukan feminin. Maroon sengaja
+   gelap dan kurang jenuh (oxblood), ujung halaman nyaris hitam, nggak ada
+   aksen pink/rose, emasnya antik (bukan kuning terang), glow dikurangin.
+   Dasar gelap juga syarat kontras: emas di atas maroon terang (#B0413C)
+   ga kebaca. */
 :root {
-  --bg:        #2a0c0e;
-  --bg-soft:   #3a1215;
-  --card:      #3a1215;
-  --card-2:    #431519;
-  --line:      #6a2a2f;
-  --muted:     #bfa7a2;
-  --muted-2:   #94797a;
-  --wine-text: #e0c37e;
-  --poster-bg: linear-gradient(160deg, #6b1d22 0%, #4a1519 55%, #33100f 100%);
-  --radar-line: #8a4348;
-  --radar-fill: rgba(224,195,126,.20);
-  --radar-stroke: #e0c37e;
+  --bg:        #1f0809;
+  --bg-soft:   #2c0c0e;
+  --card:      #2c0c0e;
+  --card-2:    #34100f;
+  --line:      #57272a;
+  --gold:      #cdae6c;
+  --gold-soft: #e0c88f;
+  --muted:     #b9a39c;
+  --muted-2:   #8d7672;
+  --wine-text: #e0c88f;
+  --poster-bg: linear-gradient(165deg, #4a1418 0%, #2e0c0e 58%, #1d0708 100%);
+  --radar-line: #6e3337;
+  --radar-fill: rgba(224,200,143,.16);
+  --radar-stroke: #e0c88f;
   --radar-dot: #f4efe4;
-  --radar-low: #ffb0a8;
-  --radar-lbl: #f1e6df;
-  --radar-lbl-low: #ffc9c3;
+  --radar-low: #e0c88f;
+  --radar-lbl: #e9ddd6;
+  --radar-lbl-low: #e0c88f;
 }
 body {
-  background: radial-gradient(1200px 760px at 80% -10%, #8a2a2f 0%, #4a1519 48%, #260a0c 100%) fixed;
+  background: radial-gradient(1100px 720px at 78% -12%, #561a1e 0%, #32100f 46%, #170506 100%) fixed;
 }
 .aura .a1 {
-  background: radial-gradient(circle, rgba(224,195,126,.16), rgba(224,195,126,.05) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(224,200,143,.10), rgba(224,200,143,.03) 45%, transparent 70%);
 }
 .aura .a2 {
-  background: radial-gradient(circle, rgba(214,92,86,.34), rgba(214,92,86,.12) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(120,30,34,.30), rgba(120,30,34,.10) 45%, transparent 70%);
 }
 .panel {
   background:
-    linear-gradient(180deg, rgba(42,12,14,.78), rgba(33,9,11,.78)) padding-box,
-    linear-gradient(140deg, rgba(224,195,126,.46), rgba(224,195,126,.10) 50%, rgba(224,195,126,.30)) border-box;
+    linear-gradient(180deg, rgba(36,10,12,.80), rgba(28,8,9,.80)) padding-box,
+    linear-gradient(140deg, rgba(224,200,143,.34), rgba(224,200,143,.10) 50%, rgba(224,200,143,.24)) border-box;
+  box-shadow: 0 14px 34px rgba(0,0,0,.32);
 }
-.lnl-poster { box-shadow: 0 22px 58px rgba(10,2,3,.55); border-color: rgba(224,195,126,.5); }
+.lnl-poster { border-color: rgba(224,200,143,.42); }
 .list li::before { color: var(--gold-soft); }
 input[type=text], input[type=email], input[type=tel], select {
-  background: rgba(24,6,8,.6); border-color: var(--line);
+  background: rgba(16,4,5,.55); border-color: var(--line);
 }
-.choice { background: rgba(24,6,8,.6); }
-.btn-primary { color: #240a0b; }
-.err { background: rgba(0,0,0,.32); border-color: #e0908c; color: #ffd0cc; }
-.sub, .tagline { color: #ecdcd6; }
+.choice { background: rgba(16,4,5,.55); }
+.btn-primary {
+  background: linear-gradient(180deg, #e4cc94, #c4a15a);
+  color: #1d0708; letter-spacing: .02em;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+.btn-primary:hover { box-shadow: 0 10px 26px rgba(0,0,0,.42); }
+.err { background: rgba(0,0,0,.32); border-color: #d9a59a; color: #f6d9d2; }
+.sub { color: #e6d9d2; }
