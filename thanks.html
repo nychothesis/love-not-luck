@@ -9,6 +9,16 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="funnel.css?v=20261006c">
 <link rel="stylesheet" href="theme-maroon.css?v=20261006c">
+<!-- Google Analytics 4, property sama kayak homepage dan funnel Paradoxical
+     Man (satu domain nychothesis.com). Halaman ini kebedain lewat path
+     /love-not-luck/ di laporan. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFND4PK6SC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-FFND4PK6SC');
+</script>
 </head>
 <body>
 <div class="aura" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
@@ -34,8 +44,8 @@
   </div>
 </div>
 <script>
-  // TODO: isi link undangan grup WA Love, Not Luck. Selama kosong, panelnya disembunyiin.
-  var WA_LINK = '';
+  // Sementara pakai grup WA webinar Paradoxical Man (keputusan Nicho 2026-10-06).
+  var WA_LINK = 'https://chat.whatsapp.com/LgJniU6pz9N2HVb0LAvQn0';
   if (WA_LINK) {
     document.getElementById('wa-btn').href = WA_LINK;
     document.getElementById('wa-panel').hidden = false;

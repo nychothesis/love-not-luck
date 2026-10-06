@@ -32,7 +32,8 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 - Lead magnet (2026-10-06): **ebook pendek Peta Zaman**, judul kerja "Bukan
   Salah Hoki: Kenapa Dapet Pasangan yang Tepat Berasa Makin Susah Zaman
   Sekarang". Self-test dibuang. Ebook belum dibuat, jadi link jangan disebar.
-- `WA_LINK` di `thanks.html` kosong. Panel ajakan grup WA baru muncul kalau diisi.
+- `WA_LINK` di `thanks.html` sementara pakai grup WA webinar Paradoxical Man
+  (keputusan Nicho 2026-10-06). Ganti kalau nanti ada grup khusus Love, Not Luck.
 - Copy hero diputuskan Nicho (2026-10-06): subtitle "Cara Narik & Dapetin
   Pasangan yang Tepat, Tanpa Ngandalin Hoki", sub-subtitle badge "Bukan ebook
   dating biasa. Psikologi & filosofi yang legit, plus pengalaman nyata gw"
@@ -41,7 +42,8 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 - Radar chart di index.html cuma ilustrasi bentuk (pilar kuat vs bocor), bukan
   skor siapa pun. Urutan pilar ngikut mindmap: Fisik, Emosional, Sosial,
   Kompetensi, Spiritual, Seksual. Jangan diganti jadi data atau testimoni palsu.
-- Belum ada Google Analytics, belum ada halaman penjualan (sales page) flagship.
+- GA4 udah dipasang, property sama dengan homepage (`G-FFND4PK6SC`), dibedain
+  lewat path. Belum ada halaman penjualan (sales page) flagship.
 - Varian headline cowok/cewek sengaja belum ada (sign-up masih sedikit).
   Bisa ditambah lewat `?v=cowok` / `?v=cewek` kalau ada alasan.
 
