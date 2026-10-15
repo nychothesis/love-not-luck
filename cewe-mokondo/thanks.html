@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Mini ebook kamu siap dibaca | Nychothesis</title>
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../funnel.css?v=20261006c">
+  <link rel="stylesheet" href="../theme-maroon.css?v=20261006c">
+  <link rel="stylesheet" href="./mini-ebook.css?v=20261015a">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFND4PK6SC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FFND4PK6SC');
+    if (sessionStorage.getItem('cewe-mokondo-signup') === 'yes') {
+      sessionStorage.removeItem('cewe-mokondo-signup');
+      gtag('event', 'lead_magnet_signup', { lead_magnet: 'cewe_mokondo' });
+    }
+  </script>
+</head>
+<body>
+  <div class="aura" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+  <main class="wrap thanks-wrap">
+    <div class="brand">
+      <img src="../assets/logo.svg" alt="" width="34" height="34">
+      <div class="brand-name">NYCHO<span>THESIS</span></div>
+    </div>
+    <section class="lnl-poster thanks-poster">
+      <span class="eyebrow">Love, Not Luck · Mini ebook</span>
+      <h1>Mini ebook kamu <em>siap dibaca.</em></h1>
+      <p class="poster-lead">Cara bedain cowo “mokondo” vs cowo berkualitas yang lagi berproses.</p>
+    </section>
+    <div class="panel">
+      <p class="lead">Buka link ini buat baca langsung di Craft:</p>
+      <a class="btn-primary" href="https://s.craft.me/RDrjLE5gKsH0Xj" target="_blank" rel="noopener noreferrer">Baca mini ebook sekarang ↗</a>
+      <p class="micro">Simpan link-nya kalau mau lanjut baca nanti.</p>
+    </div>
+    <div class="panel wa-panel" id="wa-panel" hidden>
+      <h2>Mau ikut obrolan lanjutannya?</h2>
+      <p class="wa-copy">Gabung grup WhatsApp kalau kamu mau dapat update dan diskusi selanjutnya. Ini opsional. Anggota grup bisa melihat nomor WhatsApp sesama anggota.</p>
+      <a class="btn-secondary" id="wa-link" target="_blank" rel="noopener noreferrer">Gabung grup WhatsApp ↗</a>
+    </div>
+  </main>
+  <script>
+    // Nicho memakai ulang grup lama yang sudah diganti namanya untuk mini ebook ini.
+    var WA_LINK = 'https://chat.whatsapp.com/LgJniU6pz9N2HVb0LAvQn0';
+    if (WA_LINK) {
+      document.getElementById('wa-link').href = WA_LINK;
+      document.getElementById('wa-panel').hidden = false;
+    }
+  </script>
+</body>
+</html>

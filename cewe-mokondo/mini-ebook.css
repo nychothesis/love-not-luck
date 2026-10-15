@@ -1,0 +1,39 @@
+.ebook-poster h1 { max-width: 470px; font-size: clamp(2rem, 8.4vw, 3rem); line-height: 1.14; }
+.ebook-poster h1 em { color: var(--gold-soft); }
+.poster-lead { max-width: 430px; color: #f0e6df; font-size: 1.02rem; line-height: 1.6; }
+.ebook-cover {
+  position: relative; display: flex; flex-direction: column; justify-content: space-between;
+  width: min(72%, 286px); min-height: 330px; margin: 30px auto 6px;
+  padding: 22px 24px; background: #842421; color: #f8e6b9;
+  border: 1px solid #b97b55; border-radius: 3px;
+  box-shadow: 13px 18px 0 #1b0708, 18px 24px 30px rgba(0,0,0,.45);
+  transform: rotate(-3deg);
+}
+.ebook-cover::after { content: ""; position: absolute; inset: 7px; border: 1px solid rgba(248,230,185,.27); pointer-events: none; }
+.cover-top { display: flex; justify-content: space-between; gap: 10px; font-size: .55rem; font-weight: 800; letter-spacing: .15em; }
+.cover-top span { font-weight: 500; }
+.cover-question { font-family: Georgia, serif; font-weight: 700; font-size: clamp(1.55rem, 6vw, 2rem); line-height: 1.22; letter-spacing: -.04em; }
+.cover-question i { font-weight: 400; }
+.cover-rule { width: 46px; height: 1px; background: rgba(248,230,185,.7); }
+.cover-bottom { max-width: 170px; font-size: .7rem; line-height: 1.4; }
+.chapter-list { list-style: none; margin: 12px 0 0; }
+.chapter-list li { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.chapter-list li:last-child { border: 0; padding-bottom: 0; }
+.chapter-num { color: var(--gold-soft); font-size: .8rem; font-weight: 800; letter-spacing: .08em; }
+.chapter-list strong { display: block; font-size: .91rem; }
+.chapter-list small { display: block; margin-top: 4px; color: #d8c9c2; font-size: .82rem; line-height: 1.55; }
+.form-panel h2 { font-size: 1.4rem; margin-bottom: 8px; }
+.form-panel .eyebrow { margin-bottom: 4px; }
+.form-intro { color: #d8c9c2; font-size: .91rem; margin-bottom: 20px; }
+.hero-jump { margin: -11px 0 26px; width: 100%; text-align: center; color: var(--gold-soft); border-color: rgba(224,200,143,.38); }
+.btn-primary:focus-visible, .btn-secondary:focus-visible, input:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+.thanks-wrap { padding-top: 56px; }
+.thanks-poster { margin-bottom: 22px; }
+.thanks-poster h1 { font-size: 2.1rem; }
+.wa-panel { margin-top: 22px; }
+.wa-panel .btn-secondary { width: 100%; text-align: center; margin-top: 8px; }
+@media (max-width: 420px) {
+  .ebook-cover { width: 78%; min-height: 290px; padding: 19px; }
+  .ebook-poster h1 { font-size: 2rem; }
+  .panel { padding: 24px 20px; }
+}

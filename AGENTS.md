@@ -22,10 +22,16 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 |---|---|
 | `index.html` | Opt-in: form nama, email, username IG (opsional), gender, dan **forced choice** satu rasa sakit (susah dapet vs sering dapet yang salah). Satu halaman netral gender. |
 | `thanks.html` | "Cek email lu" setelah submit. |
+| `cewe-mokondo/index.html` | LP khusus mini ebook cewe. Copy dan visual mengikuti tema maroon LP utama. |
+| `cewe-mokondo/thanks.html` | Akses langsung ke mini ebook Craft, lalu ajakan opsional ke grup WhatsApp yang sudah diganti namanya. |
 | `funnel.css` | Style bersama, hasil salinan funnel Paradoxical Man. Hero mengikuti pola poster `webinar.html` (judul + subtitle jadi satu heading besar di kartu poster), tapi tanpa foto: visualnya radar chart SVG. |
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
 
 ## Yang masih kosong (TODO)
+- LP mini ebook cewe masih draft lokal. `cewe-mokondo/optin.js` belum tersambung
+  ke EmailOctopus, jadi jangan push/menyebarkan URL-nya sebelum form diuji.
+  Rencana: satu list Love, Not Luck dengan tag khusus `lm-cewe-mokondo`.
+  Endpoint dan pemetaan field harus berasal dari form khusus mini ebook ini.
 - `ENDPOINT` di `index.html` kosong. Harus diisi form EmailOctopus buat list
   baru Love, Not Luck. **Jangan pakai endpoint Paradoxical Man.** Nama kolom
   form (`nama`, `email`, `gender`, `rasa_sakit`) harus dipetakan ke field list.
