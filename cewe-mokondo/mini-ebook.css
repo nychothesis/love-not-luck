@@ -13,7 +13,6 @@
 .cover-top { display: flex; justify-content: space-between; gap: 10px; font-size: .55rem; font-weight: 800; letter-spacing: .15em; }
 .cover-top span { font-weight: 500; }
 .cover-question { font-family: Georgia, serif; font-weight: 700; font-size: clamp(1.55rem, 6vw, 2rem); line-height: 1.22; letter-spacing: -.04em; }
-.cover-question i { font-weight: 400; }
 .cover-rule { width: 46px; height: 1px; background: rgba(248,230,185,.7); }
 .cover-bottom { max-width: 170px; font-size: .7rem; line-height: 1.4; }
 .chapter-list { list-style: none; margin: 12px 0 0; }
@@ -30,7 +29,7 @@
 .form-cover { width: 118px; min-height: 154px; margin: 0; padding: 10px; box-shadow: 5px 7px 0 #1b0708, 8px 10px 14px rgba(0,0,0,.3); }
 .form-cover::after { inset: 4px; }
 .form-cover .cover-top { gap: 2px; font-size: .27rem; letter-spacing: .05em; }
-.form-cover .cover-question { font-size: .9rem; }
+.form-cover .cover-question { font-size: .68rem; line-height: 1.15; letter-spacing: -.035em; overflow-wrap: break-word; }
 .form-cover .cover-rule { width: 24px; }
 .form-cover .cover-bottom { font-size: .35rem; }
 .hero-jump { margin: -11px 0 26px; width: 100%; text-align: center; color: var(--gold-soft); border-color: rgba(224,200,143,.38); }
@@ -59,5 +58,5 @@
 @media (max-width: 420px) {
   .form-header { grid-template-columns: minmax(0, 1fr) 96px; gap: 12px; }
   .form-cover { width: 96px; min-height: 136px; padding: 8px; }
-  .form-cover .cover-question { font-size: .76rem; }
+  .form-cover .cover-question { font-size: .61rem; }
 }
