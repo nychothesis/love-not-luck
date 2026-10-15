@@ -28,10 +28,12 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
 
 ## Yang masih kosong (TODO)
-- LP mini ebook cewe masih draft lokal. `cewe-mokondo/optin.js` belum tersambung
-  ke EmailOctopus, jadi jangan push/menyebarkan URL-nya sebelum form diuji.
-  Rencana: satu list Love, Not Luck dengan tag khusus `lm-cewe-mokondo`.
-  Endpoint dan pemetaan field harus berasal dari form khusus mini ebook ini.
+- LP mini ebook cewe memakai halaman pendaftaran EmailOctopus terpisah di
+  `https://nychothesis.eo.page/cewe-mokondo`. List `Love, Not Luck`, tag
+  `lm-cewe-mokondo`. Paket Starter hanya menyediakan satu embedded form dan
+  slot itu sudah dipakai form lain, sehingga CTA halaman ini membuka halaman
+  pendaftaran EmailOctopus. Setelah daftar, EmailOctopus mengarahkan pembaca
+  ke `cewe-mokondo/thanks.html` untuk link Craft dan grup WA opsional.
 - `ENDPOINT` di `index.html` kosong. Harus diisi form EmailOctopus buat list
   baru Love, Not Luck. **Jangan pakai endpoint Paradoxical Man.** Nama kolom
   form (`nama`, `email`, `gender`, `rasa_sakit`) harus dipetakan ke field list.
