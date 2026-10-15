@@ -23,21 +23,23 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 | `index.html` | Opt-in: form nama, email, username IG (opsional), gender, dan **forced choice** satu rasa sakit (susah dapet vs sering dapet yang salah). Satu halaman netral gender. |
 | `thanks.html` | "Cek email lu" setelah submit. |
 | `cewe-mokondo/index.html` | LP khusus mini ebook cewe. Copy dan visual mengikuti tema maroon LP utama. |
-| `cewe-mokondo/thanks.html` | Akses langsung ke mini ebook Craft, lalu ajakan opsional ke grup WhatsApp yang sudah diganti namanya. |
+| `cewe-mokondo/thanks.html` | Setelah daftar, arahkan ke grup WhatsApp. Link mini ebook hanya ada di deskripsi grup, bukan di LP atau halaman ini. |
+| `signup-worker/` | Backend form custom mini ebook cewe. Validasi data lalu simpan ke list EmailOctopus dengan tag `lm-cewe-mokondo`. API key disimpan sebagai Cloudflare Worker secret. |
 | `funnel.css` | Style bersama, hasil salinan funnel Paradoxical Man. Hero mengikuti pola poster `webinar.html` (judul + subtitle jadi satu heading besar di kartu poster), tapi tanpa foto: visualnya radar chart SVG. |
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
 
 ## Yang masih kosong (TODO)
-- LP mini ebook cewe memakai halaman pendaftaran EmailOctopus terpisah di
-  `https://nychothesis.eo.page/cewe-mokondo`. List `Love, Not Luck`, tag
-  `lm-cewe-mokondo`. Paket Starter hanya menyediakan satu embedded form dan
-  slot itu sudah dipakai form lain, sehingga CTA halaman ini membuka halaman
-  pendaftaran EmailOctopus. Setelah daftar, EmailOctopus mengarahkan pembaca
-  ke `cewe-mokondo/thanks.html` untuk link Craft dan grup WA opsional.
-  Field form (2026-10-15, semua wajib): email, nama, username IG, gender
-  (Cewe/Cowo saja), dan "Masalah dating utama" versi umum LNL (susah dapet
-  orang yang dimau / sering dapet orang yang salah), bukan spesifik LM ini.
-  Field diatur di editor landing page EmailOctopus, bukan di repo ini.
+- LP mini ebook cewe yang live sementara masih membuka form EmailOctopus di
+  `https://nychothesis.eo.page/cewe-mokondo`. Draft form custom satu halaman
+  sudah ada di `cewe-mokondo/index.html`, tetapi **jangan deploy sebelum**
+  Cloudflare Worker aktif, API key EmailOctopus terpasang sebagai secret,
+  endpoint di `signup.js` terisi, dan alur signup teruji. Saat ini endpoint
+  kosong, sehingga draft form custom sengaja belum dipublikasikan.
+- List `Love, Not Luck`, tag `lm-cewe-mokondo`. Field wajib: email, nama,
+  username IG, gender (Cowo lalu Cewe), dan "Masalah dating utama" versi umum
+  LNL. Setelah submit sukses, pembaca masuk ke `cewe-mokondo/thanks.html`,
+  lalu ke grup WhatsApp. LP pertama cukup menjanjikan ebook gratis dan
+  menunjukkan cover; jangan ungkap lokasi link ebook di LP pertama.
 - `ENDPOINT` di `index.html` kosong. Harus diisi form EmailOctopus buat list
   baru Love, Not Luck. **Jangan pakai endpoint Paradoxical Man.** Nama kolom
   form (`nama`, `email`, `gender`, `rasa_sakit`) harus dipetakan ke field list.

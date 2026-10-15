@@ -1,0 +1,7 @@
+name = "nychothesis-lm-signup"
+main = "worker.mjs"
+compatibility_date = "2026-10-15"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+EMAILOCTOPUS_LIST_ID = "59e20f62-c87d-11f1-8a9e-752b79b9034a"

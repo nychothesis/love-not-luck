@@ -25,6 +25,14 @@
 .form-panel h2 { font-size: 1.4rem; margin-bottom: 8px; }
 .form-panel .eyebrow { margin-bottom: 4px; }
 .form-intro { color: #d8c9c2; font-size: .91rem; margin-bottom: 20px; }
+.form-header { display: grid; grid-template-columns: minmax(0, 1fr) 118px; gap: 20px; align-items: center; margin-bottom: 20px; }
+.form-header .form-intro { margin-bottom: 0; }
+.form-cover { width: 118px; min-height: 154px; margin: 0; padding: 10px; box-shadow: 5px 7px 0 #1b0708, 8px 10px 14px rgba(0,0,0,.3); }
+.form-cover::after { inset: 4px; }
+.form-cover .cover-top { gap: 2px; font-size: .27rem; letter-spacing: .05em; }
+.form-cover .cover-question { font-size: .9rem; }
+.form-cover .cover-rule { width: 24px; }
+.form-cover .cover-bottom { font-size: .35rem; }
 .hero-jump { margin: -11px 0 26px; width: 100%; text-align: center; color: var(--gold-soft); border-color: rgba(224,200,143,.38); }
 .btn-primary:focus-visible, .btn-secondary:focus-visible, input:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
 .thanks-wrap { padding-top: 56px; }
@@ -37,6 +45,19 @@
   .ebook-poster h1 { font-size: 2rem; }
   .panel { padding: 24px 20px; }
 }
-.form-panel { margin-bottom: 26px; }
+.form-panel { margin-bottom: 32px; scroll-margin-top: 16px; }
 .bottom-cta { margin: 4px 0 0; }
 .hero-cta { margin-top: 20px; }
+@media (max-width: 600px) {
+  .wrap { padding-top: 28px; }
+  .brand { margin-bottom: 20px; }
+  .ebook-poster { margin-bottom: 16px; padding: 22px 22px 18px; }
+  .ebook-poster .eyebrow { margin-bottom: 10px; }
+  .ebook-poster .poster-meta { margin-top: 12px; padding-top: 10px; }
+  .form-panel { padding: 22px 20px; }
+}
+@media (max-width: 420px) {
+  .form-header { grid-template-columns: minmax(0, 1fr) 96px; gap: 12px; }
+  .form-cover { width: 96px; min-height: 136px; padding: 8px; }
+  .form-cover .cover-question { font-size: .76rem; }
+}
