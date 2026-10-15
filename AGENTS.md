@@ -34,6 +34,10 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
   slot itu sudah dipakai form lain, sehingga CTA halaman ini membuka halaman
   pendaftaran EmailOctopus. Setelah daftar, EmailOctopus mengarahkan pembaca
   ke `cewe-mokondo/thanks.html` untuk link Craft dan grup WA opsional.
+  Field form (2026-10-15, semua wajib): email, nama, username IG, gender
+  (Cewe/Cowo saja), dan "Masalah dating utama" versi umum LNL (susah dapet
+  orang yang dimau / sering dapet orang yang salah), bukan spesifik LM ini.
+  Field diatur di editor landing page EmailOctopus, bukan di repo ini.
 - `ENDPOINT` di `index.html` kosong. Harus diisi form EmailOctopus buat list
   baru Love, Not Luck. **Jangan pakai endpoint Paradoxical Man.** Nama kolom
   form (`nama`, `email`, `gender`, `rasa_sakit`) harus dipetakan ke field list.
