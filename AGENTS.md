@@ -7,15 +7,26 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 > Untuk pekerjaan user-facing yang menyentuh brand, baca `../BRAND.md` dulu.
 > Aturan universal berlaku dari `../AGENTS.md`.
 
-## Status (2026-10-06)
+## Status (2026-10-16)
 - Repo publik `nychothesis/love-not-luck` sudah dibuat dan GitHub Pages sudah
-  diaktifkan (branch `main`, path `/`), URL yang dituju
-  `https://nychothesis.com/love-not-luck/`. **Status build Pages belum
-  diverifikasi** (pengecekan URL live diblokir sesi ini). Halaman `noindex`,
-  tapi form belum berfungsi dan ebook belum ada.
+  diaktifkan (branch `main`, path `/`) di
+  `https://nychothesis.com/love-not-luck/`. Halaman utama `noindex`,
+  tetapi form utama belum berfungsi dan lead magnet utama belum ada.
 - Deploy: push ke `main`, Pages auto-update. Nggak ada build step.
 - Situs statis tanpa build step, gaya dan font disalin dari
   `paradoxical-man-lp/` (Inter, gelap `#121110`, emas).
+- LP mini ebook cewe dengan form custom satu halaman sudah live di
+  `https://nychothesis.com/love-not-luck/cewe-mokondo/`. Cloudflare Worker
+  `nychothesis-lm-signup.nicho-aurelius.workers.dev` aktif, API key
+  EmailOctopus terpasang sebagai secret, dan endpoint di `signup.js` terisi.
+  Uji signup ke Worker live lolos: semua field dan tag tersimpan di
+  EmailOctopus; kontak uji dihapus sesudahnya. Halaman publik dan script
+  sudah dicek setelah push GitHub Pages.
+- List `Love, Not Luck` memakai tag `lm-cewe-mokondo`. Field wajib: email,
+  nama, username IG, gender (Cowo lalu Cewe), dan "Masalah dating utama"
+  versi umum LNL. Setelah submit sukses, pembaca masuk ke
+  `cewe-mokondo/thanks.html`, lalu ke grup WhatsApp. Link ebook hanya ada di
+  deskripsi grup.
 
 ## Halaman
 | File | Fungsi |
@@ -29,18 +40,6 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
 
 ## Yang masih kosong (TODO)
-- LP mini ebook cewe dengan form custom satu halaman ada di
-  `cewe-mokondo/index.html`. Cloudflare Worker
-  `nychothesis-lm-signup.nicho-aurelius.workers.dev` aktif, API key
-  EmailOctopus terpasang sebagai secret, dan endpoint di `signup.js` terisi.
-  Uji signup ke Worker live sudah lolos: semua field dan tag tersimpan di
-  EmailOctopus; kontak uji dihapus sesudahnya. Halaman live perlu dicek lagi
-  setelah push GitHub Pages.
-- List `Love, Not Luck`, tag `lm-cewe-mokondo`. Field wajib: email, nama,
-  username IG, gender (Cowo lalu Cewe), dan "Masalah dating utama" versi umum
-  LNL. Setelah submit sukses, pembaca masuk ke `cewe-mokondo/thanks.html`,
-  lalu ke grup WhatsApp. LP pertama cukup menjanjikan ebook gratis dan
-  menunjukkan cover; jangan ungkap lokasi link ebook di LP pertama.
 - `ENDPOINT` di `index.html` kosong. Harus diisi form EmailOctopus buat list
   baru Love, Not Luck. **Jangan pakai endpoint Paradoxical Man.** Nama kolom
   form (`nama`, `email`, `gender`, `rasa_sakit`) harus dipetakan ke field list.
