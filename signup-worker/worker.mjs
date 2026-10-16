@@ -1,6 +1,10 @@
 const ORIGIN = 'https://nychothesis.com';
 const TAG = 'lm-cewe-mokondo';
-const PAINS = new Set(['Susah dapet orang yang aku mau', 'Sering dapet orang yang salah']);
+const PAINS = new Set([
+  'Jarang ketemu kenalan baru yang potensial',
+  'Suka sama seseorang, tapi dia ga tertarik balik',
+  'Suka dapet orang yang salah'
+]);
 
 function reply(status, body, cors = true) {
   return new Response(JSON.stringify(body), {

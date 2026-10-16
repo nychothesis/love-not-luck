@@ -5,7 +5,7 @@ import worker from './worker.mjs';
 const env = { EMAILOCTOPUS_API_KEY: 'test-key', EMAILOCTOPUS_LIST_ID: 'test-list' };
 const valid = {
   firstName: 'Nicho', email: 'nicho@example.com', gender: 'Cowo', instagram: '@nichokp',
-  datingPain: 'Sering dapet orang yang salah', website: ''
+  datingPain: 'Suka dapet orang yang salah', website: ''
 };
 function request(payload = valid, origin = 'https://nychothesis.com') {
   return new Request('https://signup.example.workers.dev/', {
@@ -22,19 +22,25 @@ test('valid signup maps fields and tag to EmailOctopus', async () => {
     return new Response('{}', { status: 200 });
   };
   try {
-    const response = await worker.fetch(request(), env);
-    assert.equal(response.status, 200);
-    assert.equal(sent.url, 'https://api.emailoctopus.com/lists/test-list/contacts');
-    assert.equal(sent.options.method, 'PUT');
-    assert.equal(sent.options.headers.Authorization, 'Bearer test-key');
-    assert.equal(sent.body.email_address, 'nicho@example.com');
-    assert.deepEqual(sent.body.tags, { 'lm-cewe-mokondo': true });
-    assert.deepEqual(sent.body.fields, {
-      FirstName: 'Nicho', Gender: 'Cowo', UsernameInstagram: 'nichokp',
-      MasalahDatingUtama: 'Sering dapet orang yang salah'
+    for (const datingPain of [
+      'Jarang ketemu kenalan baru yang potensial',
+      'Suka sama seseorang, tapi dia ga tertarik balik',
+      'Suka dapet orang yang salah'
+    ]) {
+      const response = await worker.fetch(request({ ...valid, datingPain }), env);
+      assert.equal(response.status, 200);
+      assert.equal(sent.url, 'https://api.emailoctopus.com/lists/test-list/contacts');
+      assert.equal(sent.options.method, 'PUT');
+      assert.equal(sent.options.headers.Authorization, 'Bearer test-key');
+      assert.equal(sent.body.email_address, 'nicho@example.com');
+      assert.deepEqual(sent.body.tags, { 'lm-cewe-mokondo': true });
+      assert.deepEqual(sent.body.fields, {
+        FirstName: 'Nicho', Gender: 'Cowo', UsernameInstagram: 'nichokp',
+        MasalahDatingUtama: datingPain
     });
     assert.equal(sent.body.status, undefined);
     assert.equal(response.headers.get('Access-Control-Allow-Origin'), 'https://nychothesis.com');
+    }
   } finally { globalThis.fetch = original; }
 });
 
@@ -58,6 +64,8 @@ test('invalid and cross-origin submissions do not call EmailOctopus', async () =
   globalThis.fetch = () => { throw new Error('must not call provider'); };
   try {
     assert.equal((await worker.fetch(request({ ...valid, instagram: 'not valid' }), env)).status, 400);
+    assert.equal((await worker.fetch(request({ ...valid, datingPain: '' }), env)).status, 400);
+    assert.equal((await worker.fetch(request({ ...valid, datingPain: [valid.datingPain] }), env)).status, 400);
     assert.equal((await worker.fetch(request(valid, 'https://other.example'), env)).status, 403);
   } finally { globalThis.fetch = original; }
 });

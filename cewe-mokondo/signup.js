@@ -32,7 +32,7 @@
     if (!emailValid(email) || email.length > 254) return fail('Cek lagi alamat email kamu.');
     if (gender !== 'Cowo' && gender !== 'Cewe') return fail('Pilih gender dulu, ya.');
     if (!/^[A-Za-z0-9._]{1,30}$/.test(instagram)) return fail('Isi username Instagram yang valid, tanpa link.');
-    if (datingPain !== 'Susah dapet orang yang aku mau' && datingPain !== 'Sering dapet orang yang salah') {
+    if (['Jarang ketemu kenalan baru yang potensial', 'Suka sama seseorang, tapi dia ga tertarik balik', 'Suka dapet orang yang salah'].indexOf(datingPain) === -1) {
       return fail('Pilih satu masalah dating yang paling dekat dengan pengalamanmu.');
     }
     if (!ENDPOINT) return fail('Pendaftaran sedang disiapkan. Coba lagi nanti.');

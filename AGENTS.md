@@ -27,6 +27,10 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
   versi umum LNL. Setelah submit sukses, pembaca masuk ke
   `cewe-mokondo/thanks.html`, lalu ke grup WhatsApp. Link ebook hanya ada di
   deskripsi grup.
+- Form mini ebook memakai satu pilihan masalah utama: "Jarang ketemu kenalan
+  baru yang potensial", "Suka sama seseorang, tapi dia ga tertarik balik", atau
+  "Suka dapet orang yang salah". Pilihan di form, validasi Worker, dan field
+  EmailOctopus `MasalahDatingUtama` harus tetap sama.
 
 ## Halaman
 | File | Fungsi |
