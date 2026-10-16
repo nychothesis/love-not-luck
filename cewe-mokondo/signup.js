@@ -28,7 +28,7 @@
     var instagram = form.elements.instagram.value.trim().replace(/^@/, '');
     var datingPain = form.elements.datingPain.value;
 
-    if (!firstName || firstName.length > 80) return fail('Isi nama kamu dulu, ya.');
+    if (!firstName || firstName.length > 80) return fail('Isi nama depan kamu dulu, ya.');
     if (!emailValid(email) || email.length > 254) return fail('Cek lagi alamat email kamu.');
     if (gender !== 'Cowo' && gender !== 'Cewe') return fail('Pilih gender dulu, ya.');
     if (!/^[A-Za-z0-9._]{1,30}$/.test(instagram)) return fail('Isi username Instagram yang valid, tanpa link.');
