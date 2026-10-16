@@ -29,12 +29,13 @@ konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
 
 ## Yang masih kosong (TODO)
-- LP mini ebook cewe yang live sementara masih membuka form EmailOctopus di
-  `https://nychothesis.eo.page/cewe-mokondo`. Draft form custom satu halaman
-  sudah ada di `cewe-mokondo/index.html`, tetapi **jangan deploy sebelum**
-  Cloudflare Worker aktif, API key EmailOctopus terpasang sebagai secret,
-  endpoint di `signup.js` terisi, dan alur signup teruji. Saat ini endpoint
-  kosong, sehingga draft form custom sengaja belum dipublikasikan.
+- LP mini ebook cewe dengan form custom satu halaman ada di
+  `cewe-mokondo/index.html`. Cloudflare Worker
+  `nychothesis-lm-signup.nicho-aurelius.workers.dev` aktif, API key
+  EmailOctopus terpasang sebagai secret, dan endpoint di `signup.js` terisi.
+  Uji signup ke Worker live sudah lolos: semua field dan tag tersimpan di
+  EmailOctopus; kontak uji dihapus sesudahnya. Halaman live perlu dicek lagi
+  setelah push GitHub Pages.
 - List `Love, Not Luck`, tag `lm-cewe-mokondo`. Field wajib: email, nama,
   username IG, gender (Cowo lalu Cewe), dan "Masalah dating utama" versi umum
   LNL. Setelah submit sukses, pembaca masuk ke `cewe-mokondo/thanks.html`,

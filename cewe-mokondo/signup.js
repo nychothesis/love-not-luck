@@ -1,8 +1,7 @@
 (function () {
   'use strict';
 
-  // Diisi dengan URL Worker setelah backend dan secret EmailOctopus aktif.
-  var ENDPOINT = window.NYCHO_SIGNUP_ENDPOINT || '';
+  var ENDPOINT = 'https://nychothesis-lm-signup.nicho-aurelius.workers.dev';
   var form = document.getElementById('ebook-form');
   var button = document.getElementById('submit-btn');
   var error = document.getElementById('form-error');
