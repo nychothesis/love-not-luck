@@ -24,9 +24,11 @@ test('valid signup maps fields and tag to EmailOctopus', async () => {
   try {
     const response = await worker.fetch(request(), env);
     assert.equal(response.status, 200);
-    assert.equal(sent.url, 'https://emailoctopus.com/api/1.6/lists/test-list/contacts');
+    assert.equal(sent.url, 'https://api.emailoctopus.com/lists/test-list/contacts');
+    assert.equal(sent.options.method, 'PUT');
+    assert.equal(sent.options.headers.Authorization, 'Bearer test-key');
     assert.equal(sent.body.email_address, 'nicho@example.com');
-    assert.deepEqual(sent.body.tags, ['lm-cewe-mokondo']);
+    assert.deepEqual(sent.body.tags, { 'lm-cewe-mokondo': true });
     assert.deepEqual(sent.body.fields, {
       FirstName: 'Nicho', Gender: 'Cowo', UsernameInstagram: 'nichokp',
       MasalahDatingUtama: 'Sering dapet orang yang salah'
@@ -36,22 +38,18 @@ test('valid signup maps fields and tag to EmailOctopus', async () => {
   } finally { globalThis.fetch = original; }
 });
 
-test('existing contact receives the tag without changing subscription status', async () => {
+test('upsert does not request a subscription status change', async () => {
   const original = globalThis.fetch;
-  const sent = [];
+  let sent;
   globalThis.fetch = async (url, options) => {
-    sent.push({ url, method: options.method, body: JSON.parse(options.body) });
-    if (sent.length === 1) {
-      return new Response(JSON.stringify({ code: 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS' }), { status: 409 });
-    }
+    sent = { url, method: options.method, body: JSON.parse(options.body) };
     return new Response('{}', { status: 200 });
   };
   try {
     assert.equal((await worker.fetch(request(), env)).status, 200);
-    assert.equal(sent.length, 2);
-    assert.equal(sent[1].method, 'PUT');
-    assert.deepEqual(sent[1].body.tags, { 'lm-cewe-mokondo': true });
-    assert.equal(sent[1].body.status, undefined);
+    assert.equal(sent.method, 'PUT');
+    assert.deepEqual(sent.body.tags, { 'lm-cewe-mokondo': true });
+    assert.equal(sent.body.status, undefined);
   } finally { globalThis.fetch = original; }
 });
 

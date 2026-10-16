@@ -1,5 +1,3 @@
-import { createHash } from 'node:crypto';
-
 const ORIGIN = 'https://nychothesis.com';
 const TAG = 'lm-cewe-mokondo';
 const PAINS = new Set(['Susah dapet orang yang aku mau', 'Sering dapet orang yang salah']);
@@ -62,33 +60,29 @@ export default {
     if (payload.bot) return reply(200, { ok: true });
     if (!env.EMAILOCTOPUS_API_KEY || !env.EMAILOCTOPUS_LIST_ID) return reply(503, { error: 'not_ready' });
 
-    const base = `https://emailoctopus.com/api/1.6/lists/${encodeURIComponent(env.EMAILOCTOPUS_LIST_ID)}/contacts`;
+    const endpoint = `https://api.emailoctopus.com/lists/${encodeURIComponent(env.EMAILOCTOPUS_LIST_ID)}/contacts`;
     const fields = {
       FirstName: payload.firstName,
       Gender: payload.gender,
       UsernameInstagram: payload.instagram,
       MasalahDatingUtama: payload.datingPain
     };
-    const options = (method, body) => ({
-      method,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_key: env.EMAILOCTOPUS_API_KEY, ...body })
-    });
     try {
-      const created = await fetch(base, options('POST', {
+      // API v2 upsert menambah kontak baru atau memperbarui kontak lama.
+      // Status langganan lama tidak diubah; kontak baru mengikuti setelan list.
+      const result = await fetch(endpoint, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${env.EMAILOCTOPUS_API_KEY}`
+        },
+        body: JSON.stringify({
         email_address: payload.email,
         fields,
-        tags: [TAG]
-      }));
-      if (created.ok) return reply(200, { ok: true });
-      const error = await created.json().catch(() => ({}));
-      if (error.code !== 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS') return reply(502, { error: 'provider' });
-
-      // Kontak yang sudah ada ditag dan diperbarui, tanpa mengubah status unsubscribe.
-      const hash = createHash('md5').update(payload.email).digest('hex');
-      const updated = await fetch(`${base}/${hash}`, options('PUT', { fields, tags: { [TAG]: true } }));
-      if (!updated.ok) return reply(502, { error: 'provider' });
-      return reply(200, { ok: true });
+        tags: { [TAG]: true }
+        })
+      });
+      return result.ok ? reply(200, { ok: true }) : reply(502, { error: 'provider' });
     } catch (_) {
       return reply(502, { error: 'provider' });
     }
