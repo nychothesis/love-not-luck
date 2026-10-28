@@ -1,0 +1,226 @@
+/* ============ SALES PAGE PRE-ORDER (cewe) ============
+   Nambah di atas funnel.css + theme-maroon.css. Satu kolom 560px kayak
+   halaman funnel lain, karena mayoritas pembaca datang dari IG di HP. */
+
+/* Placeholder yang belum diputusin: sengaja mencolok biar ga kelewat
+   pas review. Hapus class-nya begitu angkanya keisi. */
+.ph {
+  background: rgba(224,200,143,.18); color: var(--gold-soft);
+  border: 1px dashed rgba(224,200,143,.55); border-radius: 4px;
+  padding: 0 5px; font-weight: 700; white-space: nowrap;
+}
+
+/* Strip paling atas: deadline pre-order, bukan countdown. */
+.topbar {
+  position: relative; z-index: 2;
+  padding: 10px 18px; text-align: center;
+  font-size: .82rem; font-weight: 600; line-height: 1.5; color: #f4e9d8;
+  background: rgba(16,4,5,.72); border-bottom: 1px solid rgba(224,200,143,.28);
+}
+
+.hero-lead { margin-top: 18px; color: #f0e6df; font-size: .98rem; line-height: 1.7; }
+.hero-cta { margin-top: 24px; }
+
+.block { margin: 56px 0 0; }
+.block-panel { margin-top: 56px; }
+.sec-title {
+  font-size: clamp(1.4rem, 5.6vw, 1.75rem); font-weight: 900; line-height: 1.25;
+  letter-spacing: -.025em; margin-bottom: 18px; text-wrap: balance;
+}
+.panel .sec-title { font-size: clamp(1.3rem, 5vw, 1.55rem); }
+.lead { color: #e6d9d2; font-size: .97rem; margin-bottom: 18px; }
+.mini-title { font-weight: 700; font-size: .95rem; margin: 22px 0 6px; }
+h3 { font-size: 1.02rem; font-weight: 800; line-height: 1.4; margin-bottom: 6px; }
+p { color: #e6d9d2; }
+
+/* 2. Pain */
+.pain { display: grid; gap: 14px; }
+.pain-card { padding: 22px 24px; border-left: 3px solid var(--gold-soft); }
+.pain-card p { font-size: .93rem; }
+.pivot { margin-top: 26px; font-size: 1.02rem; line-height: 1.75; }
+
+/* 3. Reframe */
+.roots { list-style: none; }
+.roots li { display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.roots li:first-child { padding-top: 4px; }
+.roots .num { color: var(--gold-soft); font-weight: 900; font-size: 1.15rem; letter-spacing: .04em; line-height: 1.5; }
+.roots p { font-size: .94rem; }
+
+/* 4. Offer */
+.diff { list-style: none; }
+.diff li {
+  position: relative; padding: 14px 0 14px 24px; font-size: .93rem; color: #e6d9d2;
+  border-bottom: 1px dashed var(--line);
+}
+.diff li:last-child { border-bottom: 0; }
+.diff li::before {
+  content: ""; position: absolute; left: 3px; top: 23px; width: 8px; height: 8px;
+  background: var(--gold-soft); transform: rotate(45deg);
+}
+.radar-wrap { margin-top: 26px; }
+
+/* 5. Kurikulum */
+.topics { display: grid; gap: 12px; }
+.topic { padding: 20px 24px; }
+.topic .list { margin: 6px 0 0; }
+.topic .list li { padding: 7px 0 7px 22px; }
+.schedule { margin-top: 18px; font-size: .9rem; color: var(--muted); }
+
+/* 7. Dream outcome */
+.scenes p {
+  position: relative; padding: 0 0 18px 22px; margin-bottom: 18px;
+  font-size: .97rem; border-bottom: 1px solid var(--line);
+}
+.scenes p::before {
+  content: ""; position: absolute; left: 0; top: .55em; bottom: 26px;
+  width: 2px; background: linear-gradient(var(--gold-soft), transparent);
+}
+.honest {
+  margin-top: 8px; padding: 18px 20px; font-size: .94rem;
+  border: 1px solid rgba(224,200,143,.3); border-radius: 10px; background: rgba(16,4,5,.4);
+}
+
+/* 8 + 9 */
+.fit { display: grid; gap: 14px; margin-top: 56px; }
+.checks, .crosses { list-style: none; }
+.checks li, .crosses li { position: relative; padding: 9px 0 9px 28px; font-size: .93rem; color: #e6d9d2; }
+.checks li::before, .crosses li::before { position: absolute; left: 0; top: 9px; font-weight: 900; }
+.checks li::before { content: "✓"; color: var(--gold-soft); }
+.crosses li::before { content: "✕"; color: #d98f86; }
+.fit-no { opacity: .92; }
+
+/* 10. Harga */
+.price { margin-top: 56px; scroll-margin-top: 16px; }
+.price-box { margin: 22px 0 22px; padding: 20px 0 4px; border-top: 1px solid rgba(244,239,228,.14); text-align: center; }
+.price-normal { font-size: .88rem; color: var(--muted); }
+.price-now { font-size: clamp(2.4rem, 11vw, 3.1rem); font-weight: 900; letter-spacing: -.04em; color: var(--gold-soft); line-height: 1.2; margin: 6px 0; }
+.price-until { font-size: .88rem; }
+
+/* 11 */
+.last-cta { text-align: center; }
+.last-cta p { font-size: 1rem; margin-bottom: 10px; }
+.last-cta .btn-primary { margin-top: 22px; }
+
+/* 12. FAQ */
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 16px 30px 16px 0; position: relative;
+  font-weight: 700; font-size: .96rem;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 13px; color: var(--gold-soft); font-size: 1.3rem; font-weight: 400; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { padding: 0 0 16px; font-size: .93rem; }
+.faq summary:focus-visible, .btn-primary:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+
+.foot { margin-top: 56px; text-align: center; font-size: .76rem; color: var(--muted-2); }
+
+@media (max-width: 600px) {
+  .wrap { padding-top: 28px; }
+  .brand { margin-bottom: 20px; }
+  .block, .block-panel, .fit, .price { margin-top: 44px; }
+  .panel { padding: 24px 20px; }
+  .pain-card, .topic { padding: 20px; }
+}
+
+/* Tombol: line-height bawaan body (1.75) bikin tombol dua baris kegedean. */
+.btn-primary { line-height: 1.4; }
+.price-normal .ph { white-space: normal; }
+
+/* Halaman ini punya banyak panel. backdrop-filter di tiap panel + aura
+   position:fixed bikin browser (terutama Chrome/Safari HP) gagal ngegambar
+   sebagian layar pas scroll, jadi ada bagian yang kosong/kepotong. Latar
+   panel udah 80% pekat, jadi blur-nya dimatiin aja di halaman ini. */
+.panel { -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* ============ VISUAL (v1.6) ============ */
+/* Stickman di kartu rasa sakit: digambar dari rig S56 (herk-edit-kit),
+   statis, latar transparan biar nyatu sama panel. */
+.pain-art { display: block; width: 100%; height: auto; margin: -4px 0 12px; }
+
+/* Foto Nicho: bukti "dari cowo" di section offer. */
+.author { display: flex; align-items: center; gap: 14px; margin: 0 0 20px; }
+.author img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(224,200,143,.55); }
+.author figcaption { font-weight: 700; font-size: .95rem; line-height: 1.4; }
+.author figcaption span { display: block; font-weight: 500; font-size: .82rem; color: var(--muted); }
+
+/* Chat mockup di dream outcome: adegan pertama dibikin keliatan. */
+.chat {
+  max-width: 340px; margin: 0 auto 28px; padding: 14px 14px 16px;
+  background: #140405; border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(0,0,0,.4);
+}
+.chat-head { display: flex; align-items: center; gap: 9px; padding: 0 4px 12px; margin-bottom: 12px; border-bottom: 1px solid var(--line); font-size: .78rem; font-weight: 700; color: var(--muted); }
+.chat-ava { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, #6e3337, #2c0c0e); border: 1px solid var(--line); }
+.chat .bub {
+  width: fit-content; max-width: 85%; margin: 0 0 8px; padding: 9px 13px;
+  background: #34100f; border-radius: 16px 16px 16px 4px;
+  font-size: .86rem; line-height: 1.45; color: #f4efe4;
+}
+.chat-q { margin: 14px 4px 0; font-size: .82rem; font-weight: 700; color: var(--gold-soft); text-align: right; }
+
+/* Mockup produk di harga: HP (video) + lembar workbook. */
+.mock { position: relative; height: 270px; margin: 8px 0 22px; }
+.mock-phone {
+  position: absolute; left: 6%; top: 0; width: 56%; max-width: 230px; padding: 10px 10px 16px;
+  background: #0f0304; border: 2px solid #57272a; border-radius: 24px;
+  box-shadow: 0 18px 36px rgba(0,0,0,.5); z-index: 1;
+}
+.mock-video {
+  position: relative; aspect-ratio: 16/10; border-radius: 14px;
+  background: radial-gradient(120% 120% at 30% 20%, #6e3337, #2c0c0e 70%);
+}
+.mock-play { position: absolute; left: 50%; top: 50%; width: 42px; height: 42px; margin: -21px 0 0 -21px; border-radius: 50%; background: rgba(224,200,143,.92); }
+.mock-play::after { content: ""; position: absolute; left: 17px; top: 13px; border-left: 13px solid #1f0809; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.mock-title { margin: 12px 4px 0; font-size: .8rem; font-weight: 800; color: #f4efe4; line-height: 1.35; }
+.mock-sub { margin: 2px 4px 0; font-size: .68rem; color: var(--muted); }
+.mock-bar { height: 4px; margin: 12px 4px 0; border-radius: 2px; background: #34100f; }
+.mock-bar i { display: block; width: 38%; height: 100%; border-radius: 2px; background: var(--gold-soft); }
+.mock-book {
+  position: absolute; right: 4%; top: 46px; width: 46%; max-width: 200px; min-height: 200px; padding: 16px 14px;
+  background: #f4efe4; border-radius: 6px; transform: rotate(4deg);
+  box-shadow: 0 18px 36px rgba(0,0,0,.45);
+}
+.mock-kick { font-size: .58rem; font-weight: 800; letter-spacing: .16em; color: #842421; }
+.mock-q { margin: 8px 0 12px; font-size: .74rem; font-weight: 700; line-height: 1.4; color: #1f0809; }
+.mock-book i { display: block; height: 1px; margin: 16px 0 0; background: rgba(31,8,9,.25); }
+.mock figcaption { position: absolute; left: 0; right: 0; bottom: -4px; text-align: center; font-size: .72rem; color: var(--muted); }
+/* Lembar workbook ketutup HP di sisi kiri, jadi teksnya digeser ke kanan. */
+.mock-phone { left: 2%; width: 52%; }
+.mock-book { right: 0; width: 52%; padding-left: 30px; }
+
+/* Foto candid (portrait 4:5): wajahnya di sepertiga atas. */
+.author img { object-position: 50% 22%; }
+
+/* Foto author versi gede: kartu 4:5, bukan avatar bulat. */
+.author { gap: 18px; align-items: flex-end; }
+.author img {
+  width: 42%; max-width: 200px; height: auto; aspect-ratio: 4 / 5;
+  border-radius: 10px; object-position: 50% 30%;
+  box-shadow: 0 14px 30px rgba(0,0,0,.45);
+}
+.author figcaption { font-size: 1.05rem; padding-bottom: 6px; }
+.author img { flex: 0 0 auto; width: 150px; height: 188px; max-width: none; }
+/* Pertanyaan workbook versi panjang: kartunya ikut tinggi, mockup dikasih ruang. */
+.mock { height: 320px; }
+.mock-q { font-size: .7rem; line-height: 1.45; }
+.mock-book i { margin-top: 12px; }
+
+/* Author v3: foto selebar panel, nama nempel di atas foto (bukan ngambang
+   di samping). Nama jadi caption foto, jadi keliatan nyatu. */
+.author { position: relative; display: block; margin: 0 0 22px; border-radius: 10px; overflow: hidden; box-shadow: 0 14px 30px rgba(0,0,0,.45); }
+.author img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; max-width: none; border: 0; border-radius: 0; box-shadow: none; object-fit: cover; object-position: 50% 28%; }
+.author figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 44px 18px 14px;
+  background: linear-gradient(transparent, rgba(16,4,5,.88));
+  font-size: 1rem; line-height: 1.3; color: #f4efe4;
+}
+.author figcaption span { display: inline; margin-left: 4px; color: var(--gold-soft); font-size: .85rem; }
+
+/* Author v4: crop atas lebih rapet, tangan (lagi gestur jelasin) ga kepotong.
+   Nama pindah ke strip di bawah foto biar gradasinya ga nutup tangan. */
+.author img { aspect-ratio: 10 / 9; object-position: 50% 46%; }
+.author figcaption { position: static; padding: 12px 16px; background: #140405; }
+/* Author v5: file fotonya udah di-crop dengan badan pas di tengah, jadi
+   tampil apa adanya tanpa crop CSS lagi. */
+.author img { aspect-ratio: 976 / 960; object-position: 50% 50%; }
