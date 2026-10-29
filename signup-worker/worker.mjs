@@ -86,7 +86,11 @@ export default {
         tags: { [TAG]: true }
         })
       });
-      return result.ok ? reply(200, { ok: true }) : reply(502, { error: 'provider' });
+      if (result.ok) return reply(200, { ok: true });
+      // Field lain sudah divalidasi di atas, jadi 400/422 dari EmailOctopus
+      // praktis berarti alamat email ditolak (mis. typo domain gmail.con).
+      if (result.status === 400 || result.status === 422) return reply(422, { error: 'email' });
+      return reply(502, { error: 'provider' });
     } catch (_) {
       return reply(502, { error: 'provider' });
     }

@@ -47,6 +47,9 @@
         body: JSON.stringify({ firstName: firstName, email: email, gender: gender,
           instagram: instagram, datingPain: datingPain, website: form.elements.website.value })
       });
+      if (response.status === 422) {
+        return fail('Email kamu ditolak. Cek lagi ejaannya, misalnya gmail.com bukan gmail.con.');
+      }
       if (!response.ok) throw new Error('signup failed');
       window.location.assign('./thanks.html');
     } catch (_) {

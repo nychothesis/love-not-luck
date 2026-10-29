@@ -72,7 +72,19 @@ test('invalid and cross-origin submissions do not call EmailOctopus', async () =
 
 test('provider failure never claims success', async () => {
   const original = globalThis.fetch;
-  globalThis.fetch = async () => new Response(JSON.stringify({ code: 'INVALID_PARAMETERS' }), { status: 400 });
+  globalThis.fetch = async () => new Response('{}', { status: 500 });
   try { assert.equal((await worker.fetch(request(), env)).status, 502); }
   finally { globalThis.fetch = original; }
+});
+
+test('email rejected by provider is reported as an email problem', async () => {
+  const original = globalThis.fetch;
+  try {
+    for (const status of [400, 422]) {
+      globalThis.fetch = async () => new Response(JSON.stringify({ code: 'INVALID_PARAMETERS' }), { status });
+      const response = await worker.fetch(request(), env);
+      assert.equal(response.status, 422);
+      assert.deepEqual(await response.json(), { error: 'email' });
+    }
+  } finally { globalThis.fetch = original; }
 });
