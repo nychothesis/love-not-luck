@@ -49,3 +49,20 @@
 .hero-author p { margin: 0; font-size: .9rem; line-height: 1.6; }
 .hero-author strong { display: block; color: #f4efe4; font-weight: 700; }
 .hero-author span { display: block; font-size: .75rem; color: #bca59b; }
+
+/* OTO replaces the dated pre-order strip. */
+.oto-bar { padding: 22px 20px 24px; background: #781d2d; border-bottom: 1px solid #a54355; box-shadow: none; color: #fff8f3; }
+.oto-bar p { max-width: 680px; margin: 0 auto 7px; font-size: .95rem; line-height: 1.5; font-weight: 600; }
+.oto-bar strong { display: block; max-width: 680px; margin: 0 auto; font-size: clamp(1.25rem, 4.6vw, 1.8rem); line-height: 1.25; font-weight: 900; letter-spacing: -.025em; text-wrap: balance; }
+
+/* Mobile: avoid fixed animated layers while Safari resizes its scroll viewport. */
+@media (max-width: 640px) {
+  body {
+    background-color: #170506;
+    background-image: radial-gradient(ellipse 1100px 720px at 78% 0, #561a1e 0%, #32100f 46%, #170506 100%);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: 100% 900px;
+  }
+  .aura { display: none; }
+}
