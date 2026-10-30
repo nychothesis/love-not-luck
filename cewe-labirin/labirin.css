@@ -42,3 +42,10 @@
 
 /* The mask needs its own tight composition to remain readable on mobile. */
 .pain-visual-1 img { width: 100%; height: 100%; object-fit: cover; transform: none; }
+
+/* Approved charcoal portrait, directly below the labyrinth, without a prefix. */
+.hero-author { display: flex; align-items: center; gap: 13px; margin: 20px 0; }
+.hero-author img { display: block; width: 76px; height: 86px; flex: 0 0 auto; object-fit: cover; object-position: 50% 35%; border-radius: 8px; }
+.hero-author p { margin: 0; font-size: .9rem; line-height: 1.6; }
+.hero-author strong { display: block; color: #f4efe4; font-weight: 700; }
+.hero-author span { display: block; font-size: .75rem; color: #bca59b; }
