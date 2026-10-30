@@ -39,3 +39,6 @@
   .lockup-subsub { font-size: .86rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* The mask needs its own tight composition to remain readable on mobile. */
+.pain-visual-1 img { width: 100%; height: 100%; object-fit: cover; transform: none; }

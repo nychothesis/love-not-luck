@@ -4,6 +4,11 @@ Halaman opt-in buat lead magnet gratis flagship **Love, Not Luck** (program
 gabungan narik + milih orang yang tepat, netral gender). Halaman publik buat
 konversi, jadi copy-nya sensitif: jangan diubah tanpa diminta.
 
+Setiap revisi copy atau keputusan LP yang disetujui Nicho wajib ikut
+disinkronkan ke master Notion "🤍 LP Love, Not Luck". Bedakan keputusan
+final dari konsep yang masih dieksplorasi. Kalau akses Notion belum tersedia,
+catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
+
 > Untuk pekerjaan user-facing yang menyentuh brand, baca `../BRAND.md` dulu.
 > Aturan universal berlaku dari `../AGENTS.md`.
 
