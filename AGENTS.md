@@ -56,8 +56,9 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 - Lead magnet (2026-10-06): **ebook pendek Peta Zaman**, judul kerja "Bukan
   Salah Hoki: Kenapa Dapet Pasangan yang Tepat Berasa Makin Susah Zaman
   Sekarang". Self-test dibuang. Ebook belum dibuat, jadi link jangan disebar.
-- `WA_LINK` di `thanks.html` sementara pakai grup WA webinar Paradoxical Man
-  (keputusan Nicho 2026-10-06). Ganti kalau nanti ada grup khusus Love, Not Luck.
+- `WA_LINK` di `thanks.html` dan `cewe-mokondo/thanks.html` memakai link grup
+  yang sama. Per Nicho 2026-11-01 itu grup khusus Love, Not Luck (±170 orang),
+  bukan lagi grup webinar Paradoxical Man (keputusan sementara 2026-10-06).
 - Copy hero diputuskan Nicho (2026-10-06): subtitle "Cara Narik & Dapetin
   Pasangan yang Tepat, Tanpa Ngandalin Hoki", sub-subtitle badge "Bukan ebook
   dating biasa. Psikologi & filosofi yang legit, plus pengalaman nyata gw"
