@@ -29,9 +29,19 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   sudah dicek setelah push GitHub Pages.
 - List `Love, Not Luck` memakai tag `lm-cewe-mokondo`. Field wajib: email,
   nama, username IG, gender (Cowo lalu Cewe), dan "Masalah dating utama"
-  versi umum LNL. Setelah submit sukses, pembaca masuk ke
+  versi umum LNL. Setelah submit sukses, pembaca masuk ke halaman OTO
+  `cewe-labirin/` (sejak 2026-11-02). Dari OTO: beli lewat checkout OrderHero,
+  atau link skip "Nanti dulu, aku ambil guide gratisnya dulu" ke
   `cewe-mokondo/thanks.html`, lalu ke grup WhatsApp. Link ebook hanya ada di
   deskripsi grup.
+- Checkout (2026-11-02): OrderHero toko `nychothesis.orderhero.id`, produk
+  "Love, Not Luck (Pre-order)" Rp397rb, Form Order
+  `https://nychothesis.orderhero.id/form/form-order-love-not-luck`, kupon
+  `LNLPO` −Rp100rb berlaku sampai 10 Des 2026 (= akhir pre-order = rilis
+  materi). Biaya transaksi dibayar pembeli (termasuk platform fee 5% Free
+  Plan). Konten digital = link grup WA pembeli + link grup LM di instruksi.
+  Satu halaman jualan (OTO) dipakai buat semua traffic; grup LM dikasih kode
+  yang sama lewat pesan.
 - Form mini ebook memakai satu pilihan masalah utama: "Jarang ketemu kenalan
   baru yang potensial", "Suka sama seseorang, tapi dia ga tertarik balik", atau
   "Suka dapet orang yang salah". Pilihan di form, validasi Worker, dan field
@@ -44,7 +54,8 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 | `thanks.html` | "Cek email lu" setelah submit. |
 | `cewe-mokondo/index.html` | LP khusus mini ebook cewe. Copy dan visual mengikuti tema maroon LP utama. |
 | `cewe-mokondo/thanks.html` | Setelah daftar, arahkan ke grup WhatsApp. Link mini ebook hanya ada di deskripsi grup, bukan di LP atau halaman ini. |
-| `cewe/index.html` | Draft sales page pre-order Love, Not Luck khusus cewe (Rp287rb), `noindex`. Master copy di Notion "🤍 LP Love, Not Luck"; HTML ngikut copy di sana. Placeholder `.ph` (tanggal, harga normal, platform) belum diisi, tombol CTA masih loncat ke `#harga` sampai link checkout ada. Stickman `img/pain-*.svg` digambar dari rig S56 (`herk-edit-kit/tools/nychothesis-editor/stick-rig.mjs`). Blur panel sengaja dimatiin di sini karena bikin halaman kepotong pas scroll. |
+| `cewe-labirin/index.html` | **Halaman OTO/jualan aktif** (banner "PENAWARAN EXCLUSIVE"), `noindex`. Harga Rp297rb via kode LNLPO, coret Rp397rb, value stack sementara total Rp3jt (nunggu konsul mentor), rilis 10 Des 2026. Tombol "Ambil" ke checkout OrderHero, tombol "Amankan" scroll ke `#harga`. Platform materi: LMS OrderHero (MemberHero), video bisa upload Loom. File `_*.html` = sampel review desain. |
+| `cewe/index.html` | Draft lama (sebelum versi labirin) sales page pre-order Love, Not Luck khusus cewe (Rp297rb, normal Rp397rb), `noindex`. Master copy di Notion "🤍 LP Love, Not Luck"; HTML ngikut copy di sana. Placeholder `.ph` (tanggal, value stack, platform) belum diisi, tombol CTA masih loncat ke `#harga` sampai link checkout ada. Stickman `img/pain-*.svg` digambar dari rig S56 (`herk-edit-kit/tools/nychothesis-editor/stick-rig.mjs`). Blur panel sengaja dimatiin di sini karena bikin halaman kepotong pas scroll. |
 | `signup-worker/` | Backend form custom mini ebook cewe. Validasi data lalu simpan ke list EmailOctopus dengan tag `lm-cewe-mokondo`. API key disimpan sebagai Cloudflare Worker secret. |
 | `funnel.css` | Style bersama, hasil salinan funnel Paradoxical Man. Hero mengikuti pola poster `webinar.html` (judul + subtitle jadi satu heading besar di kartu poster), tapi tanpa foto: visualnya radar chart SVG. |
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
@@ -79,4 +90,4 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 - Jangan janjiin hal yang bergantung ke orang lain ("pasti dapet pasangan").
   Janji cuma yang bisa dikendaliin pembaca.
 - Detail diskusi dan keputusan ada di vault
-  `2 - Projects/Nychothesis/🤍 Love, Not Luck.md`.
+  `1 - Projects/Nychothesis/🤍 Love, Not Luck.md`.
