@@ -51,7 +51,7 @@
         return fail('Email kamu ditolak. Cek lagi ejaannya, misalnya gmail.com bukan gmail.con.');
       }
       if (!response.ok) throw new Error('signup failed');
-      window.location.assign('../cewe-labirin/');
+      window.location.assign('../pre-order/');
     } catch (_) {
       fail('Data belum tersimpan. Coba lagi sebentar lagi.');
     }
