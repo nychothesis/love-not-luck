@@ -78,3 +78,34 @@
   text-underline-offset: 3px;
 }
 .oto-skip:hover { color: var(--gold-soft); }
+
+/* Jadwal rilis: badge, biar tanggalnya kebaca. */
+.schedule {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 8px 16px;
+  border: 1px solid rgba(224, 200, 143, .45);
+  border-radius: 999px;
+  font-size: .95rem;
+  color: var(--text);
+  background: rgba(224, 200, 143, .08);
+}
+.schedule b { color: var(--gold-soft); }
+
+/* Kode voucher: gede, gampang disalin. */
+.voucher { margin: 14px auto 10px; }
+.voucher-label { font-size: .95rem; color: var(--text); margin-bottom: 8px; }
+.voucher-code {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 10px 12px 10px 20px;
+  border: 2px dashed var(--gold-soft); border-radius: 12px;
+  background: rgba(224, 200, 143, .1);
+  color: var(--gold-soft); font: inherit; cursor: pointer;
+}
+.voucher-text { font-size: 1.6rem; font-weight: 900; letter-spacing: .14em; }
+.voucher-copy {
+  padding: 6px 12px; border-radius: 8px;
+  background: var(--gold-soft); color: #1f0809;
+  font-size: .82rem; font-weight: 700;
+}
+.voucher-code:hover .voucher-copy { filter: brightness(1.08); }

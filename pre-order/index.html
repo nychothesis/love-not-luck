@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../funnel.css?v=20261006c">
   <link rel="stylesheet" href="../theme-maroon.css?v=20261006c">
   <link rel="stylesheet" href="../cewe/sales.css?v=20261029e">
-  <link rel="stylesheet" href="./labirin.css?v=20261102a">
+  <link rel="stylesheet" href="./labirin.css?v=20261102b">
 </head>
 <body>
   <!-- Teks dalam .ph = placeholder yang belum diputusin Nicho (tanggal, harga
@@ -184,7 +184,7 @@
           </ul>
         </div>
       </div>
-      <p class="schedule">Jadwal rilis: 10 Desember 2026</p>
+      <p class="schedule">Jadwal rilis: <b>10 Desember 2026</b></p>
       <a class="btn-primary mid-cta" href="#harga">Amankan harga pre-order</a>
     </section>
 
@@ -279,7 +279,13 @@
         <p class="price-normal">Harga normal setelah pre-order: <s>Rp397.000</s></p>
         <p class="price-label">Harga founding member</p>
         <p class="price-now">Rp297.000</p>
-        <p class="price-until">Pakai kode voucher <b>LNLPO</b> pas checkout. Penawaran khusus untuk kali ini aja.</p>
+        <div class="voucher">
+          <p class="voucher-label">Pakai kode voucher ini pas checkout:</p>
+          <button type="button" class="voucher-code" data-code="LNLPO" aria-label="Salin kode voucher LNLPO">
+            <span class="voucher-text">LNLPO</span><span class="voucher-copy">Salin</span>
+          </button>
+        </div>
+        <p class="price-until">Penawaran khusus untuk kali ini aja.</p>
       </div>
       <a class="btn-primary" href="https://nychothesis.orderhero.id/form/form-order-love-not-luck">Ambil Love, Not Luck sekarang (Rp297rb)</a>
       <a class="oto-skip" href="../cewe-mokondo/thanks.html">Nanti dulu, aku ambil guide gratisnya dulu</a>
@@ -323,5 +329,20 @@
 
     <footer class="foot">© Nychothesis · Love, Not Luck</footer>
   </main>
+  <script>
+    document.querySelectorAll('.voucher-code').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var code = btn.dataset.code, label = btn.querySelector('.voucher-copy');
+        function done() { label.textContent = 'Tersalin ✓'; setTimeout(function () { label.textContent = 'Salin'; }, 2000); }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(code).then(done, fallback);
+        } else { fallback(); }
+        function fallback() {
+          var ta = document.createElement('textarea'); ta.value = code; document.body.appendChild(ta);
+          ta.select(); try { document.execCommand('copy'); done(); } catch (_) {} ta.remove();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
