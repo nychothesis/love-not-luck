@@ -36,7 +36,7 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   deskripsi grup.
 - Checkout (2026-11-02): OrderHero toko `nychothesis.orderhero.id`, produk
   "Love, Not Luck (Pre-order)" Rp397rb, Form Order
-  `https://nychothesis.orderhero.id/form/form-order-love-not-luck`, kupon
+  lama `https://nychothesis.orderhero.id/form/form-order-love-not-luck`, kupon
   `LNLPO` −Rp100rb berlaku sampai 10 Des 2026 (= akhir pre-order = rilis
   materi). Biaya transaksi dibayar pembeli (termasuk platform fee 5% Free
   Plan). Konten digital = link grup WA pembeli + link grup LM di instruksi.
@@ -51,6 +51,16 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   guide gratis berbingkai dan teks terbaca, menuju `cewe-mokondo/thanks.html`.
   Mengikuti masukan Mike yang dikirim Nicho. Sinkron master Notion masih tertunda
   karena koneksi Notion belum tersedia di sesi ini.
+
+- Checkout LMS (2026-11-03): kelas MemberHero `CLS-26683ZPE` aktif, harga
+  Rp397rb sekali bayar. Checkout aktif baru:
+  `https://nychothesis.orderhero.id/form/love-not-luck-kelas`. Tombol beli
+  `pre-order/index.html` mengarah ke sini. Enrollment otomatis + email
+  kredensial aktif; WA otomatis nonaktif. Modul sambutan memuat tanggal rilis
+  10 Des 2026 dan link grup pembeli. Kupon LNLPO mencakup produk lama DAN
+  kelas, diuji di checkout kelas: total QRIS Rp313.929 setelah diskon.
+  Belum dites transaksi nyata / penerimaan email / login pembeli. Produk dan
+  form lama tidak dihapus. Detail kelanjutan: `HANDOFF.md`.
 
 ## Halaman
 | File | Fungsi |
