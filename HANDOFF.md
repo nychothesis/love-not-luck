@@ -16,8 +16,9 @@ plan berbayar atau melakukan pembayaran tanpa otorisasi transaksi.
   extension Chrome diaktifkan sendiri oleh Nicho.
 - Enrollment otomatis dan email kredensial aktif, WA sambutan dimatikan dan
   tersimpan. Tab Automation berhasil menampilkan Settings saved.
-- Modul Mulai di sini, satu pelajaran teks Selamat datang di Love, Not Luck,
-  berisi rilis 10 Desember 2026 dan link WA pembeli. Tersimpan. Materi utama
+- Modul Mulai di sini, satu pelajaran Custom HTML Selamat datang di Love, Not Luck,
+  berisi rilis 10 Desember 2026 dan tombol WA pembeli. Tersimpan dan dibuka
+  ulang setelah reload; preview iframe menampilkan isi dan hyperlink benar. Materi utama
   belum tersedia dan tidak dibuatkan materi palsu.
 - Form kelas 6ae9b4125a79a48b4bfdcef4, URL
   https://nychothesis.orderhero.id/form/love-not-luck-kelas dapat diakses publik.
@@ -32,8 +33,7 @@ plan berbayar atau melakukan pembayaran tanpa otorisasi transaksi.
 ## Sisa verifikasi
 - Belum ada transaksi nyata, jadi email akses, enrollment pascabayar, login
   siswa, dan pemutaran materi belum terbukti end-to-end. Jangan klaim tuntas.
-- Cek tampilan siswa, klik link WA dari materi; teks link mungkin perlu
-  dijadikan lampiran tautan atau hyperlink bila editor tidak otomatis menautkan.
+- Preview pelajaran terverifikasi, login siswa sebenarnya belum diuji.
 - Halaman terima kasih checkout belum dikustomisasi.
 - Sinkron master Notion tertunda: connector Notion tidak tersedia.
 - Link LP diubah ke checkout kelas; cek commit/deploy terbaru sebelum lanjut.
