@@ -59,7 +59,8 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   kredensial aktif; WA otomatis nonaktif. Modul sambutan memuat tanggal rilis
   10 Des 2026 dan link grup pembeli. Kupon LNLPO mencakup produk lama DAN
   kelas, diuji di checkout kelas: total QRIS Rp313.929 setelah diskon.
-  Belum dites transaksi nyata / penerimaan email / login pembeli. Produk dan
+  Tes checkout gratis Rp0 3 Nov 2026 berhasil: email akses diterima, login
+  siswa dan halaman sambutan lolos. QRIS berbayar belum diuji. Produk dan
   form lama tidak dihapus. Detail kelanjutan: `HANDOFF.md`.
 
 ## Halaman

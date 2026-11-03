@@ -31,9 +31,16 @@ plan berbayar atau melakukan pembayaran tanpa otorisasi transaksi.
 - Bukti screenshot /tmp/lnl-checkout-kelas.png (sementara).
 
 ## Sisa verifikasi
-- Belum ada transaksi nyata, jadi email akses, enrollment pascabayar, login
-  siswa, dan pemutaran materi belum terbukti end-to-end. Jangan klaim tuntas.
-- Preview pelajaran terverifikasi, login siswa sebenarnya belum diuji.
+- Tes checkout gratis Rp0 berhasil 3 Nov 2026 pukul 18:03 WIB, order
+  FO2639CQR5JA. Voucher privat 100% khusus kelas, total limit 1.
+  Email pesanan dan Selamat! Akses Kelas Aktif diterima di email tes pilihan
+  Nicho. Login memakai kredensial yang diberikan di halaman akses berhasil,
+  dashboard menunjukkan 1 kelas dan sambutan + hyperlink WA tampil.
+  Bukti /tmp/lnl-tes-pembeli.png. Jangan simpan password/link akses bearer.
+  Voucher tes tidak muncul lagi di daftar kupon setelah dipakai dan reload.
+  Pembayaran QRIS berbayar (callback/payment gateway) dan pemutaran video
+  belum diuji; materi utama belum ada.
+- Preview dan login siswa sebenarnya sudah diuji dengan pembelian gratis.
 - Halaman terima kasih checkout belum dikustomisasi.
 - Sinkron master Notion tertunda: connector Notion tidak tersedia.
 - Link LP diubah ke checkout kelas; cek commit/deploy terbaru sebelum lanjut.
