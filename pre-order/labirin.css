@@ -70,14 +70,23 @@
 /* Jalan keluar OTO: ke thanks page LM (link guide gratis ada di grup WA). */
 .oto-skip {
   display: block;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
   margin: 14px auto 0;
+  padding: 14px 22px;
+  border: 1px solid rgba(224, 200, 143, .55);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .04);
   text-align: center;
-  font-size: 0.9rem;
-  color: var(--muted);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+  text-decoration: none;
 }
-.oto-skip:hover { color: var(--gold-soft); }
+.oto-skip:hover { background: rgba(224, 200, 143, .12); border-color: var(--gold-soft); }
+.oto-skip:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
 
 /* Jadwal rilis: badge, biar tanggalnya kebaca. */
 .schedule {

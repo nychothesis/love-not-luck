@@ -47,6 +47,11 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   "Suka dapet orang yang salah". Pilihan di form, validasi Worker, dan field
   EmailOctopus `MasalahDatingUtama` harus tetap sama.
 
+- CTA OTO (2026-11-03): setiap enam lokasi tombol penawaran disertai tombol
+  guide gratis berbingkai dan teks terbaca, menuju `cewe-mokondo/thanks.html`.
+  Mengikuti masukan Mike yang dikirim Nicho. Sinkron master Notion masih tertunda
+  karena koneksi Notion belum tersedia di sesi ini.
+
 ## Halaman
 | File | Fungsi |
 |---|---|
