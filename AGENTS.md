@@ -30,7 +30,7 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 - List `Love, Not Luck` memakai tag `lm-cewe-mokondo`. Field wajib: email,
   nama, username IG, gender (Cowo lalu Cewe), dan "Masalah dating utama"
   versi umum LNL. Setelah submit sukses, pembaca masuk ke halaman OTO
-  `pre-order/` (sejak 2026-11-02; `cewe-labirin/` sekarang cuma redirect ke sana). Dari OTO: beli lewat checkout OrderHero,
+  `one-time-offer/` (sejak 2026-11-04; `cewe-labirin/` sekarang cuma redirect ke sana). Dari OTO: beli lewat checkout OrderHero,
   atau link skip "Nanti dulu, aku ambil guide gratisnya dulu" ke
   `cewe-mokondo/thanks.html`, lalu ke grup WhatsApp. Link ebook hanya ada di
   deskripsi grup.
@@ -40,7 +40,7 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   `LNLPO` −Rp100rb berlaku sampai 10 Des 2026 (= akhir pre-order = rilis
   materi). Biaya transaksi dibayar pembeli (termasuk platform fee 5% Free
   Plan). Konten digital = link grup WA pembeli + link grup LM di instruksi.
-  Satu halaman jualan (OTO) dipakai buat semua traffic; grup LM dikasih kode
+  Halaman OTO untuk traffic setelah opt-in; pre-order tanpa banner untuk CTA konten; grup LM dikasih kode
   yang sama lewat pesan.
 - Form mini ebook memakai satu pilihan masalah utama: "Jarang ketemu kenalan
   baru yang potensial", "Suka sama seseorang, tapi dia ga tertarik balik", atau
@@ -55,7 +55,7 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 - Checkout LMS (2026-11-03): kelas MemberHero `CLS-26683ZPE` aktif, harga
   Rp397rb sekali bayar. Checkout aktif baru:
   `https://nychothesis.orderhero.id/form/love-not-luck-kelas`. Tombol beli
-  `pre-order/index.html` mengarah ke sini. Enrollment otomatis + email
+  `pre-order/index.html` dan `one-time-offer/index.html` mengarah ke sini. Enrollment otomatis + email
   kredensial aktif; WA otomatis nonaktif. Modul sambutan memuat tanggal rilis
   10 Des 2026 dan link grup pembeli. Kupon LNLPO mencakup produk lama DAN
   kelas, diuji di checkout kelas: total QRIS Rp313.929 setelah diskon.
@@ -70,7 +70,7 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 | `thanks.html` | "Cek email lu" setelah submit. |
 | `cewe-mokondo/index.html` | LP khusus mini ebook cewe. Copy dan visual mengikuti tema maroon LP utama. |
 | `cewe-mokondo/thanks.html` | Setelah daftar, arahkan ke grup WhatsApp. Link mini ebook hanya ada di deskripsi grup, bukan di LP atau halaman ini. |
-| `pre-order/index.html` | **Halaman OTO/jualan aktif** (dulu `cewe-labirin/`, yang sekarang tinggal redirect) (banner "PENAWARAN EXCLUSIVE"), `noindex`. Harga Rp297rb via kode LNLPO, coret Rp397rb, value stack sementara total Rp3jt (nunggu konsul mentor), rilis 10 Des 2026. Tombol "Ambil" ke checkout OrderHero, tombol "Amankan" scroll ke `#harga`. Platform materi: LMS OrderHero (MemberHero), video bisa upload Loom. File `_*.html` = sampel review desain. |
+| `one-time-offer/index.html` | **Halaman OTO/jualan aktif** (dulu `cewe-labirin/`, yang sekarang tinggal redirect) (banner "PENAWARAN EXCLUSIVE"), `noindex`. Harga Rp297rb via kode LNLPO, coret Rp397rb, value stack sementara total Rp3jt (nunggu konsul mentor), rilis 10 Des 2026. Tombol "Ambil" ke checkout OrderHero, tombol "Amankan" scroll ke `#harga`. Platform materi: LMS OrderHero (MemberHero), video bisa upload Loom. File `_*.html` = sampel review desain. |
 | `cewe/index.html` | Draft lama (sebelum versi labirin) sales page pre-order Love, Not Luck khusus cewe (Rp297rb, normal Rp397rb), `noindex`. Master copy di Notion "🤍 LP Love, Not Luck"; HTML ngikut copy di sana. Placeholder `.ph` (tanggal, value stack, platform) belum diisi, tombol CTA masih loncat ke `#harga` sampai link checkout ada. Stickman `img/pain-*.svg` digambar dari rig S56 (`herk-edit-kit/tools/nychothesis-editor/stick-rig.mjs`). Blur panel sengaja dimatiin di sini karena bikin halaman kepotong pas scroll. |
 | `signup-worker/` | Backend form custom mini ebook cewe. Validasi data lalu simpan ke list EmailOctopus dengan tag `lm-cewe-mokondo`. API key disimpan sebagai Cloudflare Worker secret. |
 | `funnel.css` | Style bersama, hasil salinan funnel Paradoxical Man. Hero mengikuti pola poster `webinar.html` (judul + subtitle jadi satu heading besar di kartu poster), tapi tanpa foto: visualnya radar chart SVG. |
@@ -107,3 +107,8 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   Janji cuma yang bisa dikendaliin pembaca.
 - Detail diskusi dan keputusan ada di vault
   `1 - Projects/Nychothesis/🤍 Love, Not Luck.md`.
+
+## Pemisahan jalur (2026-11-04)
+- `/one-time-offer/`: halaman OTO semula, banner eksklusif tetap ada. Signup guide dan redirect lama `/cewe-labirin/` menuju ke sini.
+- `/pre-order/`: landing page untuk link DM dari CTA konten. Satu-satunya perbedaan isi adalah banner eksklusif atas dihapus; harga, checkout, tombol guide gratis, dan copy lain tetap sama. Aset/CSS bersama berada di `pre-order/`.
+- Sinkron master Notion "🤍 LP Love, Not Luck" tertunda karena koneksi Notion tidak tersedia.

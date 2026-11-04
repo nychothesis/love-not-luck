@@ -46,3 +46,8 @@ plan berbayar atau melakukan pembayaran tanpa otorisasi transaksi.
 - Link LP diubah ke checkout kelas; cek commit/deploy terbaru sebelum lanjut.
 - Keputusan akses lifetime belum dibahas khusus: UI one-time payment menyebut
   lifetime access. Jangan menambah janji durasi di copy publik.
+
+## Update funnel 4 November 2026
+- Permintaan Nicho: OTO pindah ke `/love-not-luck/one-time-offer/`; `/love-not-luck/pre-order/` dipakai untuk link DM dari CTA konten, hanya tanpa banner eksklusif atas.
+- Signup guide dan redirect `/cewe-labirin/` sekarang ke OTO. Harga, checkout, dan semua copy/tombol lain dipertahankan. CSS/gambar OTO memakai aset bersama di `pre-order/`.
+- Patch master Notion tertunda (koneksi tidak tersedia): catat dua URL dan perbedaan banner ini di "🤍 LP Love, Not Luck".
