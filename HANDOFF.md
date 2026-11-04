@@ -51,3 +51,5 @@ plan berbayar atau melakukan pembayaran tanpa otorisasi transaksi.
 - Permintaan Nicho: OTO pindah ke `/love-not-luck/one-time-offer/`; `/love-not-luck/pre-order/` dipakai untuk link DM dari CTA konten, hanya tanpa banner eksklusif atas.
 - Signup guide dan redirect `/cewe-labirin/` sekarang ke OTO. Harga, checkout, dan semua copy/tombol lain dipertahankan. CSS/gambar OTO memakai aset bersama di `pre-order/`.
 - Patch master Notion tertunda (koneksi tidak tersedia): catat dua URL dan perbedaan banner ini di "🤍 LP Love, Not Luck".
+
+- Revisi lanjutan 4 November: keenam tombol "Nanti dulu, aku ambil guide gratisnya dulu" di `/pre-order/` dihapus sesuai permintaan Nicho. Tombol di `/one-time-offer/` tetap ada. Sertakan perubahan ini dalam patch Notion tertunda.

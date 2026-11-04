@@ -110,5 +110,5 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 
 ## Pemisahan jalur (2026-11-04)
 - `/one-time-offer/`: halaman OTO semula, banner eksklusif tetap ada. Signup guide dan redirect lama `/cewe-labirin/` menuju ke sini.
-- `/pre-order/`: landing page untuk link DM dari CTA konten. Satu-satunya perbedaan isi adalah banner eksklusif atas dihapus; harga, checkout, tombol guide gratis, dan copy lain tetap sama. Aset/CSS bersama berada di `pre-order/`.
+- `/pre-order/`: landing page untuk link DM dari CTA konten. Banner eksklusif atas dan keenam tombol guide gratis dihapus; harga, checkout, dan copy lain tetap sama. Tombol guide gratis tetap ada di OTO. Aset/CSS bersama berada di `pre-order/`.
 - Sinkron master Notion "🤍 LP Love, Not Luck" tertunda karena koneksi Notion tidak tersedia.
