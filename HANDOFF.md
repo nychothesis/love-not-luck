@@ -53,3 +53,5 @@ plan berbayar atau melakukan pembayaran tanpa otorisasi transaksi.
 - Patch master Notion tertunda (koneksi tidak tersedia): catat dua URL dan perbedaan banner ini di "🤍 LP Love, Not Luck".
 
 - Revisi lanjutan 4 November: keenam tombol "Nanti dulu, aku ambil guide gratisnya dulu" di `/pre-order/` dihapus sesuai permintaan Nicho. Tombol di `/one-time-offer/` tetap ada. Sertakan perubahan ini dalam patch Notion tertunda.
+
+- Patch Notion tertunda: ganti label “Materi” jadi “Modul video” di kelima item daftar penawaran, untuk kedua versi halaman.
