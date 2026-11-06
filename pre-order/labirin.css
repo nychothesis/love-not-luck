@@ -120,8 +120,8 @@
 .voucher-code:hover .voucher-copy { filter: brightness(1.08); }
 
 .offer-format {
-  display: inline-block;
-  margin: 14px 0 4px;
+  width: fit-content;
+  margin: 14px auto 4px;
   padding: 7px 13px;
   border-radius: 6px;
   background: #e0c37e;
