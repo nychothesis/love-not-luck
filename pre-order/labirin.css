@@ -118,3 +118,14 @@
   font-size: .82rem; font-weight: 700;
 }
 .voucher-code:hover .voucher-copy { filter: brightness(1.08); }
+
+.offer-format {
+  display: inline-block;
+  margin: 14px 0 4px;
+  padding: 7px 13px;
+  border-radius: 6px;
+  background: #e0c37e;
+  color: #2c1114;
+  font-size: .9rem;
+  font-weight: 800;
+}
