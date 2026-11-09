@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="../theme-maroon.css?v=20261006c">
   <link rel="stylesheet" href="../cewe/sales.css?v=20261029e">
   <link rel="stylesheet" href="../pre-order/labirin.css?v=20261109c">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFND4PK6SC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FFND4PK6SC');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="orderhero.id"]');
+      if (a) gtag('event', 'begin_checkout', { link_url: a.href, page: location.pathname });
+    });
+  </script>
 </head>
 <body>
   <!-- Teks dalam .ph = placeholder yang belum diputusin Nicho (tanggal, harga
