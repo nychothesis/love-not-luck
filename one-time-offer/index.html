@@ -360,5 +360,17 @@
       });
     });
   </script>
+  <script>
+    // Jalur webinar: signup webinar redirect ke ?source=webinar. Default (guide) ga berubah.
+    (function () {
+      if (new URLSearchParams(location.search).get('source') !== 'webinar') return;
+      var bar = document.querySelector('.oto-bar p');
+      if (bar) bar.textContent = 'Sebelum masuk grup webinar, aku punya';
+      document.querySelectorAll('a.oto-skip').forEach(function (a) {
+        a.href = '../webinar/thanks.html';
+        a.textContent = 'Nanti dulu, aku ikut webinar gratisnya dulu';
+      });
+    }());
+  </script>
 </body>
 </html>

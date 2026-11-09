@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Webinar gratis Love, Not Luck bareng Nicholas Kristianus (Nychothesis).">
+  <title>Webinar Gratis Love, Not Luck | Nychothesis</title>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-900.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-400.woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="stylesheet" href="../funnel.css?v=20261006c">
+  <link rel="stylesheet" href="../theme-maroon.css?v=20261006c">
+  <link rel="stylesheet" href="../cewe-mokondo/mini-ebook.css?v=20261015e">
+  <!-- .ph = placeholder yang belum diputusin Nicho (judul, tanggal, jam,
+       platform, poin materi). Hapus class-nya kalau isinya udah final. -->
+  <style>
+    .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
+    .webinar-intro { margin: 0 0 22px; }
+    /* mini-ebook.css nyiapin kolom kedua buat cover ebook; webinar ga punya cover. */
+    .form-header { display: block; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFND4PK6SC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FFND4PK6SC');
+  </script>
+</head>
+<body>
+  <div class="aura" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+  <main class="wrap">
+    <div class="brand">
+      <img src="../assets/logo.svg" alt="" width="34" height="34">
+      <div class="brand-name">NYCHO<span>THESIS</span></div>
+    </div>
+
+    <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
+      <span class="eyebrow">Webinar gratis · Live via <span class="ph">Zoom</span></span>
+      <h1 id="hero-title"><span class="ph">Judul webinar</span></h1>
+      <p class="poster-lead"><span class="ph">Subjudul: janji utama webinar dalam satu kalimat.</span></p>
+      <div class="poster-meta">
+        <span class="ph">Hari, tanggal</span>
+        <span class="ph">20.00 WIB</span>
+      </div>
+    </section>
+
+    <p class="sub webinar-intro">Live bareng Nicholas Kristianus (Nychothesis). <span class="ph">Satu-dua kalimat: masalah yang dibahas dan kenapa kamu perlu dateng.</span></p>
+
+    <section class="panel stack" aria-labelledby="dapet-title" style="margin-bottom:22px;">
+      <h2 id="dapet-title">Yang kamu dapet</h2>
+      <ul class="list">
+        <li><span class="ph">Poin materi 1</span></li>
+        <li><span class="ph">Poin materi 2</span></li>
+        <li><span class="ph">Poin materi 3</span></li>
+      </ul>
+    </section>
+
+    <section class="panel form-panel" id="daftar" aria-labelledby="form-title">
+      <div class="form-header">
+        <div>
+          <span class="eyebrow">Gratis</span>
+          <h2 id="form-title">Daftar webinarnya</h2>
+          <p class="form-intro">Isi datamu biar kamu dapet link dan pengingat webinarnya.</p>
+        </div>
+      </div>
+      <form id="webinar-form" novalidate>
+        <div class="field">
+          <label for="first-name">Nama depan</label>
+          <input id="first-name" name="firstName" type="text" placeholder="Nama depanmu" autocomplete="given-name" maxlength="80" required>
+        </div>
+        <div class="field">
+          <label for="email">Email aktif</label>
+          <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" inputmode="email" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="254" required>
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="" selected disabled>Pilih salah satu</option>
+            <option value="Cowo">Cowo</option>
+            <option value="Cewe">Cewe</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="instagram">Username Instagram</label>
+          <input id="instagram" name="instagram" type="text" placeholder="@username" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="31" required>
+        </div>
+        <fieldset class="choice-group">
+          <legend>Masalah dating utamamu (pilih satu)</legend>
+          <label class="choice"><input type="radio" name="datingPain" value="Jarang ketemu kenalan baru yang potensial" required><span>Jarang ketemu kenalan baru yang potensial</span></label>
+          <label class="choice"><input type="radio" name="datingPain" value="Suka sama seseorang, tapi dia ga tertarik balik" required><span>Suka sama seseorang, tapi dia ga tertarik balik</span></label>
+          <label class="choice"><input type="radio" name="datingPain" value="Suka dapet orang yang salah" required><span>Suka dapet orang yang salah</span></label>
+        </fieldset>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+        <button class="btn-primary" type="submit" id="submit-btn">Daftar webinar gratis</button>
+        <p class="err" id="form-error" role="alert" hidden></p>
+        <p class="micro">Link dan pengingat dikirim lewat email dan grup WhatsApp sebelum hari-H. Dengan daftar, kamu setuju menerima email dari Nychothesis. Bisa berhenti kapan aja.</p>
+      </form>
+    </section>
+  </main>
+  <script src="./signup.js?v=20261109a" defer></script>
+</body>
+</html>

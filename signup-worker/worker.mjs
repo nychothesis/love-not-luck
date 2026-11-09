@@ -1,5 +1,6 @@
 const ORIGIN = 'https://nychothesis.com';
-const TAG = 'lm-cewe-mokondo';
+// Lead magnet asal pendaftaran. Default cewe-mokondo biar form lama tetap jalan.
+const TAGS = { 'cewe-mokondo': 'lm-cewe-mokondo', webinar: 'lm-webinar' };
 const PAINS = new Set([
   'Jarang ketemu kenalan baru yang potensial',
   'Suka sama seseorang, tapi dia ga tertarik balik',
@@ -30,7 +31,9 @@ function clean(payload) {
   if (gender !== 'Cowo' && gender !== 'Cewe') return null;
   if (!/^[A-Za-z0-9._]{1,30}$/.test(instagram)) return null;
   if (!PAINS.has(datingPain)) return null;
-  return { firstName, email, gender, instagram, datingPain };
+  const lm = payload.lm === undefined ? 'cewe-mokondo' : payload.lm;
+  if (!Object.prototype.hasOwnProperty.call(TAGS, lm)) return null;
+  return { firstName, email, gender, instagram, datingPain, tag: TAGS[lm] };
 }
 
 export default {
@@ -83,7 +86,7 @@ export default {
         body: JSON.stringify({
         email_address: payload.email,
         fields,
-        tags: { [TAG]: true }
+        tags: { [payload.tag]: true }
         })
       });
       if (result.ok) return reply(200, { ok: true });

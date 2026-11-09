@@ -72,7 +72,9 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 | `cewe-mokondo/thanks.html` | Setelah daftar, arahkan ke grup WhatsApp. Link mini ebook hanya ada di deskripsi grup, bukan di LP atau halaman ini. |
 | `one-time-offer/index.html` | **Halaman OTO/jualan aktif** (dulu `cewe-labirin/`, yang sekarang tinggal redirect) (banner "PENAWARAN EXCLUSIVE"), `noindex`. Harga Rp297rb via kode LNLPO, coret Rp397rb, value stack sementara total Rp3jt (nunggu konsul mentor), rilis 10 Des 2026. Tombol "Ambil" ke checkout OrderHero, tombol "Amankan" scroll ke `#harga`. Platform materi: LMS OrderHero (MemberHero), video bisa upload Loom. File `_*.html` = sampel review desain. |
 | `cewe/index.html` | Draft lama (sebelum versi labirin) sales page pre-order Love, Not Luck khusus cewe (Rp297rb, normal Rp397rb), `noindex`. Master copy di Notion "🤍 LP Love, Not Luck"; HTML ngikut copy di sana. Placeholder `.ph` (tanggal, value stack, platform) belum diisi, tombol CTA masih loncat ke `#harga` sampai link checkout ada. Stickman `img/pain-*.svg` digambar dari rig S56 (`herk-edit-kit/tools/nychothesis-editor/stick-rig.mjs`). Blur panel sengaja dimatiin di sini karena bikin halaman kepotong pas scroll. |
-| `signup-worker/` | Backend form custom mini ebook cewe. Validasi data lalu simpan ke list EmailOctopus dengan tag `lm-cewe-mokondo`. API key disimpan sebagai Cloudflare Worker secret. |
+| `webinar/index.html` | LP lead magnet **webinar gratis** (pengganti LM cewe-mokondo mulai Nov 2026). Struktur ngikut `paradoxical-man-lp/webinar.html`, desain LNL maroon. Field form sama kayak cewe-mokondo; kirim `lm: 'webinar'` ke Worker (tag `lm-webinar`), lalu ke `one-time-offer/?source=webinar`. Teks `.ph` = placeholder (judul, tanggal, jam, platform, poin materi) yang belum diisi Nicho, jangan disebar sebelum final. |
+| `webinar/thanks.html` | "Kamu udah terdaftar" + grup WA. Sementara pakai grup LM yang sama dengan cewe-mokondo (keputusan Nicho 2026-11-09). |
+| `signup-worker/` | Backend form custom mini ebook cewe. Validasi data lalu simpan ke list EmailOctopus. Tag dari field `lm`: kosong/`cewe-mokondo` = `lm-cewe-mokondo`, `webinar` = `lm-webinar`. API key disimpan sebagai Cloudflare Worker secret. |
 | `funnel.css` | Style bersama, hasil salinan funnel Paradoxical Man. Hero mengikuti pola poster `webinar.html` (judul + subtitle jadi satu heading besar di kartu poster), tapi tanpa foto: visualnya radar chart SVG. |
 | `theme-maroon.css` | Tema maroon (dasar maroon gelap, bukan hitam). **Aktif sekarang.** Mau balik ke hitam: hapus baris `<link ... theme-maroon.css>` di `index.html` dan `thanks.html`. Dasar sengaja maroon gelap karena emas di atas maroon terang (#B0413C) kontrasnya jelek. |
 
@@ -107,6 +109,9 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
   Janji cuma yang bisa dikendaliin pembaca.
 - Detail diskusi dan keputusan ada di vault
   `1 - Projects/Nychothesis/🤍 Love, Not Luck.md`.
+
+## OTO mode webinar (2026-11-09)
+- `one-time-offer/?source=webinar` ganti teks topbar dan keenam tombol skip jadi versi webinar (ke `webinar/thanks.html`). Tanpa param, OTO tetap versi guide.
 
 ## Pemisahan jalur (2026-11-04)
 - `/one-time-offer/`: halaman OTO semula, banner eksklusif tetap ada. Signup guide dan redirect lama `/cewe-labirin/` menuju ke sini.

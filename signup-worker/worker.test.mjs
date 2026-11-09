@@ -88,3 +88,16 @@ test('email rejected by provider is reported as an email problem', async () => {
     }
   } finally { globalThis.fetch = original; }
 });
+
+test('webinar signup gets lm-webinar tag, unknown lm rejected', async () => {
+  const original = globalThis.fetch;
+  let sent;
+  globalThis.fetch = async (url, options) => { sent = JSON.parse(options.body); return new Response('{}', { status: 200 }); };
+  try {
+    const ok = await worker.fetch(request({ ...valid, lm: 'webinar' }), env);
+    assert.equal(ok.status, 200);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true });
+    const bad = await worker.fetch(request({ ...valid, lm: 'toString' }), env);
+    assert.equal(bad.status, 400);
+  } finally { globalThis.fetch = original; }
+});
