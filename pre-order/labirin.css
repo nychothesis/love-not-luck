@@ -6,6 +6,11 @@
 .lnl-poster[aria-labelledby="hero-title"] { max-width: 560px; margin-left: auto; margin-right: auto; }
 .hero-art { padding-top: 40px; background: #260a0d; }
 .hero-labirin { display: block; width: 100%; height: auto; }
+/* Hero: headline besar, nama program kecil (dibalik dari funnel.css). */
+.lnl-poster .lockup-name { font-size: clamp(1.4rem, 6.4vw, 1.95rem); line-height: 1.2; letter-spacing: -.03em; }
+.lnl-poster .lockup-sub { margin-top: 10px; font-size: clamp(2.3rem, 11vw, 3.1rem); line-height: 1.04; font-weight: 900; letter-spacing: -.05em; }
+.lnl-poster .lockup-sub .hl { color: var(--wine-text); }
+.lnl-poster .lockup-tail { display: block; margin-top: 12px; font-size: .52em; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; color: #d8c3b6; }
 .lockup-subsub {
   display: block; margin-top: 20px; padding: 14px 0 3px;
   border: 0; border-top: 1px solid rgba(224,195,126,.3); border-radius: 0;
