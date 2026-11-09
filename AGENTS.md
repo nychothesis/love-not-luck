@@ -110,6 +110,9 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 - Detail diskusi dan keputusan ada di vault
   `1 - Projects/Nychothesis/🤍 Love, Not Luck.md`.
 
+## Kata ganti hero (2026-11-09)
+- Hero pre-order dan OTO: "cowo impian lu" dan "Biar lu ga ketemu" diganti "kamu", biar satu halaman ga campur lu/kamu (aturan voice LNL cewe = gw/kamu). Sinkron ke master Notion "🤍 LP Love, Not Luck" masih tertunda.
+
 ## OTO mode webinar (2026-11-09)
 - `one-time-offer/?source=webinar` ganti teks topbar dan keenam tombol skip jadi versi webinar (ke `webinar/thanks.html`). Tanpa param, OTO tetap versi guide.
 
