@@ -29,7 +29,7 @@
     .when small { display: block; margin-bottom: 3px; font-size: .64rem; font-weight: 700; letter-spacing: .18em; color: var(--gold-soft); }
     .when b { display: block; font-size: 1.12rem; font-weight: 900; letter-spacing: -.02em; color: var(--text); line-height: 1.2; }
     /* Hero webinar = poster "speaker live" (Nicho 2026-11-12): foto lagi ngomong
-       duotone marun, badge WEBINAR GRATIS di kanan bawah foto. Sengaja beda
+       duotone marun, badge WEBINAR GRATIS di atas judul. Sengaja beda
        dari poster labirin program berbayar biar ga ketuker pas masuk OTO. */
     .hero-top { position: relative; margin: -30px -28px 18px; }
     .hero-photo { position: relative; height: 420px; overflow: hidden; -webkit-mask-image: linear-gradient(transparent 30px, #000 60px, #000 70%, transparent); mask-image: linear-gradient(transparent 30px, #000 60px, #000 70%, transparent); }
@@ -37,7 +37,7 @@
     .hero-photo .tint { position: absolute; inset: 30px 0 0 0; background: #b3343a; mix-blend-mode: multiply; opacity: .6; }
     .hero-top .live { z-index: 1; position: absolute; left: 20px; top: 18px; display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(16,4,5,.72); border: 1px solid rgba(224,200,143,.35); font-size: .7rem; font-weight: 700; letter-spacing: .16em; color: var(--text); }
     .hero-top .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #e5484d; box-shadow: 0 0 0 0 rgba(229,72,77,.6); animation: livepulse 1.8s infinite; }
-    .hero-top .badge { position: absolute; right: 20px; bottom: 48px; padding: 7px 12px; border-radius: 4px; background: var(--gold-soft); color: #2a0b0c; font-size: .78rem; font-weight: 800; letter-spacing: .2em; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+    .lnl-poster .badge { display: inline-block; margin: -40px 0 14px; position: relative; z-index: 1; padding: 7px 12px; border-radius: 4px; background: var(--gold-soft); color: #2a0b0c; font-size: .78rem; font-weight: 800; letter-spacing: .2em; }
     @keyframes livepulse { 70% { box-shadow: 0 0 0 7px rgba(229,72,77,0); } 100% { box-shadow: 0 0 0 0 rgba(229,72,77,0); } }
     @media (prefers-reduced-motion: reduce) { .hero-top .live::before { animation: none; } }
     .hero-byline { margin: 0 0 8px; font-size: .8rem; color: #bca59b; }
@@ -48,7 +48,7 @@
     .webinar-intro { margin: 0 0 24px; }
     .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
     .pain-list { list-style: none; margin: 12px 0 16px; padding: 0; display: grid; gap: 8px; }
-    .pain-list li { position: relative; padding: 13px 14px 13px 50px; border: 1px solid rgba(224,200,143,.28); border-left: 3px solid var(--gold-soft); border-radius: 10px; background: linear-gradient(90deg, rgba(224,200,143,.13), rgba(224,200,143,.04)); font-weight: 600; line-height: 1.45; }
+    .pain-list li { position: relative; padding: 13px 14px 13px 50px; border: 1px solid rgba(224,200,143,.28); border-radius: 10px; background: linear-gradient(90deg, rgba(224,200,143,.13), rgba(224,200,143,.04)); font-weight: 600; line-height: 1.45; }
     .pain-list li::before { content: "\2715"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: rgba(229,72,77,.22); color: #ff8a8d; font-size: .75rem; font-weight: 800; }
     .webinar-intro strong { color: var(--gold-soft); }
     /* mini-ebook.css nyiapin kolom kedua buat cover ebook; webinar ga punya cover. */
@@ -76,8 +76,8 @@
         <div class="img" role="img" aria-label="Nicholas Kristianus lagi ngejelasin sesuatu"></div><div class="tint"></div>
       </div>
       <span class="live">LIVE ONLINE</span>
-      <span class="badge">WEBINAR GRATIS</span>
       </div>
+      <span class="badge">WEBINAR GRATIS</span>
       <p class="hero-byline">Nicholas Kristianus · Nychothesis</p>
       <h1 id="hero-title">Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h1>
       <p class="poster-lead">Versi perkenalan Love, Not Luck, live bareng gw. Gratis.</p>
