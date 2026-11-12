@@ -26,17 +26,19 @@
     /* Hero webinar = poster "speaker live" (Nicho 2026-11-12): foto lagi ngomong
        duotone marun, badge WEBINAR GRATIS di kanan bawah foto. Sengaja beda
        dari poster labirin program berbayar biar ga ketuker pas masuk OTO. */
-    .hero-photo { position: relative; margin: -30px -28px 18px; height: 420px; overflow: hidden; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+    .hero-top { position: relative; margin: -30px -28px 18px; }
+    .hero-photo { position: relative; height: 420px; overflow: hidden; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
     .hero-photo .img { position: absolute; inset: 0; background: url(./img/speaker.webp) 50% 14%/cover; filter: grayscale(1) contrast(1.05) brightness(1.08); }
     .hero-photo .tint { position: absolute; inset: 0; background: #b3343a; mix-blend-mode: multiply; opacity: .6; }
     .hero-photo .live { position: absolute; left: 20px; top: 18px; display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(16,4,5,.72); border: 1px solid rgba(224,200,143,.35); font-size: .7rem; font-weight: 700; letter-spacing: .16em; color: var(--text); }
     .hero-photo .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #e5484d; box-shadow: 0 0 0 0 rgba(229,72,77,.6); animation: livepulse 1.8s infinite; }
-    .hero-photo .badge { position: absolute; right: 20px; bottom: 34px; padding: 7px 12px; border-radius: 4px; background: var(--gold-soft); color: #2a0b0c; font-size: .78rem; font-weight: 800; letter-spacing: .2em; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+    .hero-top .badge { position: absolute; right: 20px; bottom: 48px; padding: 7px 12px; border-radius: 4px; background: var(--gold-soft); color: #2a0b0c; font-size: .78rem; font-weight: 800; letter-spacing: .2em; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
     @keyframes livepulse { 70% { box-shadow: 0 0 0 7px rgba(229,72,77,0); } 100% { box-shadow: 0 0 0 0 rgba(229,72,77,0); } }
     @media (prefers-reduced-motion: reduce) { .hero-photo .live::before { animation: none; } }
     .hero-byline { margin: 0 0 8px; font-size: .8rem; color: #bca59b; }
     @media (max-width: 600px) {
-      .hero-photo { margin: -22px -22px 16px; height: 330px; }
+      .hero-top { margin: -22px -22px 16px; }
+      .hero-photo { height: 330px; }
     }
     .webinar-intro { margin: 0 0 24px; }
     .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
@@ -64,10 +66,12 @@
     </div>
 
     <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
+      <div class="hero-top">
       <div class="hero-photo">
         <div class="img" role="img" aria-label="Nicholas Kristianus lagi ngejelasin sesuatu"></div><div class="tint"></div>
         <span class="live">LIVE ONLINE</span>
-        <span class="badge">WEBINAR GRATIS</span>
+      </div>
+      <span class="badge">WEBINAR GRATIS</span>
       </div>
       <p class="hero-byline">Nicholas Kristianus · Nychothesis</p>
       <h1 id="hero-title">Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h1>
