@@ -22,7 +22,12 @@
        platform, poin materi). Hapus class-nya kalau isinya udah final. -->
   <style>
     .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
-    .hero-jump { margin: 14px 0 26px; }
+    .hero-jump { display: block; width: 100%; margin: 14px 0 26px; text-align: center; color: #121110; border: 0; }
+    /* Tanggal & jam dibikin ngejreng: dua blok emas. */
+    .when { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .when div { padding: 10px 12px; border: 1px solid rgba(224,200,143,.55); border-radius: 10px; background: rgba(224,200,143,.1); }
+    .when small { display: block; margin-bottom: 3px; font-size: .64rem; font-weight: 700; letter-spacing: .18em; color: var(--gold-soft); }
+    .when b { display: block; font-size: 1.12rem; font-weight: 900; letter-spacing: -.02em; color: var(--text); line-height: 1.2; }
     /* Hero webinar = poster "speaker live" (Nicho 2026-11-12): foto lagi ngomong
        duotone marun, badge WEBINAR GRATIS di kanan bawah foto. Sengaja beda
        dari poster labirin program berbayar biar ga ketuker pas masuk OTO. */
@@ -43,8 +48,8 @@
     .webinar-intro { margin: 0 0 24px; }
     .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
     .pain-list { list-style: none; margin: 12px 0 16px; padding: 0; display: grid; gap: 8px; }
-    .pain-list li { position: relative; padding: 11px 14px 11px 38px; border: 1px solid var(--line); border-radius: 10px; background: rgba(44,12,14,.55); line-height: 1.45; }
-    .pain-list li::before { content: "\2715"; position: absolute; left: 14px; top: 11px; color: var(--gold-soft); font-weight: 700; }
+    .pain-list li { position: relative; padding: 13px 14px 13px 50px; border: 1px solid rgba(224,200,143,.28); border-left: 3px solid var(--gold-soft); border-radius: 10px; background: linear-gradient(90deg, rgba(224,200,143,.13), rgba(224,200,143,.04)); font-weight: 600; line-height: 1.45; }
+    .pain-list li::before { content: "\2715"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: rgba(229,72,77,.22); color: #ff8a8d; font-size: .75rem; font-weight: 800; }
     .webinar-intro strong { color: var(--gold-soft); }
     /* mini-ebook.css nyiapin kolom kedua buat cover ebook; webinar ga punya cover. */
     .form-header { display: block; }
@@ -76,12 +81,13 @@
       <p class="hero-byline">Nicholas Kristianus · Nychothesis</p>
       <h1 id="hero-title">Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h1>
       <p class="poster-lead">Versi perkenalan Love, Not Luck, live bareng gw. Gratis.</p>
-      <div class="poster-meta">
-        <span>Kamis, 10 Desember 2026</span><span>19.00 WIB</span>
+      <div class="when">
+        <div><small>TANGGAL</small><b>Kamis, 10 Des 2026</b></div>
+        <div><small>JAM</small><b>19.00 WIB</b></div>
       </div>
     </section>
 
-    <a class="btn-secondary hero-jump" href="#daftar">Daftar webinar gratis</a>
+    <a class="btn-primary hero-jump" href="#daftar">Daftar webinar gratis</a>
 
     <section class="webinar-intro" aria-label="Buat siapa webinar ini">
       <p>Kalo kamu ngerasa salah satu ini:</p>
