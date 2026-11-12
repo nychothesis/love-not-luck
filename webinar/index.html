@@ -9,6 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nychothesis.com/love-not-luck/webinar/">
   <meta property="og:title" content="Webinar Gratis Love, Not Luck | Nychothesis">
+  <meta property="og:image" content="https://nychothesis.com/love-not-luck/webinar/img/poster-lnl-og.jpg">
   <meta property="og:description" content="Webinar gratis Love, Not Luck bareng Nicholas Kristianus (Nychothesis).">
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-900.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-400.woff2" crossorigin>
@@ -20,8 +21,22 @@
        platform, poin materi). Hapus class-nya kalau isinya udah final. -->
   <style>
     .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
-    .webinar-intro { margin: 0 0 22px; }
     .hero-jump { margin: 14px 0 26px; }
+    /* Poster LNL di atas kartu hero, pola sama kayak pre-order/. */
+    .hero-art { position: relative; margin: -30px -28px 18px; background: #260a0d; -webkit-mask-image: linear-gradient(#000 88%, transparent); mask-image: linear-gradient(#000 88%, transparent); }
+    .hero-art img { display: block; width: 100%; height: auto; }
+    .hero-art .eyebrow { position: absolute; left: 28px; top: 18px; z-index: 1; margin: 0; padding: 4px 9px; border-radius: 4px; background: rgba(16,4,5,.72); }
+    .hero-byline { margin: 0 0 10px; font-size: .8rem; color: #bca59b; }
+    @media (max-width: 600px) {
+      .hero-art { margin: -22px -22px 16px; }
+      .hero-art .eyebrow { left: 22px; top: 14px; }
+    }
+    .webinar-intro { margin: 0 0 24px; }
+    .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
+    .pain-list { list-style: none; margin: 12px 0 16px; padding: 0; display: grid; gap: 8px; }
+    .pain-list li { position: relative; padding: 11px 14px 11px 38px; border: 1px solid var(--line); border-radius: 10px; background: rgba(44,12,14,.55); line-height: 1.45; }
+    .pain-list li::before { content: "\2715"; position: absolute; left: 14px; top: 11px; color: var(--gold-soft); font-weight: 700; }
+    .webinar-intro strong { color: var(--gold-soft); }
     /* mini-ebook.css nyiapin kolom kedua buat cover ebook; webinar ga punya cover. */
     .form-header { display: block; }
   </style>
@@ -42,7 +57,11 @@
     </div>
 
     <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
-      <span class="eyebrow">Webinar gratis · Live online</span>
+      <div class="hero-art">
+        <span class="eyebrow">Webinar gratis · Live online</span>
+        <img src="./img/poster-lnl.webp" alt="Cewe menelusuri jalur emas di labirin menuju cowo yang tepat di tengah, dengan cowo lain di cabang berbeda." width="1200" height="800" fetchpriority="high">
+      </div>
+      <p class="hero-byline">Live bareng Nicholas Kristianus · Nychothesis</p>
       <h1 id="hero-title">Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h1>
       <p class="poster-lead">Versi ringkas Love, Not Luck, live bareng gw. Gratis.</p>
       <div class="poster-meta">
@@ -52,7 +71,15 @@
 
     <a class="btn-secondary hero-jump" href="#daftar">Daftar webinar gratis</a>
 
-    <p class="sub webinar-intro">Live bareng Nicholas Kristianus (Nychothesis). Kalo kamu suka dapet orang yang salah, jarang ketemu kenalan yang potensial, atau suka sama orang yang ga tertarik balik, ini BUKAN karena kamu kurang beruntung. Ada hal-hal yang ga pernah diajarin ke kamu, dan semuanya bisa dipelajarin.</p>
+    <section class="webinar-intro" aria-label="Buat siapa webinar ini">
+      <p>Kalo kamu ngerasa salah satu ini:</p>
+      <ul class="pain-list">
+        <li>Suka dapet orang yang salah</li>
+        <li>Jarang ketemu kenalan yang potensial</li>
+        <li>Suka sama orang yang ga tertarik balik</li>
+      </ul>
+      <p>Ini <strong>BUKAN karena kamu kurang beruntung.</strong> Ada hal-hal yang ga pernah diajarin ke kamu, dan <strong>semuanya bisa dipelajarin.</strong></p>
+    </section>
 
     <section class="panel stack" aria-labelledby="dapet-title" style="margin-bottom:22px;">
       <h2 id="dapet-title">Yang kamu dapet</h2>
