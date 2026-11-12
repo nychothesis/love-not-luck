@@ -370,12 +370,12 @@
         a.href = '../webinar/thanks.html';
         a.textContent = 'Nanti dulu, aku ikut webinar gratisnya dulu';
       });
-      // Biar ga ketuker: webinar = versi ringkas, halaman ini = program lengkap.
+      // Biar ga ketuker: webinar = versi perkenalan, halaman ini = program lengkap.
       var cta = document.querySelector('.lnl-poster .hero-cta');
       if (cta) {
         var note = document.createElement('p');
         note.className = 'webinar-note';
-        note.innerHTML = 'Webinar gratis yang kamu daftarin itu <strong>versi ringkasnya</strong>. Kurikulum lengkap Love, Not Luck ada di halaman ini.';
+        note.innerHTML = 'Webinar gratis yang kamu daftarin itu <strong>versi perkenalannya</strong>. Kurikulum lengkap Love, Not Luck ada di halaman ini.';
         note.style.cssText = 'margin:18px 0 0;padding:12px 14px;border:1px solid rgba(224,200,143,.4);border-radius:10px;background:rgba(16,4,5,.45);font-size:.92rem;line-height:1.5;color:#efe6da;';
         cta.parentNode.insertBefore(note, cta);
       }

@@ -22,21 +22,19 @@
   <style>
     .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
     .hero-jump { margin: 14px 0 26px; }
-    /* Hero webinar: foto Nicho + label acara live, sengaja beda dari poster
-       labirin program berbayar biar ga ketuker pas masuk OTO. */
-    .hero-art { position: relative; margin: -30px -28px 18px; background: radial-gradient(60% 55% at 50% 42%, rgba(196,34,38,.55), rgba(90,12,16,.35) 55%, transparent 75%), linear-gradient(180deg, #2a0709, #1f0809); -webkit-mask-image: linear-gradient(#000 80%, transparent); mask-image: linear-gradient(#000 80%, transparent); }
-    .hero-art img { display: block; width: 100%; height: 440px; object-fit: cover; object-position: 50% 20%; filter: drop-shadow(0 0 1.5px rgba(255,92,80,.95)) drop-shadow(0 0 14px rgba(214,36,40,.6)); }
-    .event-label { position: absolute; left: 0; right: 0; bottom: 34px; z-index: 1; text-align: center; }
-    .event-label .live { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(16,4,5,.78); border: 1px solid rgba(224,200,143,.35); font-size: .72rem; font-weight: 700; letter-spacing: .16em; color: var(--text); }
+    /* Hero webinar: tipografi + label acara, foto host kecil. Sengaja ga pakai
+       poster labirin program berbayar biar ga ketuker pas masuk OTO. */
+    .event-label { margin: 2px 0 22px; text-align: center; }
+    .event-label .live { display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border-radius: 999px; background: rgba(16,4,5,.6); border: 1px solid rgba(224,200,143,.35); font-size: .72rem; font-weight: 700; letter-spacing: .16em; color: var(--text); }
     .event-label .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #e5484d; box-shadow: 0 0 0 0 rgba(229,72,77,.6); animation: livepulse 1.8s infinite; }
-    .event-label .big { display: block; margin-top: 10px; font-size: clamp(1.9rem, 9vw, 2.6rem); font-weight: 900; line-height: 1; letter-spacing: .06em; color: var(--gold-soft); text-shadow: 0 2px 18px rgba(0,0,0,.75); }
+    .event-label .big { display: block; margin-top: 12px; font-size: clamp(2rem, 9.5vw, 2.8rem); font-weight: 900; line-height: 1; letter-spacing: .06em; color: var(--gold-soft); }
+    .event-label::after { content: ""; display: block; width: 64px; height: 1px; margin: 18px auto 0; background: rgba(224,200,143,.45); }
     @keyframes livepulse { 70% { box-shadow: 0 0 0 7px rgba(229,72,77,0); } 100% { box-shadow: 0 0 0 0 rgba(229,72,77,0); } }
     @media (prefers-reduced-motion: reduce) { .event-label .live::before { animation: none; } }
-    .hero-byline { margin: 0 0 10px; font-size: .8rem; color: #bca59b; }
-    @media (max-width: 600px) {
-      .hero-art { margin: -22px -22px 16px; }
-      .hero-art img { height: 380px; }
-    }
+    .host { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(244,239,228,.18); }
+    .host img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 1px solid rgba(224,200,143,.5); flex: none; }
+    .host p { margin: 0; font-size: .86rem; line-height: 1.35; color: #d8c3b6; }
+    .host strong { display: block; color: var(--text); font-size: .95rem; }
     .webinar-intro { margin: 0 0 24px; }
     .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
     .pain-list { list-style: none; margin: 12px 0 16px; padding: 0; display: grid; gap: 8px; }
@@ -63,15 +61,15 @@
     </div>
 
     <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
-      <div class="hero-art">
-        <img src="./img/nicho-cutout.webp" alt="Nicholas Kristianus, host webinar" width="1000" height="1000" fetchpriority="high">
-        <p class="event-label"><span class="live">LIVE ONLINE</span><span class="big">WEBINAR GRATIS</span></p>
-      </div>
-      <p class="hero-byline">Nicholas Kristianus · Nychothesis</p>
+      <p class="event-label"><span class="live">LIVE ONLINE</span><span class="big">WEBINAR GRATIS</span></p>
       <h1 id="hero-title">Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h1>
-      <p class="poster-lead">Versi ringkas Love, Not Luck, live bareng gw. Gratis.</p>
+      <p class="poster-lead">Versi perkenalan Love, Not Luck, live bareng gw. Gratis.</p>
       <div class="poster-meta">
         <span>Kamis, 10 Desember 2026</span><span>19.00 WIB</span>
+      </div>
+      <div class="host">
+        <img src="./img/nicho-host.webp" alt="Nicholas Kristianus" width="240" height="240">
+        <p><strong>Nicholas Kristianus</strong>Host · Nychothesis</p>
       </div>
     </section>
 
