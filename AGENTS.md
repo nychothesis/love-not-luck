@@ -113,6 +113,12 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 ## Kata ganti hero (2026-11-09)
 - Hero pre-order dan OTO: "cowo impian lu" dan "Biar lu ga ketemu" diganti "kamu", biar satu halaman ga campur lu/kamu (aturan voice LNL cewe = gw/kamu). Sinkron ke master Notion "🤍 LP Love, Not Luck" masih tertunda.
 
+## Sistem harga (2026-11-12, saran Rama Satya)
+- Harga normal kelas MemberHero `CLS-26683ZPE` = Rp297.000 (sebelumnya Rp397rb), ditampilkan dicoret.
+- `LNLPO` = diskon 20% (Rp237.600) buat OTO abis daftar webinar (`one-time-offer/`). `LNLWEBINAR` = diskon 10% (Rp267.300) buat jualan di dalam webinar (`pre-order/`). Dua-duanya berlaku sampai 10 Des 2026, khusus produk lama + kelas.
+- Tes checkout 12 Nov (tanpa bayar): LNLPO total Rp251.144, LNLWEBINAR Rp282.537 (termasuk biaya transaksi). Bullet checkout ga nyebut kode biar kode OTO ga bocor.
+- Pembeli pertama (bayar Rp297rb) dapet cashback Rp60rb, ditransfer Nicho sendiri.
+
 ## OTO mode webinar (2026-11-09)
 - `one-time-offer/?source=webinar` ganti teks topbar dan keenam tombol skip jadi versi webinar (ke `webinar/thanks.html`). Tanpa param, OTO tetap versi guide.
 
