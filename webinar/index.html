@@ -33,8 +33,9 @@
        dari poster labirin program berbayar biar ga ketuker pas masuk OTO. */
     .hero-top { position: relative; margin: -30px -28px 18px; }
     .hero-photo { position: relative; height: 420px; overflow: hidden; -webkit-mask-image: linear-gradient(transparent 30px, #000 60px, #000 70%, transparent); mask-image: linear-gradient(transparent 30px, #000 60px, #000 70%, transparent); }
-    .hero-photo .img { position: absolute; inset: 30px 0 0 0; background: url(./img/speaker.webp) 50% 0%/cover; filter: grayscale(1) contrast(1.05) brightness(1.08); }
-    .hero-photo .tint { position: absolute; inset: 30px 0 0 0; background: #b3343a; mix-blend-mode: multiply; opacity: .6; }
+    .hero-photo .img { position: absolute; inset: 30px 0 0 0; background: url(./img/cover-topeng.webp) 50% 0%/cover; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 84%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 84%, transparent 100%); }
+    /* Cover topeng (Nicho 2026-11-20) udah maroon dari sananya, jadi tint duotone lama dimatiin. */
+    .hero-photo .tint { display: none; }
     .hero-top .live { z-index: 1; position: absolute; left: 20px; top: 18px; display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(16,4,5,.72); border: 1px solid rgba(224,200,143,.35); font-size: .7rem; font-weight: 700; letter-spacing: .16em; color: var(--text); }
     .hero-top .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #e5484d; box-shadow: 0 0 0 0 rgba(229,72,77,.6); animation: livepulse 1.8s infinite; }
     .lnl-poster .badge { display: inline-block; margin: -40px 0 14px; position: relative; z-index: 1; padding: 7px 12px; border-radius: 4px; background: var(--gold-soft); color: #2a0b0c; font-size: .78rem; font-weight: 800; letter-spacing: .2em; }
@@ -45,7 +46,7 @@
     .lnl-poster .lockup-sub .hl { color: var(--wine-text); }
     .lnl-poster .lockup-tail { display: block; margin-top: 12px; font-size: .52em; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; color: #d8c3b6; }
     .lnl-poster .lockup-long { font-size: clamp(1.75rem, 8vw, 2.35rem); line-height: 1.12; letter-spacing: -.035em; }
-    .lnl-poster .lockup-aside { white-space: nowrap; line-height: 1.5; font-weight: 600; font-size: .62em; letter-spacing: -.01em; color: #d8c3b6; }
+    .lnl-poster .lockup-long .lockup-tail { margin-top: 14px; font-size: .62em; line-height: 1.3; font-weight: 600; }
     .hero-byline { margin: 0 0 8px; font-size: .8rem; color: #bca59b; }
     @media (max-width: 600px) {
       .hero-top { margin: -22px -22px 16px; }
@@ -82,13 +83,13 @@
     <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
       <div class="hero-top">
       <div class="hero-photo">
-        <div class="img" role="img" aria-label="Nicholas Kristianus lagi ngejelasin sesuatu"></div><div class="tint"></div>
+        <div class="img" role="img" aria-label="Cowo memegang topeng senyum yang retak, cewe menatap curiga di belakangnya"></div><div class="tint"></div>
       </div>
       <span class="live">LIVE ONLINE</span>
       </div>
       <span class="badge">WEBINAR GRATIS</span>
       <p class="hero-byline">Nicholas Kristianus · Nychothesis</p>
-      <h1 id="hero-title"><span class="lockup-sub lockup-long">Paham Rahasia Terhindar dari Cowo <span class="hl"><i>Red Flag</i>, <i>Mokondo</i>, dan NPD</span> <span class="lockup-aside">(yang Keliatannya dari Luar Baik-Baik)</span> Cuma dalam 1 Jam</span></h1>
+      <h1 id="hero-title"><span class="lockup-sub lockup-long">Paham Rahasia Terhindar dari <span class="hl">Cowo Patriarki, Munafik, dan NPD</span> <span class="lockup-tail">Padahal dari luar keliatannya kayak <span class="hl">cowo idaman</span> banget</span></span></h1>
       <div class="when">
         <div><small>TANGGAL</small><b>Kamis, 26 Nov 2026</b></div>
         <div><small>JAM</small><b>19.00 WIB</b></div>
@@ -98,11 +99,12 @@
     <a class="btn-primary hero-jump" href="#daftar">Daftar webinar gratis</a>
 
     <section class="webinar-intro" aria-label="Buat siapa webinar ini">
-      <p>Kalo kamu ngerasa salah satu ini:</p>
+      <p>Cowo yang keliatannya baik banget, belum tentu green flag:</p>
       <ul class="pain-list">
-        <li>Suka dapet orang yang salah</li>
-        <li>Jarang ketemu kenalan yang potensial</li>
-        <li>Suka sama orang yang ga tertarik balik</li>
+        <li>Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral</li>
+        <li>Keliatannya punya mental provider, ternyata egonya tinggi</li>
+        <li>Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling</li>
+        <li>Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi</li>        <li>Keliatannya alim, tapi diem-diem nafsunya ke cewe lain</li>
       </ul>
       <p>Ini <strong>BUKAN karena kamu kurang beruntung.</strong> Ada hal-hal yang ga pernah diajarin ke kamu, dan <strong>semuanya bisa dipelajarin.</strong></p>
     </section>
@@ -110,10 +112,9 @@
     <section class="panel stack" aria-labelledby="dapet-title" style="margin-bottom:22px;">
       <h2 id="dapet-title">Yang kamu dapet</h2>
       <ul class="list">
-        <li>Kenapa dapet pasangan yang tepat berasa makin susah zaman sekarang, dan kenapa itu bukan cuma salah kamu.</li>
-        <li>Yang cowo bilang dia mau vs yang beneran dia butuhin, dari sudut pandang cowo, tanpa filter.</li>
-        <li>Kenapa kamu terus dapetin orang yang salah, dan cara mulai nyadarin polanya.</li>
-        <li>Kenalan sama <strong>6 Pillars of Rizz</strong>, framework original gw buat liat pilar daya tarik mana yang udah kuat dan mana yang bocor.</li>
+        <li>Kenapa cowo yang keliatannya baik banget bisa nyembunyiin sisi gelapnya (<i>shadow</i>).</li>
+        <li>Cara baca red, yellow, dan green flag tanpa nganggep semuanya hitam-putih.</li>
+        <li>Kenapa kamu terus ketemu tipe cowo yang sama, dan cara mulai nyadarin polanya.</li>
       </ul>
     </section>
 
