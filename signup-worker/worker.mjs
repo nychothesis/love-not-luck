@@ -82,7 +82,12 @@ export default {
 
     // Tag batch webinar (WEBINAR_BATCH di wrangler.toml, mis. 'webinar-b2'): cuma buat signup webinar, ganti tiap batch baru.
     const tagNames = [payload.tag, ...payload.extraTags];
-    if (payload.tag === TAGS.webinar && /^[a-z0-9-]{1,40}$/.test(env.WEBINAR_BATCH || '')) tagNames.push(env.WEBINAR_BATCH);
+    if (payload.tag === TAGS.webinar) {
+      // WEBINAR_TOPIC = tag topik batch ini, mis. 'topik-hindari-cowo' (produk 1) atau 'topik-cowo-betah' (produk 2).
+      for (const name of [env.WEBINAR_BATCH, env.WEBINAR_TOPIC]) {
+        if (/^[a-z0-9-]{1,40}$/.test(name || '')) tagNames.push(name);
+      }
+    }
     const endpoint = `https://api.emailoctopus.com/lists/${encodeURIComponent(env.EMAILOCTOPUS_LIST_ID)}/contacts`;
     const fields = {
       FirstName: payload.firstName,

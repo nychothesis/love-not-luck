@@ -161,3 +161,22 @@ test('webinar signup gets batch tag from env, other lm does not', async () => {
     globalThis.fetch = original;
   }
 });
+
+test('webinar signup gets topic tag from env', async () => {
+  const original = globalThis.fetch;
+  let sent;
+  globalThis.fetch = async (url, options) => {
+    sent = JSON.parse(options.body);
+    return new Response('{}', { status: 200 });
+  };
+  try {
+    await worker.fetch(request({ ...valid, lm: 'webinar' }), { ...env, WEBINAR_BATCH: 'webinar-b2', WEBINAR_TOPIC: 'topik-hindari-cowo' });
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'webinar-b2': true, 'topik-hindari-cowo': true });
+    await worker.fetch(request({ ...valid }), { ...env, WEBINAR_TOPIC: 'topik-hindari-cowo' });
+    assert.deepEqual(sent.tags, { 'lm-cewe-mokondo': true });
+    await worker.fetch(request({ ...valid, lm: 'webinar' }), { ...env, WEBINAR_TOPIC: 'Topik Ngawur!' });
+    assert.deepEqual(sent.tags, { 'lm-webinar': true });
+  } finally {
+    globalThis.fetch = original;
+  }
+});
