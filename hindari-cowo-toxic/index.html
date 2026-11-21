@@ -31,6 +31,30 @@
       .hero-photo { height: clamp(350px, 106vw, 410px); }
       .hero-photo .img { background-size: 100% auto; background-position: center top; }
     }
+
+    .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
+    .draft-note { margin: 0 0 16px; padding: 10px 14px; border: 1px dashed rgba(224,200,143,.7); border-radius: 10px; color: var(--gold-soft); font-size: .82rem; font-weight: 700; line-height: 1.4; }
+    .hero-jump { display: block; width: 100%; margin: 14px 0 26px; text-align: center; color: #121110; border: 0; }
+    .webinar-intro { margin: 0 0 24px; }
+    .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
+    .pain-list { list-style: none; margin: 12px 0 16px; padding: 0; display: grid; gap: 8px; }
+    .pain-list li { position: relative; padding: 13px 14px 13px 50px; border: 1px solid rgba(224,200,143,.28); border-radius: 10px; background: linear-gradient(90deg, rgba(224,200,143,.13), rgba(224,200,143,.04)); font-weight: 600; line-height: 1.45; }
+    .pain-list li::before { content: "\2715"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: rgba(229,72,77,.22); color: #ff8a8d; font-size: .75rem; font-weight: 800; }
+    .webinar-intro .intro-hook { margin: 0 0 4px; font-size: 1.28rem; font-weight: 800; line-height: 1.25; letter-spacing: -.02em; color: var(--text); }
+    .em { color: var(--gold-soft); }
+    .webinar-intro .reassure { margin: 20px 0 0; padding: 16px 18px; border-left: 3px solid var(--gold-soft); border-radius: 0 12px 12px 0; background: rgba(224,200,143,.1); }
+    .webinar-intro .reassure p { margin: 0; font-size: 1.02rem; line-height: 1.55; font-weight: 600; color: var(--text); }
+    .webinar-intro .reassure .reassure-lead { margin-bottom: 8px; font-size: 1.4rem; font-weight: 800; line-height: 1.2; letter-spacing: -.02em; }
+    .block { margin-bottom: 22px; }
+    .block h3 { margin: 18px 0 6px; font-size: 1.02rem; font-weight: 800; color: var(--gold-soft); }
+    .block p { line-height: 1.65; }
+    .dulu { padding: 14px 16px; margin: 0 0 10px; border: 1px solid rgba(224,200,143,.28); border-radius: 10px; line-height: 1.55; }
+    .dulu b { color: var(--gold-soft); }
+    .price-line { margin: 6px 0; line-height: 1.55; }
+    .tier { margin: 8px 0; padding: 12px 14px; border: 1px solid rgba(224,200,143,.4); border-radius: 10px; font-weight: 700; }
+    .faq-q { margin: 16px 0 4px; font-weight: 800; }
+    .faq-a { margin: 0; line-height: 1.6; }
+    .skip-link { display: block; margin: 12px 0 0; text-align: center; font-size: .9rem; opacity: .8; }
   </style>
 </head>
 <body>
@@ -41,6 +65,7 @@
       <div class="brand-name">NYCHO<span>THESIS</span></div>
     </div>
 
+    <div class="draft-note">DRAFT PRODUK 1, belum final. Kotak emas putus-putus = placeholder yang masih nunggu keputusan. Harga dan diskon belum final.</div>
     <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
       <div class="hero-top">
       <div class="hero-photo">
@@ -52,6 +77,133 @@
       <h1 id="hero-title"><span class="lockup-sub lockup-long">Paham Rahasia Terhindar dari <span class="hl">Cowo Patriarki, Munafik, dan NPD</span> <span class="lockup-tail">Padahal dari luar keliatannya kayak <span class="hl">cowo idaman</span> banget</span></span></h1>
     </section>
 
+    <a class="btn-primary hero-jump" href="#harga">Amankan harga pre-order</a>
+    <section class="webinar-intro" aria-label="Rasa sakit">
+      <p class="intro-hook">Cowo yang keliatannya baik banget, <span class="em">belum tentu green flag</span>:</p>
+      <ul class="pain-list">
+        <li>Keliatannya taat agama, ternyata judgemental, suka jadi polisi moral, dan punya banyak sisi gelap</li>
+        <li>Keliatannya punya mental provider, ternyata karena egonya tinggi dan ga mau terlihat vulnerable</li>
+        <li>Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling</li>
+        <li>Keliatannya percaya diri dan charming, ternyata deep down egonya rapuh dan tukang manipulasi (karakteristik NPD)</li>
+        <li>Keliatannya alim, tapi diem-diem nafsunya ke cewe lain</li>
+      </ul>
+      <div class="reassure"><p class="reassure-lead">Ini <span class="em">BUKAN</span> karena kamu kurang beruntung.</p><p>Ada hal-hal yang ga pernah diajarin ke kamu, dan <span class="em">semuanya bisa dipelajarin.</span></p></div>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-reframe" style="margin-bottom:22px;">
+      <h2 id="h-reframe">Masalahnya bukan di nasib. Ada 3 hal yang ga pernah dibahas ke kamu.</h2>
+      <ul class="list">
+        <li><strong>1. Cowo yang keliatannya baik bisa nyimpen sisi gelap yang dia sendiri belum sadarin.</strong><br>Banyak cowo dibesarin sama doktrin dan kultur, misalnya "cari cewe baik-baik, jangan yang sexy-sexy". Hasilnya bisa muncul sebagai sisi gelap (<i>shadow</i>) yang ga keliatan di awal. Misal, cowo yang agamis banget, tapi diem-diem nafsunya ke cewe yang beda dari "cewe baik-baik".</li>
+        <li><strong>2. Baca flag itu ga sesimpel hitam-putih.</strong><br>Satu kejadian bukan alasan buat nge-cap dia. Yang penting itu polanya, dan ada yellow flag di antara red dan green. Misal, dia menghindar tiap ada obrolan berat, dan polanya keulang.</li>
+        <li><strong>3. Ada pola di diri kamu sendiri yang belum kamu sadarin.</strong><br>Kenapa tipe yang sama terus yang nyantol? Kalo ini ga dibongkar, kamu bisa ganti orang sepuluh kali, tapi ceritanya tetep sama.</li>
+      </ul>
+      <p>Kabar baiknya: tiga-tiganya bisa dipelajarin. Dan itu yang gw susun di <strong>Love, Not Luck.</strong></p>
+    </section>
+    <a class="btn-primary hero-jump" href="#harga">Amankan harga pre-order</a>
+    <section class="panel stack block" aria-labelledby="h-offer" style="margin-bottom:22px;">
+      <h2 id="h-offer">Kenalin: Love, Not Luck</h2>
+      <p>Program buat cewe yang mau <strong>bisa baca cowo sebelum terlanjur sayang</strong> dan <strong>ga salah pilih lagi</strong>, tanpa harus jadi orang lain atau nunggu keberuntungan. <span class="ph">[tagline final belum diputusin]</span></p>
+      <p><strong>Yang bikin Love, Not Luck beda:</strong></p>
+      <ul class="list">
+        <li><strong>Isi kepala cowo, dari cowo, tanpa filter.</strong> Gw bakal ceritain hal-hal yang cowo jarang mau ngaku, bahkan ke dirinya sendiri.</li>
+        <li><strong>Ga cuma tau red flag, tapi baca yellow flag dan pola.</strong> Kamu belajar bedain yang beneran bahaya dari yang lagi belajar, dan nyadarin pola kamu sendiri.</li>
+        <li><strong>Psikologi &amp; filosofi yang grounded, bukan pop psychology.</strong> Love, Not Luck ini bukan untuk "menjilat ego", tapi apa yang beneran works bakal dibongkar di sini, walau ga semuanya "nyaman" pas kamu pahami.</li>
+      </ul>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-bisa" style="margin-bottom:22px;">
+      <h2 id="h-bisa">Setelah Love, Not Luck, kamu bakal bisa:</h2>
+      <h3>Ngerti sisi gelap cowo yang keliatannya baik</h3>
+      <ul class="list">
+        <li>Ngerti kenapa dia begitu (doktrin, kultur, <i>shadow</i>), tanpa langsung nge-judge</li>
+        <li><span class="ph">[NPD: kenal pola narsistik yang bisa diamati. Nunggu materi dicek ke sumber, dan wajib ada disclaimer: NPD itu diagnosis klinis]</span></li>
+      </ul>
+      <h3>Baca red, yellow, dan green flag</h3>
+      <ul class="list">
+        <li>Bedain fakta vs interpretasi pas baca sikap cowo</li>
+        <li>Liat pola: kabur dari hard convo, <i>DARVO</i>, kasar sebagai alarm</li>
+        <li>Bedain yang beneran bahaya dari yang lagi belajar</li>
+      </ul>
+      <h3>Kenal diri</h3>
+      <ul class="list">
+        <li>Tau standar kamu kebentuk dari mana</li>
+        <li>Kenal gaya kelekatan kamu (<i>attachment style</i>) dan <i>projection</i></li>
+        <li>Sadar kenapa tipe yang sama terus yang nyantol</li>
+      </ul>
+      <h3>Healthy boundaries: berani udahan</h3>
+      <ul class="list">
+        <li>Tau kapan harus berhenti dan gimana caranya, tanpa nyalahin diri sendiri</li>
+      </ul>
+      <h3>Workbook</h3>
+      <ul class="list">
+        <li>Latihan dan refleksi di tiap topik, biar praktik, bukan cuma ngerti</li>
+      </ul>
+      <p><strong>Jadwal rilis: 10 Desember 2026</strong> <span class="ph">[format: berapa modul/video per topik, bentuk workbook = ___]</span></p>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-dulu" style="margin-bottom:22px;">
+      <h2 id="h-dulu">Bayangin kamu beberapa bulan dari sekarang.</h2>
+      <div class="dulu"><b>Dulu:</b> ada cowo yang chat-nya manis banget di minggu pertama, dan kamu langsung baper.<br><b>Sekarang: kamu bisa bedain mana yang beneran tertarik, mana yang cuma jago di awal.</b></div>
+      <div class="dulu"><b>Dulu:</b> tipe yang sama terus bikin kamu nyantol.<br><b>Sekarang: kamu sadar polanya sebelum ceritanya keulang.</b></div>
+      <div class="dulu"><b>Dulu:</b> ada cowo yang keliatannya alim banget dan jiwa pemimpin, dan kamu percaya penuh sama tampilan luarnya. <span class="ph">[draft, nunggu Nicho]</span><br><b>Sekarang: kamu bisa liat tanda-tanda yang beda dari tampilan luarnya, sebelum terlanjur sayang.</b></div>
+      <div class="dulu"><b>Dulu:</b> kamu bertahan karena ngerasa semuanya salah kamu. <span class="ph">[draft, nunggu Nicho]</span><br><b>Sekarang: kamu tau kapan harus berhenti, dan berani udahan.</b></div>
+      <div class="dulu"><b>Dulu:</b> kamu bisa milih karena takut sendirian atau udah kelamaan nunggu.<br><b>Sekarang: pas ada yang serius, kamu milih dia karena dia emang tepat.</b></div>
+      <p>Gw ga bisa janji dia ga bakal nyakitin kamu, karena orang lain yang ikut nentuin. Yang bisa gw janjiin: kamu bakal punya cara baca cowo yang lebih tajam, kenal pola diri kamu sendiri, dan tau kapan harus berhenti.</p>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-kasus" style="margin-bottom:22px;">
+      <h2 id="h-kasus">Belajar dari kasus nyata</h2>
+      <p><span class="ph">[Studi kasus 1: tokoh atau kasus nyata, pola yang kelihatan, pelajarannya. Dicek ke sumber dulu.]</span></p>
+      <p><span class="ph">[Studi kasus 2: sama, pola beda.]</span></p>
+      <p><small>Ini studi kasus, bukan testimoni. Testimoni asli dari pembeli baru ditaruh di sini kalo udah ada dan orangnya kasih izin.</small></p>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-untuk" style="margin-bottom:22px;">
+      <h2 id="h-untuk">Love, Not Luck buat kamu, kalo:</h2>
+      <ul class="list">
+        <li>Kamu capek ketemu cowo yang ujung-ujungnya salah, dan mau tau kenapa polanya keulang.</li>
+        <li>Kamu pengen ngerti cowo dari sudut pandang cowo, bukan dari asumsi.</li>
+        <li>Kamu siap jujur ngeliat diri sendiri juga, bukan cuma nyari salah di orang lain.</li>
+      </ul>
+      <h3>Mending jangan beli kalo:</h3>
+      <ul class="list">
+        <li>Kamu nyari trik untuk manipulasi cowo, yang mungkin bisa works, tapi cepet atau lambat bakal jadi "bom waktu" aja.</li>
+        <li>Kamu belum siap denger hal yang "agak nusuk", tapi justru baik buat kamu.</li>
+        <li>Kamu cuma mau denger kalo semua salahnya ada di cowo.</li>
+      </ul>
+    </section>
+    <section class="panel stack block" aria-labelledby="harga" style="margin-bottom:22px;">
+      <h2 id="harga">Yang kamu dapet hari ini</h2>
+      <ul class="list">
+        <li>Sisi gelap cowo yang keliatannya baik &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Baca red, yellow, green flag &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Kenal diri &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Healthy boundaries: berani udahan &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Workbook latihan dan refleksi &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+      </ul>
+      <p class="price-line">Total nilai: <span class="ph">[TOTAL dihitung dari harga per item]</span></p>
+      <p class="price-line">Harga normal: <s>Rp297.000</s></p>
+      <p class="price-line"><strong>Harga peserta webinar (kuota terbatas):</strong></p>
+      <div class="tier">Tier 1, <span class="ph">[5] slot</span>: diskon <span class="ph">Rp[___]</span></div>
+      <div class="tier">Tier 2, <span class="ph">[10] slot</span>: diskon <span class="ph">Rp[___]</span></div>
+      <div class="tier">Tier 3, <span class="ph">[20] slot</span>: diskon <span class="ph">Rp[___]</span></div>
+      <p class="price-line">Kode diumumin satu-satu pas webinar. Pre-order berlaku sampai 10 Desember 2026.</p>
+      <a class="btn-primary hero-jump" href="https://nychothesis.orderhero.id/form/love-not-luck-kelas">Ambil Love, Not Luck sekarang</a>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-lastcta" style="margin-bottom:22px;">
+      <h2 id="h-lastcta">Kamu punya dua pilihan sekarang.</h2>
+      <p>Tetep pake cara yang sama, terus berharap kali ini hokinya beda.</p>
+      <p>Atau mulai ngerti apa yang sebenernya lagi terjadi, dan pilih dengan sadar.</p>
+      <a class="btn-primary hero-jump" href="https://nychothesis.orderhero.id/form/love-not-luck-kelas">Ambil Love, Not Luck sekarang</a>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-faq" style="margin-bottom:22px;">
+      <h2 id="h-faq">Pertanyaan yang sering muncul</h2>
+      <p class="faq-q">Materinya bentuknya apa?</p>
+      <p class="faq-a">Video materi + workbook buat latihan dan refleksi. Bisa ditonton kapan aja, sesuai waktu dan jadwal kamu. Semuanya bisa kamu buka lewat link khusus pembeli, dari HP maupun laptop. <span class="ph">[format modul: ___]</span></p>
+      <p class="faq-q">Kapan materinya dikirim?</p>
+      <p class="faq-a">Materinya rilis 10 Desember 2026. Kamu bakal dapet kabar lewat grup WhatsApp khusus pembeli setiap ada materi baru.</p>
+      <p class="faq-q">Cowo boleh ikut?</p>
+      <p class="faq-a">Program ini dibuat untuk cewe. Jalur buat cowo bakal disiapin terpisah.</p>
+      <p class="faq-q">Kalo udah punya pacar, masih relevan?</p>
+      <p class="faq-a">Sebagian besar isinya soal baca flag, kenal pola diri sendiri, dan healthy boundaries, yang bakal berpengaruh juga ke gimana kamu jalanin relasi sampai ke depannya.</p>
+      <p class="faq-q">Kalo pre-order-nya batal gimana?</p>
+      <p class="faq-a">Uang kamu balik 100%.</p>
+    </section>
   </main>
 </body>
 </html>

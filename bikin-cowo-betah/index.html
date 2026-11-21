@@ -33,6 +33,30 @@
       .hero-photo { height: clamp(350px, 106vw, 410px); }
       .hero-photo .img { background-size: 100% auto; background-position: center top; }
     }
+
+    .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
+    .draft-note { margin: 0 0 16px; padding: 10px 14px; border: 1px dashed rgba(224,200,143,.7); border-radius: 10px; color: var(--gold-soft); font-size: .82rem; font-weight: 700; line-height: 1.4; }
+    .hero-jump { display: block; width: 100%; margin: 14px 0 26px; text-align: center; color: #121110; border: 0; }
+    .webinar-intro { margin: 0 0 24px; }
+    .webinar-intro p { margin: 0; color: var(--text); line-height: 1.65; }
+    .pain-list { list-style: none; margin: 12px 0 16px; padding: 0; display: grid; gap: 8px; }
+    .pain-list li { position: relative; padding: 13px 14px 13px 50px; border: 1px solid rgba(224,200,143,.28); border-radius: 10px; background: linear-gradient(90deg, rgba(224,200,143,.13), rgba(224,200,143,.04)); font-weight: 600; line-height: 1.45; }
+    .pain-list li::before { content: "\2715"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: rgba(229,72,77,.22); color: #ff8a8d; font-size: .75rem; font-weight: 800; }
+    .webinar-intro .intro-hook { margin: 0 0 4px; font-size: 1.28rem; font-weight: 800; line-height: 1.25; letter-spacing: -.02em; color: var(--text); }
+    .em { color: var(--gold-soft); }
+    .webinar-intro .reassure { margin: 20px 0 0; padding: 16px 18px; border-left: 3px solid var(--gold-soft); border-radius: 0 12px 12px 0; background: rgba(224,200,143,.1); }
+    .webinar-intro .reassure p { margin: 0; font-size: 1.02rem; line-height: 1.55; font-weight: 600; color: var(--text); }
+    .webinar-intro .reassure .reassure-lead { margin-bottom: 8px; font-size: 1.4rem; font-weight: 800; line-height: 1.2; letter-spacing: -.02em; }
+    .block { margin-bottom: 22px; }
+    .block h3 { margin: 18px 0 6px; font-size: 1.02rem; font-weight: 800; color: var(--gold-soft); }
+    .block p { line-height: 1.65; }
+    .dulu { padding: 14px 16px; margin: 0 0 10px; border: 1px solid rgba(224,200,143,.28); border-radius: 10px; line-height: 1.55; }
+    .dulu b { color: var(--gold-soft); }
+    .price-line { margin: 6px 0; line-height: 1.55; }
+    .tier { margin: 8px 0; padding: 12px 14px; border: 1px solid rgba(224,200,143,.4); border-radius: 10px; font-weight: 700; }
+    .faq-q { margin: 16px 0 4px; font-weight: 800; }
+    .faq-a { margin: 0; line-height: 1.6; }
+    .skip-link { display: block; margin: 12px 0 0; text-align: center; font-size: .9rem; opacity: .8; }
   </style>
 </head>
 <body>
@@ -43,6 +67,7 @@
       <div class="brand-name">NYCHO<span>THESIS</span></div>
     </div>
 
+    <div class="draft-note">DRAFT PRODUK 2, belum final. Kotak emas putus-putus = placeholder yang masih nunggu keputusan. Harga dan diskon belum final.</div>
     <section class="lnl-poster ebook-poster" aria-labelledby="hero-title">
       <div class="hero-top">
       <div class="hero-photo">
@@ -54,6 +79,112 @@
       <h1 id="hero-title"><span class="lockup-sub lockup-long">Cara Bikin <span class="hl">Cowo Betah Banget</span> Sama Kamu, Sampai Ga Mau Lirik Cewe Lain <span class="lockup-tail">Tanpa trik murahan, tanpa tarik&#8209;ulur<span style="display:block;margin-top:8px;font-style:normal;font-weight:500;font-size:.82em;color:#d8c3b6">Cuma dengan ngerti apa yang cowo <span class="hl">benar-benar butuh dan mau</span></span></span></span></h1>
     </section>
 
+    <a class="btn-primary hero-jump" href="#harga">Amankan harga pre-order</a>
+    <section class="webinar-intro" aria-label="Rasa sakit">
+      <p class="intro-hook">Cowo yang baik pun bisa <span class="em">pelan-pelan ga betah</span>:</p>
+      <ul class="pain-list">
+        <li>Awalnya dia semangat banget, lama-lama makin cuek</li>
+        <li>Kamu udah ngasih banyak, tapi dia kayak ga pernah bener-bener betah</li>
+        <li>Kamu takut dia lirik cewe lain, tapi ga tau salahnya di mana</li>
+        <li>Kamu ngerasa harus jadi orang lain biar dia tetap tertarik</li>
+      </ul>
+      <div class="reassure"><p class="reassure-lead">Ini <span class="em">BUKAN</span> karena kamu kurang menarik.</p><p>Ada hal-hal soal cowo yang ga pernah diceritain ke kamu, dan <span class="em">semuanya bisa dipelajarin.</span></p></div>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-reframe" style="margin-bottom:22px;">
+      <h2 id="h-reframe">Betah itu bukan soal trik. Ada 3 hal yang jarang dibahas.</h2>
+      <ul class="list">
+        <li><strong>1. Cowo punya struggle yang jarang diceritain, bahkan ke dirinya sendiri.</strong><br>Banyak cowo dibilang "harus selalu kuat" dan "harus bisa provide", jadi mereka mikir harus man up dan diem. Misal, dia tertarik sama kamu tapi mundur diem-diem karena ngerasa dirinya belum cukup.</li>
+        <li><strong>2. Yang cowo bilang dia mau beda sama yang beneran dia butuhin.</strong><br>Kalo kamu cuma ngikutin yang dia ucapin, kamu bisa ngasih banyak tapi tetep meleset.</li>
+        <li><strong>3. Betah itu hasil dari rasa nyaman secara emosional.</strong><br>Bukan dark psychology, bukan tarik-ulur, tapi empati yang beneran. <span class="ph">[bagian keintiman dan seksual: nunggu keputusan Nicho soal wording publik]</span></li>
+      </ul>
+      <p>Kabar baiknya: ini bisa dipelajarin. Dan itu yang gw susun di produk ini.</p>
+    </section>
+    <a class="btn-primary hero-jump" href="#harga">Amankan harga pre-order</a>
+    <section class="panel stack block" aria-labelledby="h-offer" style="margin-bottom:22px;">
+      <h2 id="h-offer">Kenalin: <span class="ph">[nama produk 2 belum diputusin]</span></h2>
+      <p>Program buat cewe yang mau bikin cowo <strong>betah sama dia</strong> dengan cara yang sehat, tanpa jadi orang lain, tanpa trik, dan tanpa tarik-ulur.</p>
+      <p><strong>Yang bikin beda:</strong></p>
+      <ul class="list">
+        <li><strong>Isi kepala cowo, dari cowo, tanpa filter.</strong> Struggle yang jarang mereka ceritain.</li>
+        <li><strong>Yang dia butuhin, bukan cuma yang dia bilang.</strong> Biar usaha kamu kena sasaran.</li>
+        <li><strong>Empati yang beneran, bukan manipulasi.</strong> Ini bukan buat kamu yang nyari trik.</li>
+      </ul>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-bisa" style="margin-bottom:22px;">
+      <h2 id="h-bisa">Setelah program ini, kamu bakal bisa:</h2>
+      <ul class="list">
+        <li>Ngerti struggle dan tekanan yang jarang cowo ceritain</li>
+        <li>Bedain yang dia bilang dia mau, sama yang beneran dia butuhin</li>
+        <li>Bikin dia nyaman secara emosional tanpa kamu harus jadi orang lain</li>
+        <li>Jaga daya tarik jangka panjang tanpa trik</li>
+        <li><span class="ph">[topik keintiman dan seksual: wording publik dan batasannya, nunggu Nicho]</span></li>
+        <li>Workbook latihan dan refleksi</li>
+      </ul>
+      <p><strong>Jadwal rilis:</strong> <span class="ph">[tanggal produk 2 belum ada]</span> <span class="ph">[format: ___]</span></p>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-dulu" style="margin-bottom:22px;">
+      <h2 id="h-dulu">Bayangin kamu beberapa bulan dari sekarang.</h2>
+      <div class="dulu"><b>Dulu:</b> kamu ngasih banyak tapi dia tetap kayak setengah hati. <span class="ph">[draft]</span><br><b>Sekarang: kamu tau apa yang beneran dia butuhin, jadi usahamu kena sasaran.</b></div>
+      <div class="dulu"><b>Dulu:</b> kamu ngerasa harus jadi orang lain biar dia tetap tertarik. <span class="ph">[draft]</span><br><b>Sekarang: dia betah sama kamu yang apa adanya, karena kamu ngerti caranya bikin dia nyaman.</b></div>
+      <div class="dulu"><b>Dulu:</b> kamu was-was tiap dia main HP atau ketemu cewe lain. <span class="ph">[draft]</span><br><b>Sekarang: kamu fokus ke hal yang bisa kamu kendaliin: kualitas hubungan kalian.</b></div>
+      <p>Gw ga bisa janji dia ga bakal lirik cewe lain, karena itu pilihan dia. Yang bisa gw janjiin: kamu bakal tau cara bikin dia nyaman dan betah sama kamu. <span class="ph">[wording janji: samain sama judul hero]</span></p>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-kasus" style="margin-bottom:22px;">
+      <h2 id="h-kasus">Belajar dari kasus nyata</h2>
+      <p><span class="ph">[Studi kasus 1: kandidat dari konten, mis. Cleopatra atau Marilyn Monroe. Pola yang kelihatan dan pelajarannya. WAJIB dicek ke sumber, jangan nulis kutipan yang ga ada sumbernya.]</span></p>
+      <p><span class="ph">[Studi kasus 2]</span></p>
+      <p><small>Ini studi kasus, bukan testimoni. Testimoni asli dari pembeli baru ditaruh di sini kalo udah ada dan orangnya kasih izin.</small></p>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-untuk" style="margin-bottom:22px;">
+      <h2 id="h-untuk">Produk ini buat kamu, kalo:</h2>
+      <ul class="list">
+        <li>Kamu lagi deket sama cowo yang kamu suka dan pengen dia betah sama kamu.</li>
+        <li>Kamu siap ngerti cowo dari sudut pandang cowo, bukan dari asumsi.</li>
+        <li>Kamu mau dia betah karena kamu bikin dia nyaman, bukan karena kamu ngontrol dia.</li>
+      </ul>
+      <h3>Mending jangan beli kalo:</h3>
+      <ul class="list">
+        <li>Kamu nyari trik untuk manipulasi cowo, yang mungkin bisa works, tapi cepet atau lambat bakal jadi "bom waktu" aja.</li>
+        <li>Kamu belum siap denger hal yang "agak nusuk", tapi justru baik buat kamu.</li>
+      </ul>
+    </section>
+    <section class="panel stack block" aria-labelledby="harga" style="margin-bottom:22px;">
+      <h2 id="harga">Yang kamu dapet hari ini</h2>
+      <ul class="list">
+        <li>Struggle dan isi kepala cowo, tanpa filter &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Yang dia butuhin vs yang dia bilang &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Bikin dia nyaman secara emosional &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Jaga daya tarik jangka panjang &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+        <li>Workbook latihan dan refleksi &middot; <span class="ph">[HARGA: ___] [FORMAT: ___]</span></li>
+      </ul>
+      <p class="price-line">Total nilai: <span class="ph">[TOTAL dihitung dari harga per item]</span></p>
+      <p class="price-line">Harga normal: <span class="ph">[harga normal produk 2]</span></p>
+      <p class="price-line"><strong>Harga peserta webinar (kuota terbatas):</strong></p>
+      <div class="tier">Tier 1, <span class="ph">[5] slot</span>: diskon <span class="ph">Rp[___]</span></div>
+      <div class="tier">Tier 2, <span class="ph">[10] slot</span>: diskon <span class="ph">Rp[___]</span></div>
+      <div class="tier">Tier 3, <span class="ph">[20] slot</span>: diskon <span class="ph">Rp[___]</span></div>
+      <p class="price-line"><span class="ph">[paket bundling dengan produk 1: nunggu keputusan]</span></p>
+      <a class="btn-primary hero-jump" href="#harga"><span class="ph">[link checkout produk 2 belum ada]</span></a>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-lastcta" style="margin-bottom:22px;">
+      <h2 id="h-lastcta">Kamu punya dua pilihan sekarang.</h2>
+      <p>Terus ngasih banyak sambil nebak-nebak apa yang dia mau.</p>
+      <p>Atau mulai ngerti apa yang beneran dia butuhin, dan bikin dia betah dengan cara yang sehat.</p>
+      <a class="btn-primary hero-jump" href="#harga"><span class="ph">[link checkout produk 2 belum ada]</span></a>
+    </section>
+    <section class="panel stack block" aria-labelledby="h-faq" style="margin-bottom:22px;">
+      <h2 id="h-faq">Pertanyaan yang sering muncul</h2>
+      <p class="faq-q">Ini jamin dia ga bakal lirik cewe lain?</p>
+      <p class="faq-a">Ga ada yang bisa jamin perilaku orang lain, termasuk gw. Yang gw ajarin itu bagian yang bisa kamu kendaliin: cara bikin dia nyaman dan betah sama kamu. <span class="ph">[draft, nunggu Nicho]</span></p>
+      <p class="faq-q">Perlu udah pacaran dulu?</p>
+      <p class="faq-a">Ga perlu. Ini berlaku dari masa PDKT sampai jadian, selama kamu lagi deket sama cowo yang kamu suka. <span class="ph">[draft, nunggu Nicho]</span></p>
+      <p class="faq-q">Ini manipulasi?</p>
+      <p class="faq-a">Bukan. Yang diajarin itu empati yang beneran, bukan trik atau tarik-ulur.</p>
+      <p class="faq-q">Beda dari Hindari Cowo Toxic apa?</p>
+      <p class="faq-a">Itu soal milih dan ngenalin cowo yang salah. Ini soal bikin cowo yang kamu pilih betah sama kamu. Bisa dibeli satuan atau bareng. <span class="ph">[bundling: nunggu keputusan]</span></p>
+      <p class="faq-q">Kalo pre-order-nya batal gimana?</p>
+      <p class="faq-a">Uang kamu balik 100%. <span class="ph">[syarat produk 2 belum ada]</span></p>
+    </section>
   </main>
 </body>
 </html>
