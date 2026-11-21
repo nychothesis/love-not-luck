@@ -11,9 +11,9 @@
 
 .webinar-presenter-profile {
   display: grid;
-  justify-items: center;
+  justify-items: start;
   gap: 7px;
-  text-align: center;
+  text-align: left;
 }
 
 .webinar-presenter-profile img {
@@ -22,9 +22,10 @@
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
-  border: 1px solid var(--gold-soft);
+  box-sizing: border-box;
+  border: 3px solid #e0c37e;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px #1d0709, 0 0 0 4px var(--gold-soft);
+  box-shadow: 0 0 0 2px #351714, 0 0 0 3px #e0c37e;
 }
 
 .webinar-presenter-profile p {
