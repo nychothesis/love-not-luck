@@ -25,7 +25,12 @@ test('valid signup maps fields and tag to EmailOctopus', async () => {
     for (const datingPain of [
       'Jarang ketemu kenalan baru yang potensial',
       'Suka sama seseorang, tapi dia ga tertarik balik',
-      'Suka dapet orang yang salah'
+      'Suka dapet orang yang salah',
+      'Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral',
+      'Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable',
+      'Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling',
+      'Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi',
+      'Keliatannya alim, tapi diem-diem nafsunya ke cewe lain'
     ]) {
       const response = await worker.fetch(request({ ...valid, datingPain }), env);
       assert.equal(response.status, 200);
@@ -100,4 +105,33 @@ test('webinar signup gets lm-webinar tag, unknown lm rejected', async () => {
     const bad = await worker.fetch(request({ ...valid, lm: 'toString' }), env);
     assert.equal(bad.status, 400);
   } finally { globalThis.fetch = original; }
+});
+
+test('webinar signup accepts up to 2 pains, rejects 3, duplicates, or unknown', async () => {
+  const original = globalThis.fetch;
+  let sent;
+  globalThis.fetch = async (url, options) => {
+    sent = JSON.parse(options.body);
+    return new Response('{}', { status: 200 });
+  };
+  const A = 'Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral';
+  const B = 'Keliatannya alim, tapi diem-diem nafsunya ke cewe lain';
+  const C = 'Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling';
+  try {
+    const { datingPain: _ignored, ...base } = valid;
+    let response = await worker.fetch(request({ ...base, lm: 'webinar', datingPains: [A, B] }), env);
+    assert.equal(response.status, 200);
+    assert.equal(sent.fields.MasalahDatingUtama, `${A} | ${B}`);
+    response = await worker.fetch(request({ ...base, lm: 'webinar', datingPains: [A] }), env);
+    assert.equal(response.status, 200);
+    assert.equal(sent.fields.MasalahDatingUtama, A);
+    for (const datingPains of [[A, B, C], [A, A], [], ['pilihan ngarang']]) {
+      sent = undefined;
+      response = await worker.fetch(request({ ...base, lm: 'webinar', datingPains }), env);
+      assert.equal(response.status, 400);
+      assert.equal(sent, undefined);
+    }
+  } finally {
+    globalThis.fetch = original;
+  }
 });

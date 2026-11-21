@@ -2,9 +2,16 @@ const ORIGIN = 'https://nychothesis.com';
 // Lead magnet asal pendaftaran. Default cewe-mokondo biar form lama tetap jalan.
 const TAGS = { 'cewe-mokondo': 'lm-cewe-mokondo', webinar: 'lm-webinar' };
 const PAINS = new Set([
+  // Pilihan lama (LP cewe-mokondo masih pakai)
   'Jarang ketemu kenalan baru yang potensial',
   'Suka sama seseorang, tapi dia ga tertarik balik',
-  'Suka dapet orang yang salah'
+  'Suka dapet orang yang salah',
+  // Pertanyaan baru LP webinar: cowo kayak gimana yang paling ditakutin (21 Nov 2026)
+  'Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral',
+  'Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable',
+  'Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling',
+  'Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi',
+  'Keliatannya alim, tapi diem-diem nafsunya ke cewe lain'
 ]);
 
 function reply(status, body, cors = true) {
@@ -24,13 +31,16 @@ function clean(payload) {
   const email = String(payload.email || '').trim().toLowerCase();
   const gender = payload.gender;
   const instagram = String(payload.instagram || '').trim().replace(/^@/, '');
-  const datingPain = payload.datingPain;
+  // Satu pilihan (datingPain, string) atau maksimal 2 (datingPains, array). Disimpen sbg satu teks dipisah ' | '.
+  const pains = Array.isArray(payload.datingPains) ? payload.datingPains : [payload.datingPain];
   if (payload.website) return { bot: true };
   if (!firstName || firstName.length > 80 || /[\u0000-\u001f]/.test(firstName)) return null;
   if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email)) return null;
   if (gender !== 'Cowo' && gender !== 'Cewe') return null;
   if (!/^[A-Za-z0-9._]{1,30}$/.test(instagram)) return null;
-  if (!PAINS.has(datingPain)) return null;
+  if (pains.length < 1 || pains.length > 2 || new Set(pains).size !== pains.length) return null;
+  if (!pains.every((pain) => PAINS.has(pain))) return null;
+  const datingPain = pains.join(' | ');
   const lm = payload.lm === undefined ? 'cewe-mokondo' : payload.lm;
   if (!Object.prototype.hasOwnProperty.call(TAGS, lm)) return null;
   return { firstName, email, gender, instagram, datingPain, tag: TAGS[lm] };
