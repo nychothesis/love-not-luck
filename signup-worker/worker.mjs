@@ -1,6 +1,8 @@
 const ORIGIN = 'https://nychothesis.com';
 // Lead magnet asal pendaftaran. Default cewe-mokondo biar form lama tetap jalan.
 const TAGS = { 'cewe-mokondo': 'lm-cewe-mokondo', webinar: 'lm-webinar' };
+// Tag tambahan buat signup lewat pertanyaan baru (cowo kayak gimana yang paling ditakutin, maks 2). Misahin dari jawaban 3 pilihan lama.
+const NEW_QUESTION_TAG = 'pertanyaan-tipe-cowo';
 const PAINS = new Set([
   // Pilihan lama (LP cewe-mokondo masih pakai)
   'Jarang ketemu kenalan baru yang potensial',
@@ -32,7 +34,8 @@ function clean(payload) {
   const gender = payload.gender;
   const instagram = String(payload.instagram || '').trim().replace(/^@/, '');
   // Satu pilihan (datingPain, string) atau maksimal 2 (datingPains, array). Disimpen sbg satu teks dipisah ' | '.
-  const pains = Array.isArray(payload.datingPains) ? payload.datingPains : [payload.datingPain];
+  const multi = Array.isArray(payload.datingPains);
+  const pains = multi ? payload.datingPains : [payload.datingPain];
   if (payload.website) return { bot: true };
   if (!firstName || firstName.length > 80 || /[\u0000-\u001f]/.test(firstName)) return null;
   if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email)) return null;
@@ -43,7 +46,7 @@ function clean(payload) {
   const datingPain = pains.join(' | ');
   const lm = payload.lm === undefined ? 'cewe-mokondo' : payload.lm;
   if (!Object.prototype.hasOwnProperty.call(TAGS, lm)) return null;
-  return { firstName, email, gender, instagram, datingPain, tag: TAGS[lm] };
+  return { firstName, email, gender, instagram, datingPain, tag: TAGS[lm], extraTags: multi ? [NEW_QUESTION_TAG] : [] };
 }
 
 export default {
@@ -96,7 +99,7 @@ export default {
         body: JSON.stringify({
         email_address: payload.email,
         fields,
-        tags: { [payload.tag]: true }
+        tags: Object.fromEntries([payload.tag, ...payload.extraTags].map((name) => [name, true]))
         })
       });
       if (result.ok) return reply(200, { ok: true });

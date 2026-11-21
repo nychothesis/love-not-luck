@@ -122,9 +122,11 @@ test('webinar signup accepts up to 2 pains, rejects 3, duplicates, or unknown', 
     let response = await worker.fetch(request({ ...base, lm: 'webinar', datingPains: [A, B] }), env);
     assert.equal(response.status, 200);
     assert.equal(sent.fields.MasalahDatingUtama, `${A} | ${B}`);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'pertanyaan-tipe-cowo': true });
     response = await worker.fetch(request({ ...base, lm: 'webinar', datingPains: [A] }), env);
     assert.equal(response.status, 200);
     assert.equal(sent.fields.MasalahDatingUtama, A);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'pertanyaan-tipe-cowo': true });
     for (const datingPains of [[A, B, C], [A, A], [], ['pilihan ngarang']]) {
       sent = undefined;
       response = await worker.fetch(request({ ...base, lm: 'webinar', datingPains }), env);
