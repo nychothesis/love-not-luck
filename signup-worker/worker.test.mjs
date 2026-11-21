@@ -137,3 +137,27 @@ test('webinar signup accepts up to 2 pains, rejects 3, duplicates, or unknown', 
     globalThis.fetch = original;
   }
 });
+
+test('webinar signup gets batch tag from env, other lm does not', async () => {
+  const original = globalThis.fetch;
+  let sent;
+  globalThis.fetch = async (url, options) => {
+    sent = JSON.parse(options.body);
+    return new Response('{}', { status: 200 });
+  };
+  const A = 'Keliatannya alim, tapi diem-diem nafsunya ke cewe lain';
+  const withBatch = { ...env, WEBINAR_BATCH: 'webinar-b2' };
+  try {
+    const { datingPain: _ignored, ...base } = valid;
+    await worker.fetch(request({ ...base, lm: 'webinar', datingPains: [A] }), withBatch);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'pertanyaan-tipe-cowo': true, 'webinar-b2': true });
+    await worker.fetch(request({ ...valid, lm: 'webinar' }), withBatch);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'webinar-b2': true });
+    await worker.fetch(request({ ...valid }), withBatch);
+    assert.deepEqual(sent.tags, { 'lm-cewe-mokondo': true });
+    await worker.fetch(request({ ...valid, lm: 'webinar' }), { ...env, WEBINAR_BATCH: 'Batch 2!' });
+    assert.deepEqual(sent.tags, { 'lm-webinar': true });
+  } finally {
+    globalThis.fetch = original;
+  }
+});

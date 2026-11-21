@@ -80,6 +80,9 @@ export default {
     if (payload.bot) return reply(200, { ok: true });
     if (!env.EMAILOCTOPUS_API_KEY || !env.EMAILOCTOPUS_LIST_ID) return reply(503, { error: 'not_ready' });
 
+    // Tag batch webinar (WEBINAR_BATCH di wrangler.toml, mis. 'webinar-b2'): cuma buat signup webinar, ganti tiap batch baru.
+    const tagNames = [payload.tag, ...payload.extraTags];
+    if (payload.tag === TAGS.webinar && /^[a-z0-9-]{1,40}$/.test(env.WEBINAR_BATCH || '')) tagNames.push(env.WEBINAR_BATCH);
     const endpoint = `https://api.emailoctopus.com/lists/${encodeURIComponent(env.EMAILOCTOPUS_LIST_ID)}/contacts`;
     const fields = {
       FirstName: payload.firstName,
@@ -99,7 +102,7 @@ export default {
         body: JSON.stringify({
         email_address: payload.email,
         fields,
-        tags: Object.fromEntries([payload.tag, ...payload.extraTags].map((name) => [name, true]))
+        tags: Object.fromEntries(tagNames.map((name) => [name, true]))
         })
       });
       if (result.ok) return reply(200, { ok: true });
