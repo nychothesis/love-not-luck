@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Sampel label webinar</title>
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  :root { --card:#2c0c0e; --gold:#cdae6c; --gold-soft:#e0c88f; --muted:#b9a39c; --text:#F4EFE4; --red:#e5484d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 36px; background: radial-gradient(1100px 720px at 78% -12%, #561a1e 0%, #32100f 46%, #170506 100%); font-family: Inter, system-ui, sans-serif; color: var(--text); }
+  .grid { display: grid; grid-template-columns: repeat(3, 360px); gap: 28px 28px; }
+  .tag { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .12em; color: var(--gold-soft); }
+  .poster { position: relative; width: 360px; height: 520px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(224,200,143,.4); background: var(--card); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  .photo { position: absolute; inset: 0 0 auto 0; height: 330px; background: url(../cewe/img/nicho-speaker.jpg) 50% 12%/cover; filter: grayscale(1) contrast(1.05) brightness(1.08); }
+  .tint { position: absolute; inset: 0 0 auto 0; height: 330px; background: #b3343a; mix-blend-mode: multiply; opacity: .6; }
+  .fade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 28%, rgba(44,12,14,.6) 52%, var(--card) 66%); }
+  .live { position: absolute; left: 20px; top: 18px; display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 999px; background: rgba(16,4,5,.72); border: 1px solid rgba(224,200,143,.35); font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+  .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+  .copy { position: absolute; left: 22px; right: 22px; bottom: 22px; }
+  h2 { margin: 0; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1.05; }
+  em { font-style: normal; color: var(--gold-soft); }
+  .meta { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(244,239,228,.25); display: flex; gap: 14px; font-size: 12px; font-weight: 700; }
+
+  /* 1. Serif italic + sans */
+  .v1 .lbl { margin: 0 0 8px; line-height: 1; }
+  .v1 .lbl .s { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 600; font-size: 38px; color: var(--gold-soft); letter-spacing: -.01em; }
+  .v1 .lbl .g { margin-left: 8px; font-size: 13px; font-weight: 700; letter-spacing: .28em; color: var(--text); vertical-align: 8px; }
+
+  /* 2. Label kecil, headline jadi bintang */
+  .v2 .lbl { display: inline-block; margin: 0 0 12px; padding: 6px 10px; border-radius: 4px; background: var(--gold-soft); color: #2a0b0c; font-size: 12px; font-weight: 800; letter-spacing: .2em; }
+  .v2 h2 { font-size: 28px; }
+
+  /* 3. Outline + solid */
+  .v3 .lbl { margin: 0 0 8px; font-size: 34px; font-weight: 900; letter-spacing: .03em; line-height: 1; }
+  .v3 .lbl .o { color: transparent; -webkit-text-stroke: 1.4px var(--gold-soft); }
+  .v3 .lbl .f { color: var(--gold-soft); }
+
+  /* 4. Stempel GRATIS */
+  .v4 .stamp { position: absolute; right: 18px; top: 200px; width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; text-align: center; background: var(--gold-soft); color: #2a0b0c; transform: rotate(-12deg); box-shadow: 0 8px 20px rgba(0,0,0,.4); }
+  .v4 .stamp b { display: block; font-size: 22px; font-weight: 900; letter-spacing: .02em; line-height: 1; }
+  .v4 .stamp span { display: block; font-size: 9px; font-weight: 700; letter-spacing: .2em; margin-top: 3px; }
+  .v4 .lbl { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .3em; color: var(--gold-soft); }
+
+  /* 5. Sentence case + highlight */
+  .v5 .lbl { margin: 0 0 10px; font-size: 32px; font-weight: 900; letter-spacing: -.03em; line-height: 1; color: var(--text); }
+  .v5 .lbl mark { background: linear-gradient(transparent 58%, rgba(229,72,77,.75) 58%); color: var(--text); padding: 0 2px; }
+
+  /* 6. Serif penuh, elegan */
+  .v6 .lbl { margin: 0 0 6px; font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 34px; line-height: 1; color: var(--gold-soft); letter-spacing: .01em; }
+  .v6 .lbl i { font-weight: 600; }
+  .v6 .rule { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; font-size: 10px; letter-spacing: .3em; color: var(--muted); }
+  .v6 .rule::after { content: ""; flex: 1; height: 1px; background: rgba(224,200,143,.35); }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div><p class="tag">1 · SERIF ITALIC + SANS</p>
+    <div class="poster v1"><div class="photo"></div><div class="tint"></div><div class="fade"></div><span class="live">LIVE ONLINE</span>
+      <div class="copy"><p class="lbl"><span class="s">Webinar</span><span class="g">GRATIS</span></p>
+        <h2>Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h2>
+        <div class="meta"><span>Kamis, 10 Des 2026</span><span>19.00 WIB</span></div></div></div></div>
+
+  <div><p class="tag">2 · LABEL KECIL, JUDUL JADI BINTANG</p>
+    <div class="poster v2"><div class="photo"></div><div class="tint"></div><div class="fade"></div><span class="live">LIVE ONLINE</span>
+      <div class="copy"><span class="lbl">WEBINAR GRATIS</span>
+        <h2>Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h2>
+        <div class="meta"><span>Kamis, 10 Des 2026</span><span>19.00 WIB</span></div></div></div></div>
+
+  <div><p class="tag">3 · OUTLINE + SOLID</p>
+    <div class="poster v3"><div class="photo"></div><div class="tint"></div><div class="fade"></div><span class="live">LIVE ONLINE</span>
+      <div class="copy"><p class="lbl"><span class="o">WEBINAR</span> <span class="f">GRATIS</span></p>
+        <h2>Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h2>
+        <div class="meta"><span>Kamis, 10 Des 2026</span><span>19.00 WIB</span></div></div></div></div>
+
+  <div><p class="tag">4 · STEMPEL GRATIS</p>
+    <div class="poster v4"><div class="photo"></div><div class="tint"></div><div class="fade"></div><span class="live">LIVE ONLINE</span>
+      <div class="stamp"><div><b>GRATIS</b><span>WEBINAR</span></div></div>
+      <div class="copy"><p class="lbl">WEBINAR</p>
+        <h2>Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h2>
+        <div class="meta"><span>Kamis, 10 Des 2026</span><span>19.00 WIB</span></div></div></div></div>
+
+  <div><p class="tag">5 · KALIMAT + STABILO</p>
+    <div class="poster v5"><div class="photo"></div><div class="tint"></div><div class="fade"></div><span class="live">LIVE ONLINE</span>
+      <div class="copy"><p class="lbl">Webinar <mark>gratis.</mark></p>
+        <h2>Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h2>
+        <div class="meta"><span>Kamis, 10 Des 2026</span><span>19.00 WIB</span></div></div></div></div>
+
+  <div><p class="tag">6 · SERIF ELEGAN</p>
+    <div class="poster v6"><div class="photo"></div><div class="tint"></div><div class="fade"></div><span class="live">LIVE ONLINE</span>
+      <div class="copy"><p class="rule">LOVE, NOT LUCK</p><p class="lbl">Webinar <i>Gratis</i></p>
+        <h2>Cara narik &amp; dapetin <em>cowo impian</em> kamu, tanpa ngandalin hoki</h2>
+        <div class="meta"><span>Kamis, 10 Des 2026</span><span>19.00 WIB</span></div></div></div></div>
+</div>
+</body>
+</html>
