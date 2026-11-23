@@ -181,3 +181,25 @@ test('webinar signup gets topic tag from env', async () => {
     globalThis.fetch = original;
   }
 });
+
+test('webinar signup bentuk baru: status hubungan jadi tag, minat produk cowo cuma buat Cowo', async () => {
+  const original = globalThis.fetch;
+  let sent;
+  globalThis.fetch = async (url, options) => { sent = JSON.parse(options.body); return new Response('{}', { status: 200 }); };
+  try {
+    const { datingPain: _ignored, ...base } = valid;
+    let response = await worker.fetch(request({ ...base, lm: 'webinar', relationshipStatus: 'Lagi PDKT', maleInterest: true }), env);
+    assert.equal(response.status, 200);
+    assert.equal(sent.fields.MasalahDatingUtama, undefined);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'pertanyaan-status-hubungan': true, 'status-pdkt': true, 'minat-produk-cowo': true });
+    response = await worker.fetch(request({ ...base, lm: 'webinar', gender: 'Cewe', relationshipStatus: 'Single', maleInterest: true }), env);
+    assert.equal(response.status, 200);
+    assert.deepEqual(sent.tags, { 'lm-webinar': true, 'pertanyaan-status-hubungan': true, 'status-single': true });
+    for (const bad of [{ relationshipStatus: 'Ngarang' }, { relationshipStatus: 'toString' }, { relationshipStatus: 'Single', maleInterest: 'ya' }]) {
+      sent = undefined;
+      response = await worker.fetch(request({ ...base, lm: 'webinar', ...bad }), env);
+      assert.equal(response.status, 400);
+      assert.equal(sent, undefined);
+    }
+  } finally { globalThis.fetch = original; }
+});

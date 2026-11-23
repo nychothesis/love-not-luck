@@ -73,6 +73,7 @@
     .webinar-intro .reassure .reassure-lead { margin-bottom: 8px; font-size: 1.4rem; font-weight: 800; line-height: 1.2; letter-spacing: -.02em; }
     /* mini-ebook.css nyiapin kolom kedua buat cover ebook; webinar ga punya cover. */
     .form-header { display: block; }
+    .choice[hidden] { display: none; }
     .lnl-poster .hero-subheadline { margin: 14px 0 0; color: var(--gold-soft); font-size: clamp(1rem, 4vw, 1.25rem); font-weight: 800; line-height: 1.35; }
     .lnl-poster .hero-subdetail { margin: 14px 0 0; color: #d8c3b6; font-size: .95rem; line-height: 1.5; }
   </style>
@@ -168,14 +169,13 @@
           <input id="instagram" name="instagram" type="text" placeholder="@username" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="31" required>
         </div>
         <fieldset class="choice-group">
-          <legend>Cowo kayak gimana yang paling kamu takutin buat ketemu? (pilih maksimal 2)</legend>
-          <label class="choice"><input type="checkbox" name="datingPain" value="Keliatannya perhatian dan serius banget dari awal, ternyata love bombing: intens di awal, lalu tiba-tiba menghilang"><span>Keliatannya perhatian dan serius banget dari awal, ternyata love bombing: intens di awal, lalu tiba-tiba menghilang</span></label>
-          <label class="choice"><input type="checkbox" name="datingPain" value="Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral"><span>Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral</span></label>
-          <label class="choice"><input type="checkbox" name="datingPain" value="Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable"><span>Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable</span></label>
-          <label class="choice"><input type="checkbox" name="datingPain" value="Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling"><span>Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling</span></label>
-          <label class="choice"><input type="checkbox" name="datingPain" value="Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi"><span>Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi</span></label>
-          <label class="choice"><input type="checkbox" name="datingPain" value="Keliatannya alim, tapi diem-diem nafsunya ke cewe lain"><span>Keliatannya alim, tapi diem-diem nafsunya ke cewe lain</span></label>
+          <legend>Status hubungan kamu sekarang?</legend>
+          <label class="choice"><input type="radio" name="relationshipStatus" value="Single"><span>Single</span></label>
+          <label class="choice"><input type="radio" name="relationshipStatus" value="Lagi PDKT"><span>Lagi PDKT</span></label>
+          <label class="choice"><input type="radio" name="relationshipStatus" value="Pacaran"><span>Pacaran</span></label>
+          <label class="choice"><input type="radio" name="relationshipStatus" value="Menikah"><span>Menikah</span></label>
         </fieldset>
+        <label class="choice" id="male-interest" hidden><input type="checkbox" name="maleInterest" value="1"><span>Kabarin gw kalau nanti ada program buat cowo</span></label>
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
         <button class="btn-primary" type="submit" id="submit-btn">Daftar webinar gratis</button>
         <p class="err" id="form-error" role="alert" hidden></p>
@@ -183,6 +183,6 @@
       </form>
     </section>
   </main>
-  <script src="./signup.js?v=20261123a" defer></script>
+  <script src="./signup.js?v=20261123b" defer></script>
 </body>
 </html>
