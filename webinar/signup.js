@@ -3,7 +3,7 @@
 
   // Worker yang sama dengan cewe-mokondo; lm: 'webinar' bikin kontaknya dapet tag lm-webinar.
   var ENDPOINT = 'https://nychothesis-lm-signup.nicho-aurelius.workers.dev';
-  var STATUSES = ['Single', 'Lagi PDKT', 'Pacaran', 'Menikah'];
+  var STATUSES = ['Single', 'Lagi PDKT', 'Pacaran', 'Menikah', 'Bercerai'];
   var form = document.getElementById('webinar-form');
   var button = document.getElementById('submit-btn');
   var error = document.getElementById('form-error');
@@ -19,14 +19,6 @@
   function emailValid(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(value);
   }
-
-  var maleInterest = document.getElementById('male-interest');
-  form.addEventListener('change', function (event) {
-    if (event.target.name !== 'gender') return;
-    var isMale = form.elements.gender.value === 'Cowo';
-    maleInterest.hidden = !isMale;
-    if (!isMale) maleInterest.querySelector('input').checked = false;
-  });
 
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
@@ -54,7 +46,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ lm: 'webinar', firstName: firstName, email: email, gender: gender,
           instagram: instagram, relationshipStatus: relationshipStatus,
-          maleInterest: gender === 'Cowo' && form.elements.maleInterest.checked, website: form.elements.website.value })
+          maleInterest: form.elements.maleInterest.checked, website: form.elements.website.value })
       });
       if (response.status === 422) {
         return fail('Email kamu ditolak. Cek lagi ejaannya, misalnya gmail.com bukan gmail.con.');

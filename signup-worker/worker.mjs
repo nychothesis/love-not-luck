@@ -3,9 +3,9 @@ const ORIGIN = 'https://nychothesis.com';
 const TAGS = { 'cewe-mokondo': 'lm-cewe-mokondo', webinar: 'lm-webinar' };
 // Tag tambahan buat signup lewat pertanyaan baru (cowo kayak gimana yang paling ditakutin, maks 2). Misahin dari jawaban 3 pilihan lama.
 const NEW_QUESTION_TAG = 'pertanyaan-tipe-cowo';
-// Form webinar 23 Nov 2026: pertanyaan tipe cowo diganti status hubungan (1 pilihan) + checkbox minat produk cowo (cuma kalau gender Cowo). Disimpen sbg tag, bukan field baru.
+// Form webinar 23 Nov 2026: pertanyaan tipe cowo diganti status hubungan (1 pilihan) + checkbox minat produk cowo (semua gender, cewe bisa mau beliin buat cowonya). Disimpen sbg tag, bukan field baru.
 const STATUS_QUESTION_TAG = 'pertanyaan-status-hubungan';
-const STATUSES = { Single: 'status-single', 'Lagi PDKT': 'status-pdkt', Pacaran: 'status-pacaran', Menikah: 'status-menikah' };
+const STATUSES = { Single: 'status-single', 'Lagi PDKT': 'status-pdkt', Pacaran: 'status-pacaran', Menikah: 'status-menikah', Bercerai: 'status-bercerai' };
 const MALE_INTEREST_TAG = 'minat-produk-cowo';
 const PAINS = new Set([
   // Pilihan lama (LP cewe-mokondo masih pakai)
@@ -53,7 +53,7 @@ function clean(payload) {
     if (!Object.prototype.hasOwnProperty.call(STATUSES, payload.relationshipStatus)) return null;
     if (payload.maleInterest !== undefined && typeof payload.maleInterest !== 'boolean') return null;
     const extraTags = [STATUS_QUESTION_TAG, STATUSES[payload.relationshipStatus]];
-    if (payload.maleInterest === true && gender === 'Cowo') extraTags.push(MALE_INTEREST_TAG);
+    if (payload.maleInterest === true) extraTags.push(MALE_INTEREST_TAG);
     return { firstName, email, gender, instagram, tag: TAGS[lm], extraTags };
   }
   if (pains.length < 1 || pains.length > 2 || new Set(pains).size !== pains.length) return null;
