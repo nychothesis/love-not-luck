@@ -3,7 +3,7 @@
 
   // Worker yang sama dengan cewe-mokondo; lm: 'webinar' bikin kontaknya dapet tag lm-webinar.
   var ENDPOINT = 'https://nychothesis-lm-signup.nicho-aurelius.workers.dev';
-  var PAINS = ['Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral', 'Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable', 'Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling', 'Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi', 'Keliatannya alim, tapi diem-diem nafsunya ke cewe lain'];
+  var PAINS = ['Keliatannya perhatian dan serius banget dari awal, ternyata love bombing: intens di awal, lalu tiba-tiba menghilang', 'Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral', 'Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable', 'Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling', 'Keliatannya percaya diri dan charming, ternyata egonya rapuh dan tukang manipulasi', 'Keliatannya alim, tapi diem-diem nafsunya ke cewe lain'];
   var form = document.getElementById('webinar-form');
   var button = document.getElementById('submit-btn');
   var error = document.getElementById('form-error');

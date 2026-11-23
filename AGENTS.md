@@ -126,3 +126,11 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 - `/one-time-offer/`: halaman OTO semula, banner eksklusif tetap ada. Signup guide dan redirect lama `/cewe-labirin/` menuju ke sini.
 - `/pre-order/`: landing page untuk link DM dari CTA konten. Banner eksklusif atas dan keenam tombol guide gratis dihapus; harga, checkout, dan copy lain tetap sama. Tombol guide gratis tetap ada di OTO. Aset/CSS bersama berada di `pre-order/`.
 - Sinkron master Notion "🤍 LP Love, Not Luck" tertunda karena koneksi Notion tidak tersedia.
+
+## Update webinar 23 Nov 2026 (Nicho)
+- Heading webinar dan LP produk 1 (`hindari-cowo-toxic/`): "Paham Rahasia Terhindar dari **Cowo Red Flag yang Terlihat Green Flag**" + baris pendukung bergaya sub-subheading offer 2 (tegak, chip emas di "bersembunyi di baliknya"): "Kenali karakteristik patriarki, munafik, manipulatif, love bombing, dan pola narsistik yang bisa bersembunyi di baliknya". Batasan offer 1 = sebelum jadian (masa PDKT); masalah di hubungan yang udah lama jalan (stonewalling, silent treatment) = kandidat produk lain, jangan masuk heading.
+- Pain list dan checkbox form webinar jadi 6 pasangan: ditambah "Keliatannya perhatian dan serius banget dari awal, ternyata love bombing: intens di awal, lalu tiba-tiba menghilang" (urutan pertama). `signup.js` (`?v=20261123a`), Worker `PAINS`, dan tes ikut ditambah; Worker di-deploy (version fe2c4171). "(karakteristik NPD)" diganti "(pola narsistik)".
+- Bullet "Yang kamu dapet" dibikin what/why, tanpa kata "cara" (webinar tidak ngajarin how). Aturan isi webinar: semua tipe dibahas (apa dan kenapa), cuma satu yang didalemin (usul: love bombing); cara menyikapi, cara ngetes, dan daftar tanda lengkap per tipe tidak dibagi.
+- `<title>`, meta description, dan og:title/description webinar diganti ke heading baru. `og-webinar.jpg` foto polos, tidak ada teks heading.
+- `webinar/thanks.html`: kalimat "Udah di grup webinar 26 Nov?". Link WA masih grup lama sampai Nicho kasih link grup batch 2.
+- Belum dilakukan: tes signup live (butuh email tes, bikin kontak asli), sinkron Notion master v2.1 (bagian heading lama), link grup WA batch 2.

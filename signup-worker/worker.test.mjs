@@ -26,6 +26,7 @@ test('valid signup maps fields and tag to EmailOctopus', async () => {
       'Jarang ketemu kenalan baru yang potensial',
       'Suka sama seseorang, tapi dia ga tertarik balik',
       'Suka dapet orang yang salah',
+      'Keliatannya perhatian dan serius banget dari awal, ternyata love bombing: intens di awal, lalu tiba-tiba menghilang',
       'Keliatannya taat agama, ternyata judgemental dan suka jadi polisi moral',
       'Keliatannya punya mental provider, ternyata egonya tinggi dan ga mau terlihat vulnerable',
       'Keliatannya berjiwa pemimpin, ternyata patriarki dan controlling',
