@@ -33,6 +33,27 @@
       .hero-photo .img { background-size: 100% auto; background-position: center top; }
     }
 
+
+    /* Hero ringkas di HP (catatan Mike 25 Nov): tombol harus langsung keliatan tanpa scroll. */
+    .hero-tail { margin: 0 0 22px; color: #d8c3b6; font-size: .98rem; font-weight: 500; line-height: 1.55; }
+    .hero-tail .hl { background: var(--wine-text); color: #240a0c; padding: 2px 8px; margin: 0 .1em; border-radius: 4px; }
+    @media (max-width: 600px) {
+      .hero-top { margin: -22px -22px 0; }
+      .hero-photo { height: 180px; }
+      .hero-photo .img { background-position: center -58px; }
+      .lnl-poster .webinar-presenter { margin: -18px 0 10px; }
+      .lnl-poster .webinar-presenter-profile { display: flex; align-items: center; gap: 10px; }
+      .lnl-poster .webinar-presenter-profile img { width: 52px; }
+      .lnl-poster .webinar-presenter-profile p { font-size: .76rem; }
+      .lnl-poster .badge { margin: 0; }
+      .brand { display: none; }
+      .wrap { padding-top: 16px; }
+      .hero-jump { margin: 12px 0 10px; }
+      .oto-bar { padding: 12px 16px 14px; }
+      .oto-bar p { margin-bottom: 3px; font-size: .85rem; }
+      .oto-bar strong { font-size: 1.05rem; }
+    }
+
     .ph { background: rgba(212,175,55,.18); outline: 1px dashed rgba(212,175,55,.7); border-radius: 4px; padding: 0 4px; }
     .draft-note { margin: 0 0 16px; padding: 10px 14px; border: 1px dashed rgba(224,200,143,.7); border-radius: 10px; color: var(--gold-soft); font-size: .82rem; font-weight: 700; line-height: 1.4; }
     .hero-jump { display: block; width: 100%; margin: 14px 0 26px; text-align: center; color: #121110; border: 0; }
@@ -132,11 +153,12 @@
         </div>
         <span class="badge">LOVE, NOT LUCK</span>
       </div>
-      <h1 id="hero-title"><span class="lockup-sub lockup-long">Paham Rahasia Terhindar dari <span class="hl">Cowo Red Flag yang Terlihat Green Flag</span> dari Luar <span class="lockup-tail" style="font-style:normal;font-weight:500;font-size:.56em;color:#d8c3b6">Kenali karakteristik patriarki, munafik, manipulatif, love bombing, dan pola narsistik yang bisa <span class="hl">bersembunyi di baliknya</span></span></span></h1>
+      <h1 id="hero-title"><span class="lockup-sub lockup-long">Paham Rahasia Terhindar dari <span class="hl">Cowo Red Flag yang Terlihat Green Flag</span> dari Luar</span></h1>
     </section>
 
     <a class="btn-primary hero-jump" href="#harga">Amankan harga pre-order</a>
     <a class="oto-skip" href="../webinar/thanks.html">Nanti dulu, aku ikut webinar gratisnya dulu</a>
+    <p class="hero-tail">Kenali karakteristik patriarki, munafik, manipulatif, love bombing, dan pola narsistik yang bisa <span class="hl">bersembunyi di baliknya</span></p>
     <section class="webinar-intro" aria-label="Rasa sakit">
       <p class="intro-hook">Cowo yang keliatannya baik banget, <span class="em">belum tentu green flag</span>:</p>
       <ul class="pain-list">
@@ -273,13 +295,13 @@
         a.textContent = 'Nanti dulu, aku ikut webinar gratisnya dulu';
       });
       // Biar ga ketuker: webinar = versi perkenalan, halaman ini = program lengkap.
-      var cta = document.querySelector('a.hero-jump');
+      var cta = document.querySelector('p.hero-tail');
       if (cta) {
         var note = document.createElement('p');
         note.className = 'webinar-note';
         note.innerHTML = 'Webinar gratis yang kamu daftarin itu <strong>versi perkenalannya</strong>. Kurikulum lengkap Love, Not Luck ada di halaman ini.';
-        note.style.cssText = 'margin:18px 0 0;padding:12px 14px;border:1px solid rgba(224,200,143,.4);border-radius:10px;background:rgba(16,4,5,.45);font-size:.92rem;line-height:1.5;color:#efe6da;';
-        cta.parentNode.insertBefore(note, cta);
+        note.style.cssText = 'margin:0 0 26px;padding:12px 14px;border:1px solid rgba(224,200,143,.4);border-radius:10px;background:rgba(16,4,5,.45);font-size:.92rem;line-height:1.5;color:#efe6da;';
+        cta.parentNode.insertBefore(note, cta.nextSibling);
       }
     }());
   </script>
