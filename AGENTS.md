@@ -124,7 +124,7 @@ catat patch tertunda di handoff dan jangan klaim master sudah diperbarui.
 
 ## Pemisahan jalur (2026-11-04)
 - `/one-time-offer/`: halaman OTO semula, banner eksklusif tetap ada. Signup guide dan redirect lama `/cewe-labirin/` menuju ke sini.
-- `/pre-order/`: landing page untuk link DM dari CTA konten. Banner eksklusif atas dan keenam tombol guide gratis dihapus; harga, checkout, dan copy lain tetap sama. Tombol guide gratis tetap ada di OTO. Aset/CSS bersama berada di `pre-order/`.
+- `/pre-order/` (25 Nov 2026): landing page untuk link DM dari CTA konten dan jualan di dalam webinar. Isi = salinan OTO produk 1 (copy ngikut Notion v2.3) tanpa topbar eksklusif, tombol skip, dan script `?source=webinar`. Harga Rp297rb dicoret, kode `LNLWEBINAR` 10% = Rp267.300. Placeholder `.ph` disembunyiin lewat CSS (sama kayak OTO). Kalau copy OTO berubah, ubah dua-duanya.
 - Sinkron master Notion "🤍 LP Love, Not Luck" tertunda karena koneksi Notion tidak tersedia.
 
 ## Update webinar 23 Nov 2026 (Nicho)
